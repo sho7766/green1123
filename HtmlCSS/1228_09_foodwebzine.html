@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+      .row1 {
+        height: 24px;
+      }
+      .row2 {
+        height: 13px;
+      }
+      .row2 > div {
+        float: left;
+      }
+      .row2 > div:last-child {
+        float: right;
+      }
+      .row2 > div:nth-child(2) {
+        width: cal(100%-151px);
+        background: #ccc;
+        text-align: right;
+      }
+      .row3 {
+        clear: left;
+        height: 744px;
+      }
+      .row3 > div {
+        float: left;
+      }
+      .row3 > div:nth-child(3) {
+        float: left;
+      }
+      .row4 {
+        height: 35px;
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="row1"><img src="images/food_img/top.gif" alt="" /></div>
+      <div class="row2">
+        <div>
+          <img src="images/food_img/food_01.gif" alt="" />
+        </div>
+        <div>
+          <img src="images/food_img/directory_01.gif" alt="" />
+          <img src="images/food_img/directory_02.gif" alt="" />
+          <img src="images/food_img/directory_03.gif" alt="" />
+          <img src="images/food_img/directory_04.gif" alt="" />
+        </div>
+        <div><img src="images/food_img/food_02.gif" alt="" /></div>
+      </div>
+      <div class="row3">
+        <div><img src="images/food_img/note.gif" alt="" /></div>
+        <div class="image"><img src="images/food_img/image.gif" alt="" /></div>
+        <div>
+          <div>
+            <img src="images/food_img/number.gif" alt="" />
+          </div>
+          <div><img src="images/food_img/navigation.gif" alt="" /></div>
+        </div>
+        <div><img src="images/food_img/page.gif" alt="" /></div>
+      </div>
+      <div class="row4"><img src="images/food_img/bottom.gif" alt="" /></div>
+    </div>
+  </body>
+</html>
