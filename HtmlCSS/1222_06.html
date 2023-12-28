@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "맑은 고딕", sans-serif;
+      }
+      section {
+        width: 886px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      section > div {
+        float: left;
+        position: relative;
+        border: 1px solid #ccc;
+        padding: 30px 40px;
+      }
+      section:first-child > div {
+        margin-right: 20px;
+        width: 200px;
+        height: 200px;
+      }
+      section:nth-child(2) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      section:nth-child(2) > div,
+      section:nth-child(3) > div {
+        margin-right: 30px;
+        width: calc(428px - 82px);
+        height: 80px;
+      }
+      section > div:last-child {
+        margin-right: 0;
+      }
+      section > div h1 {
+        font-size: 22px;
+      }
+      section > div h2 {
+        font-size: 14px;
+        font-weight: normal;
+      }
+      section > div:last-child p {
+        position: absolute;
+        bottom: 0;
+        height: 102px;
+        width: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>칭찬합시다</h1>
+        <p><img src="images/img_citizen1-1_2023.png" alt="칭찬" /></p>
+      </div>
+      <div>
+        <h1>자유게시판</h1>
+        <h2>더 나은 일상을 시민과 함께</h2>
+        <p><img src="images/img_citizen1-2_2023.png" alt="자유게시판" /></p>
+      </div>
+      <div>
+        <h1>상상대로 서울</h1>
+        <p>
+          <img src="images/img_citizen1_2023.png" alt="상상대로 서울" />
+        </p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h1>칭찬합시다</h1>
+        <p><img src="images/img_citizen1-1_2023.png" alt="칭찬" /></p>
+      </div>
+      <div>
+        <h1>자유게시판</h1>
+        <h2>더 나은 일상을 시민과 함께</h2>
+        <p><img src="images/img_citizen1-2_2023.png" alt="자유게시판" /></p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h1>칭찬합시다</h1>
+        <p><img src="images/img_citizen1-1_2023.png" alt="칭찬" /></p>
+      </div>
+      <div>
+        <h1>자유게시판</h1>
+        <h2>더 나은 일상을 시민과 함께</h2>
+        <p><img src="images/img_citizen1-2_2023.png" alt="자유게시판" /></p>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        section{width: 1200px;margin: 0 auto;}
+        .one{height: 100px;background-color: red;}
+        .two{height: 100px;background-color: blue;}
+        .three{height: 600px;}
+        .three>div{float: left;}
+        .three>div:first-child{width: 20%;height:100%;background-color: green;}
+        .three>div:nth-child(2){width: 70%;height:100%;background-color: pink;}
+        .three>div:last-child{width: 10%;height:100%;background-color: green;}
+        .four{height: 100px;background-color: blue;}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <div class="four">6</div>
+    </section>
+</body>
+</html>

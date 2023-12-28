@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 100px; /*100+50+50+10+10*/
+        background: #ccc;
+        padding: 50px;
+        border: 10px solid;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid;
+      }
+      div p {
+        /* width: auto;
+        height: auto; */
+        width: 100%; /*300+50+50+10+10*/
+        height: 100%;
+        padding: 50px;
+        background: #ccc;
+        box-sizing: border-box; /*크기에 패딩과 border값이 포함됨*/
+      }
+      section {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        height: 500px;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <div><p></p></div>
+    <section></section>
+  </body>
+</html>

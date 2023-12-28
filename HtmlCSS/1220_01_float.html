@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        section{border: 1px solid;text-align: center;background-color: #ccc;}
+        section>div{width: 100px;height: 100px;}
+        section>div:first-child{background-color: #f00;}
+        section>div:nth-child(2){background-color: #0f0;}
+        section>div:last-child{background-color: #00f;}
+        section:first-child > div{display: inline-block;}
+        section:nth-child(2){overflow: hidden;width: 300px;margin: 0 auto;}
+        /*블록요소를 가운데에 배치하는 속성 margin: 0 auto;대신블록요서는 가로크기가 지정되어야 함*/
+        /*child요소에 float속성을 주면 부모요소가 높이값을 상실
+        부모요소에 overflow:hidden속성을 주면 부모 높이값을 찾아준다*/
+        section:nth-child(2)>div{float: left;}
+    </style>
+</head>
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+</body>
+</html>

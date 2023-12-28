@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+       section{width: 370px;height: 148px; border: 1px solid #ccc;
+        padding: 20px;padding-bottom: 0;border-top: 2px solid #3e8bf5;
+        margin: 20px;} 
+       div{overflow: hidden;margin-top: 20px;}
+       div p:first-child{float: left;width: 70%;word-break: keep-all;}
+       div p:last-child{float: right;}
+       section>p{
+        /* word-break: break-all; */
+        word-break: keep-all;
+    }
+    #compliment{position: relative;}
+    #compliment div p:last-child{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    #compliment div p img{
+        width: 410px;
+        height: 168px;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>설문조사</h1>
+        <div>
+            <p></p>
+            <p><img src="images/sm01_icon_01.gif" alt="설문"></p>
+        </div>
+    </section>
+    <section>
+        <p>aaa bbb cccccc ffffffffffffffffffffffff gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</p>
+        <p>무궁화 꽃이 꽃이 꽃이 꽃이 꽃이 꽃이 꽃이 꽃이 무궁화 피었습니다</p>
+    </section>
+    <section>
+        <h1>시민시정제안</h1>
+        <div>
+            <p>실/국, 시청의 현안과제는 물론 생활공감 등 자유롭게 제안하세요</p>
+            <p><img src="images/sm01_icon_02.gif" alt="시민시정제안" width="103"height="94"></p>
+        </div>
+    </section>
+    <section id="compliment">
+        <h1>칭찬합시다</h1>
+        <div>
+            <p>잊지 못할 한사람의 친절에 감사함을 느끼셨나요?</p>
+            <p><img src="images/sm01_bg_02.gif" alt="칭찬합시다"></p>
+        </div>
+    </section>
+</body>
+</html>
