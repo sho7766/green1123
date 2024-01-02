@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      position: relative;
+    }
+    div p:first-child{
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      width: 100px;
+      height: 100px;
+      background: #ccffec;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    div p:nth-child(2){
+        position: absolute;
+        left: 80px;
+        top: 85px;
+      }
+    div p.hover{
+      display: none;
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      width: 100px;
+      height: 100px;
+      background: blue;
+      border-radius: 50%
+    }
+    /* div:hover .hover {
+        display: block;
+      } */
+      
+      div p:first-child:hover ~ .hover{
+        display: block;
+      }
+  
+  </style>
+</head>
+<body>
+  <div>
+    <p></p>
+    <p>hover</p>
+    <p class="hover"></p>
+  </div>
+</body>
+</html>

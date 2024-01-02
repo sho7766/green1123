@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style>
+      :focus{
+        outline: none;    
+      }
+      select{
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: darkseagreen;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>회원가입</legend>
+      <p>아 이 디 : 
+        <input 
+        type="text" 
+        name="id"
+        maxlength="10"
+        minlength="5"
+        size="20"
+        placeholder="아이디를 입력해 주세요"
+        onfocus="this.placeholder='5~10자 영문,숫자 조합'" 
+        required
+        />
+      </p>
+      <p>비밀번호 : 
+        <input 
+        type="password" 
+        name="pwd" 
+        placeholder="비밀번호를 입력해 주세요"
+        pattern="*"
+        />
+      </p>
+      <p>검색 : <input type="search" /></p>
+      <p>이메일 : <input type="email"></p>
+      <p>
+        전화번호 :
+        <input 
+        type="tel"
+        placeholder="000-0000-0000"
+        pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+      </p>
+      <p>color : <input type="color"></p>
+      <p>
+        number : <input type="number" value="1" max="10" min="1">
+      </p>
+      <p>range : <input type="range" max="10" min="1"></p>
+      <p>
+        <label for="man">남</label>
+        <input 
+        type="radio"
+        value="남자"
+        name="gender"
+        id="man"
+        checked
+      >
+        <label for="woman">여</label>
+        <input 
+        type="radio"
+        value="여자"
+        name="gender"
+        id="woman"
+      >
+      </p>
+      <p>관심분야 : <input type="checkbox" name="ck" value="html5"
+        >Html5
+       <input type="checkbox" name="ck" value="html5"
+        >CSS
+       <input type="checkbox" name="ck" value="html5"
+        >CSS3
+       <input type="checkbox" name="ck" value="html5"
+        >Javascript
+       <input type="checkbox" name="ck" value="html5"
+        >jQuery
+      </p>
+        <p>
+          거주지역 :
+          <select name="city" id="city">
+            <option value="">선택</option>
+            <option value="">서울</option>
+            <option value="">대전</option>
+            <option value="">대구</option>
+            <option value="">부산</option>
+            <option value="">제주도</option>
+          </select>
+        </p>
+        <p>
+          하고싶은 이야기 : 
+          <textarea name="tell" id="tell" cols="30" rows="10"></textarea>
+        </p>
+        <p><input type="submit"></p>
+        <p><input type="reset"></p>
+        <p><input type="file"></p>
+        <p><input type="button" value="전송"></p>
+        <p><input type="image" src="images/menu1.jpg" alt="메뉴" hidden></p>
+        </fieldset>
+          <p>년월일 : <input type="date"></p>
+          <p>날짜와 시간 : <input type="datetime-local"></p>
+          <p>월 : <input type="month"></p>
+          <p>주 : <input type="week"></p>
+          <p>시간 : <input type="time"></p>    
+    </form>
+  </body>
+</html>
