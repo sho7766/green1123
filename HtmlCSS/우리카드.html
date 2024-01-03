@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      /* 첫번째 메뉴 시작 */
+      ul#first {
+        position: relative;
+        width: 1080px;
+        /* height: 94px; */
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      ul#first li {
+        height: 94px;
+        float: left;
+        width: calc(100% / 6);
+        text-align: center;
+        /* cursor: pointer; */
+        background: #e2fdfe;
+        border-right: 1px solid #ddd;
+        margin-top: 50px;
+      }
+      ul#first li:last-child {
+        position: absolute;
+        left: 906px;
+        border-right: none;
+      }
+      ul#first li img {
+        margin: 5px;
+      }
+      ul#first li p {
+        font-family: "Nanum Square", "맑은 고딕";
+      }
+      /* 첫번째 메뉴 끝 */
+      /* 두번째 메뉴 시작 */
+      ul#second {
+        width: 1080px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      ul#second li.bg {
+        position: relative;
+      }
+      ul#second li.item {
+        position: absolute;
+      }
+      ul#second {
+        width: 1080px;
+        margin: 0 auto;
+      }
+      ul#second li {
+        height: 460px;
+        position: relative;
+        float: left;
+        width: calc(100% / 4);
+        text-align: center;
+        cursor: pointer;
+        background: #e2f3fc;
+        margin-top: 50px;
+      }
+      ul#second li .bg {
+        position: relative;
+        margin: 10px;
+      }
+      ul#second li .item {
+        position: absolute;
+        left: 120px;
+        top: 140px;
+        z-index: 1;
+      }
+      ul#second li .shadow {
+        position: absolute;
+        left: 120px;
+        top: 140px;
+      }
+      ul#second li p {
+        font-family: "Nanum Square", "맑은 고딕";
+        font-size: 18px;
+        font-weight: 100;
+      }
+      ul#second li p.tit {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 20px;
+      }
+      ul#second li p.subtit {
+        padding-bottom: 20px;
+      }
+      ul#third {
+        position: relative;
+        width: 1080px;
+        margin: 0 auto;
+      }
+      ul#third li {
+        height: 365px;
+        float: left;
+        width: calc(100% / 4);
+        text-align: center;
+        cursor: pointer;
+        background: #fff;
+        margin-top: 50px;
+        border-right: 1px solid #ddd;
+      }
+      ul#third li:first-child img {
+        width: 290px;
+        height: 247px;
+      }
+      ul#third li:last-child {
+        position: absolute;
+        left: 820px;
+        border-right: none;
+      }
+      ul#third li p {
+        font-family: "Nanum Square", "맑은 고딕";
+        font-size: 18px;
+        font-weight: 100;
+      }
+      ul#third li p.tit {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 5px 0 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="first">
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+          alt="이용대금명세서"
+        />
+        <p>이용대금명세서</p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu2.png"
+          alt="결제예상금액"
+        />
+        <p>결제예상금액</p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu3.png"
+          alt="이용내역조회"
+        />
+        <p>이용내역조회</p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu4.png"
+          alt="내정보변경"
+        />
+        <p>내정보변경</p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu5.png"
+          alt="카드분실신고"
+        />
+        <p>카드분실신고</p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu6.png"
+          alt="카드사용등록"
+        />
+        <p>카드사용등록</p>
+      </li>
+    </ul>
+
+    <ul id="second">
+      <li>
+        <img
+          class="bg"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png"
+          alt="시계와동전"
+        />
+        <img
+          class="shadow"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_shd.png"
+          alt="지갑그림자"
+        />
+        <img
+          class="item"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png"
+          alt="지갑"
+        />
+        <p class="tit">단기카드대출</p>
+        <p class="subtit">(현금서비스)</p>
+        <p>
+          현금이 급할 때 바로<br />
+          찾아쓰는,<br />
+          편리한 생활자금 마련방법
+        </p>
+      </li>
+      <li>
+        <img
+          class="bg"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_bg.png"
+          alt="열쇠,집모형,서류,볼펜"
+        />
+        <img
+          class="shadow"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_shd.png"
+          alt="그림자"
+        />
+        <img
+          class="item"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_obj.png"
+          alt="신용카드"
+        />
+        <p class="tit">장기카드대출</p>
+        <p class="subtit">(카드론)</p>
+        <p>
+          목돈이 필요할 때 <br />
+          복잡한 심사 과정 없이<br />
+          간편하게
+        </p>
+      </li>
+      <li>
+        <img
+          class="bg"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_bg.png"
+          alt="달력,연필"
+        />
+        <img
+          class="shadow"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_shd.png"
+          alt="그림자"
+        />
+        <img
+          class="item"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_obj.png"
+          alt="과일배"
+        />
+        <p class="tit">일부결제금액이월약정</p>
+        <p class="subtit">(리볼빙)</p>
+        <p>
+          원하는 만큼만 결제하고 매월<br />
+          결제금액을 계획적으로 관리
+        </p>
+      </li>
+      <li>
+        <img
+          class="bg"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_bg.png"
+          alt="내정보변경"
+        />
+        <img
+          class="shadow"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_shd.png"
+          alt="내정보변경"
+        />
+        <img
+          class="item"
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_obj.png"
+          alt="내정보변경"
+        />
+        <p class="tit">올인원대출</p>
+        <p class="subtit">(신용대출)</p>
+        <p>
+          우리카드가 없어도 서류없이,<br />
+          방문없이, 내 신용만으로
+        </p>
+      </li>
+    </ul>
+
+    <ul id="third">
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_1_obj.png"
+          alt="비행기"
+        />
+        <p class="tit">해외이용의 정석</p>
+        <p>
+          여행, 직구, 항공<br />
+          무엇이든 우리카드로
+        </p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_2_obj.png"
+          alt="회전목마"
+        />
+        <p class="tit">MY Pick 서비스</p>
+        <p>
+          혜택도 맞춤!<br />
+          나만을 위한 맞춤 혜택
+        </p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_3_obj.png"
+          alt="의자"
+        />
+        <p class="tit">우리V클럽</p>
+        <p>
+          특별함을 원하는<br />
+          고객을 위한 VIP우대 혜택
+        </p>
+      </li>
+      <li>
+        <img
+          src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_4_obj.png"
+          alt="동전"
+        />
+        <p class="tit">우리 Point</p>
+        <p>
+          차곡차곡 쌓아<br />
+          다양한 곳에서 사용가능
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>
