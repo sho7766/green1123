@@ -19,7 +19,6 @@
       }
       /* 첫번째 메뉴 시작 */
       ul#first {
-        position: relative;
         width: 1080px;
         /* height: 94px; */
         margin: 0 auto;
@@ -33,11 +32,10 @@
         /* cursor: pointer; */
         background: #e2fdfe;
         border-right: 1px solid #ddd;
+        box-sizing: border-box;
         margin-top: 50px;
       }
       ul#first li:last-child {
-        position: absolute;
-        left: 906px;
         border-right: none;
       }
       ul#first li img {
@@ -102,7 +100,6 @@
         padding-bottom: 20px;
       }
       ul#third {
-        position: relative;
         width: 1080px;
         margin: 0 auto;
       }
@@ -115,14 +112,13 @@
         background: #fff;
         margin-top: 50px;
         border-right: 1px solid #ddd;
+        box-sizing: border-box;
       }
       ul#third li:first-child img {
         width: 290px;
         height: 247px;
       }
       ul#third li:last-child {
-        position: absolute;
-        left: 820px;
         border-right: none;
       }
       ul#third li p {
