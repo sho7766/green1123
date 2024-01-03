@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      ul#iconmenu {
+        width: 837px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      ul#iconmenu li {
+        position: relative;
+        float: left;
+        width: calc(100% / 4);
+        text-align: center;
+        cursor: pointer;
+      }
+      ul#iconmenu li p {
+        display: none;
+        position: absolute;
+        left: 50px;
+        top: 0px;
+        width: 109px;
+        height: 109px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        line-height: 100px;
+        text-transform: uppercase;
+      }
+      ul#iconmenu li:hover p {
+        display: block;
+      }
+      ul#product {
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        margin-top: 50px;
+      }
+      ul#product li {
+        position: relative;
+        float: left;
+        width: calc(100% / 3);
+        text-align: center;
+        cursor: pointer;
+      }
+      ul#product li p {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: rgba(0, 0, 0, 0.7);
+        width: 394px;
+        height: 333px;
+        color: #fff;
+        padding-top: 140px;
+        /* box-sizing: border-box; */
+      }
+      ul#product li:hover p {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="iconmenu">
+      <li>
+        <img src="images/icon1.png" alt="icon1" />
+        <p>about</p>
+      </li>
+      <li>
+        <img src="images/icon2.png" alt="icon2" />
+        <p>collection</p>
+      </li>
+      <li>
+        <img src="images/icon3.png" alt="icon3" />
+        <p>shop</p>
+      </li>
+      <li>
+        <img src="images/icon4.png" alt="icon4" />
+        <p>services</p>
+      </li>
+    </ul>
+    <ul id="product">
+      <li>
+        <img src="images/sub1.png" alt="sub1" />
+        <p>
+          12018년 여름신상 <br />
+          지금 바로 만나보세요! <br />
+          +
+        </p>
+      </li>
+      <li>
+        <img src="images/sub2.png" alt="sub2" />
+        <p>상품구매하기</p>
+      </li>
+      <li>
+        <img src="images/sub3.png" alt="sub3" />
+        <p>
+          이보다 더 'Cool'<br />
+          할수는 없다 <br />
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>
