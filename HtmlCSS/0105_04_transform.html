@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 200px;
+        height: 20px;
+        background: #def;
+      }
+      p:hover {
+        width: 400px;
+        /* transition-property: width;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        transition-delay: 1s; */
+        /* transition: width 1s linear 1s height 2s linear 1s; */
+        transition: all 1s cubic-bezier(0, 1.09, 1, 0.36) 1s;
+      }
+      div {
+        width: 200px;
+        height: 20px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #8ac007;
+        cursor: pointer;
+        transition: all 1s;
+      }
+      div:first-of-type:hover {
+        background: #8ac007;
+        color: #fff;
+      }
+      div:nth-of-type(2):hover {
+        margin-left: 50px;
+      }
+      div:nth-of-type(3):hover {
+        border-width: 10px;
+      }
+      div:nth-of-type(4):hover {
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <div>color change</div>
+    <div>offset change</div>
+    <div>border change</div>
+    <div>size change</div>
+  </body>
+</html>

@@ -6,33 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+        /* display: table; 블록과 테이블 둘다 사용 가능 */
+      }
+      /* .clearfix::after {
+        clear: both;
+      } */
+      /* ^ child 요소에 float을 줘서 부모의 높이값을 상실했을때 높이값을 지정하는 방법
+      1. 부모에 높이값을 지정
+      2. 부모요소에 overflow:hidden
+      3. 부모요소에 class="clearfix" 를 지정하고 위와 같은 서식지정 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
       ul {
-        position: relative;
         list-style: none;
         width: 1200px;
+        margin: 50px;
+        /* overflow: hidden; */
       }
-      li {
+      ul li {
+        padding: 10px 10px 20px;
         /* width: calc(100% / 4); */
-        padding: 10px 20px;
+        width: 25%;
         float: left;
         border: 1px solid #ccc;
-        box-shadow: 10px 10px 10px #aaaa;
+        box-shadow: 10px 10px 10px #aaa;
         box-sizing: border-box;
         background: #fff;
       }
-
-      li:last-child {
-        position: absolute;
-        left: 1065px;
+      ul li p:first-child {
+        height: 250px;
       }
-      p {
+      ul li p:last-child {
         text-align: center;
       }
-      img {
-        width: 300px;
-        height: 250px;
+      ul li p img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        object-position: center;
       }
       .left {
         transform: rotate(-5deg);
@@ -43,7 +59,7 @@
     </style>
   </head>
   <body>
-    <ul>
+    <ul class="clearfix">
       <li class="left">
         <p><img src="images/photo1.jpg" alt="photo1" /></p>
         <p>그린컴퓨터아트학원</p>
