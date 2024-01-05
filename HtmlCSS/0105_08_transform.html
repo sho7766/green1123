@@ -21,6 +21,25 @@
         background: #def;
         text-align: center;
       }
+      ul li p {
+        /* position: relative; */
+        top: 30px;
+        width: 50px;
+        border-bottom: 1px solid;
+      }
+      ul li p::after {
+        position: absolute;
+        bottom: 6px;
+        right: -2.5 px;
+        content: "";
+        width: 20px;
+        height: 1px;
+        background: #000;
+        transform: rotate(45deg);
+      }
+      ul li:hover p {
+        left: 20px;
+      }
       ul li div.contents {
         position: absolute;
         left: 50%;
@@ -35,22 +54,50 @@
         width: 100%;
         height: 5px;
         left: 0;
+        transform: scaleX(0);
+        /* transform-origin: 0; */
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-top {
+        transform: scaleX(1);
+        transition: all 0.5s ease-in-out;
       }
       .line-left {
         width: 5px;
         height: 100%;
         left: 0;
+        transform: scaleY(0);
+        /* transform-origin: 0 100%; */
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-left {
+        transform: scaleY(1);
+        transition: all 0.5s ease-in-out;
       }
       .line-right {
         width: 5px;
         height: 100%;
         right: 0;
+        transform: scaleY(0);
+        /* transform-origin: 0 0; */
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-right {
+        transform: scaleY(1);
+        transition: all 0.5s ease-in-out;
       }
       .line-bottom {
         width: 100%;
         height: 5px;
         left: 0;
         bottom: 0;
+        transform: scaleX(0);
+        /* transform-origin: 100% 0; */
+        transition: all 0.5s ease-in-out;
+      }
+      ul li:hover .line-bottom {
+        transform: scaleX(1);
+        transition: all 0.5s ease-in-out;
       }
     </style>
   </head>
@@ -59,7 +106,8 @@
       <li>
         <div class="contents">
           <h1>메인배너</h1>
-          <h2>Border Transition</h2>
+          <!-- <h2>Border Transition</h2> -->
+          <!-- <p></p> -->
         </div>
         <span class="line line-top"></span>
         <span class="line line-right"></span>
