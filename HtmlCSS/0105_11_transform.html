@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>극동건설</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding: 500px 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        position: relative;
+        width: 270px;
+        height: 265px;
+        background: #eee;
+        text-align: center;
+      }
+      ul li div.text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .last {
+        width: 100%;
+        min-width: 1280px;
+        margin: 0 auto;
+        padding: 120px 0;
+      }
+      div.desc {
+        width: 1280px;
+        margin: 0 auto;
+        color: #000;
+        text-align: center;
+        line-height: 70px;
+      }
+
+      /* h3 {
+        width: 100%;
+        height: 60px;
+        font-size: 40px;
+        position: relative;
+        line-height: 50px;
+        margin: 0 auto 20px;
+      } */
+      .sub {
+        width: 100%;
+        height: 24px;
+        margin: 0 0 16px;
+      }
+      div.box {
+        width: 565px;
+        height: 570px;
+        margin: 100px auto;
+        color: #000;
+      }
+      div.box ul {
+        /* position: relative; */
+        width: 1080px;
+        margin: 0 auto;
+        height: 200px;
+        text-align: center;
+      }
+      div.box ul li {
+        /* position: absolute; */
+        float: left;
+        width: 25%;
+        height: 100%;
+      }
+      ul li p {
+        position: relative;
+        top: 30px;
+        width: 50px;
+        border-bottom: 1px solid;
+      }
+      ul li p::after {
+        position: absolute;
+        bottom: 6px;
+        right: -2.5px;
+        content: "";
+        width: 20px;
+        height: 1px;
+        background: #000;
+        transform: rotate(45deg);
+      }
+      ul li:hover p {
+        left: 20px;
+      }
+      .line {
+        position: absolute;
+        background: #07348c;
+      }
+      .line-top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        transform: scale(0);
+        transform-origin: 0 100%;
+      }
+      ul li:hover .line-top {
+        transform: scale(1);
+        transition: all 0.2s ease;
+      }
+      .line-left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        transform: scale(0);
+        transform-origin: 0 100%;
+      }
+      ul li:hover .line-left {
+        transform: scale(1);
+        transition: all 0.2s ease-in-out 0.3s;
+      }
+      .line-right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        transform: scale(0);
+        transform-origin: 0 0;
+      }
+      ul li:hover .line-right {
+        transform: scale(1);
+        transition: all 0.3s ease-in-out 0.1s;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: scale(0);
+        transform-origin: 100% 0;
+      }
+      ul li:hover .line-bottom {
+        transform: scale(1);
+        transition: all 0.2s ease-in-out 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="last">
+      <div class="desc">
+        <h1>PR Center</h1>
+        <p class="sub">
+          세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를
+          선도합니다.
+        </p>
+      </div>
+      <div class="box">
+        <ul>
+          <li>
+            <div class="text">
+              <h3>
+                언론속의<br />
+                <strong>극동</strong>
+              </h3>
+              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+              <p></p>
+            </div>
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </li>
+          <li>
+            <div class="text">
+              <h3>
+                언론속의<br />
+                <strong>극동</strong>
+              </h3>
+              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+              <p></p>
+            </div>
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </li>
+          <li>
+            <div class="text">
+              <h3>
+                언론속의<br />
+                <strong>극동</strong>
+              </h3>
+              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+              <p></p>
+            </div>
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </li>
+          <li>
+            <div class="text">
+              <h3>
+                언론속의<br />
+                <strong>극동</strong>
+              </h3>
+              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+              <p></p>
+            </div>
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
