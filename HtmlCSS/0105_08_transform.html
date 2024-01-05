@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Transition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 20px;
+      }
+      ul li {
+        position: relative;
+        width: 500px;
+        height: 200px;
+        background: #def;
+        text-align: center;
+      }
+      ul li div.contents {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .line {
+        position: absolute;
+        background: #07348c;
+      }
+      .line-top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+      }
+      .line-left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+      }
+      .line-right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="contents">
+          <h1>메인배너</h1>
+          <h2>Border Transition</h2>
+        </div>
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+      </li>
+    </ul>
+  </body>
+</html>
