@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 100px;
+        height: 100px;
+        background: #def;
+        margin: 20px;
+      }
+      p:first-child {
+        /* transform: translateX(100px); 오른쪽으로만 100PX이동 */
+        /* transform: translateY(100px);아래로만 100px이동(음의값은 위로) */
+        /* transform: translateY(-50px); (음의값은 위로) */
+      }
+      p:nth-child(2) {
+        /* transform: scale(0.5, 1); */
+        /* transform: scaleX(0.5);  가로만 줄어듦*/
+      }
+      p:nth-child(3) {
+        /* transform: rotateX(30deg); */
+        /* transform: rotateY(90deg); 3d개념 ..앞뒤로 90도 회전했기 때문에 ㅡ <- 이런형태라 안보임 */
+        /* transform: rotateX(90deg); 3d개념 ..앞뒤로 90도 회전했기 때문에 ㅣ <- 이런형태라 안보임 */
+      }
+      p:nth-child(4) {
+        /* transform: skew(10deg, 20deg); */
+        transform: skew(-10deg);
+      }
+      p:nth-child(5) {
+        transform: translate(50%, 50%) scale(1.5) rotate(30deg) skew(10deg);
+      } /* 여러개의 속성을 사용할 때에는 각 속성마다 한칸씩 띄우기 */
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p>rotate</p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

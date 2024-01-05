@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        position: relative;
+        list-style: none;
+        width: 1200px;
+      }
+      li {
+        /* width: calc(100% / 4); */
+        padding: 10px 20px;
+        float: left;
+        border: 1px solid #ccc;
+        box-shadow: 10px 10px 10px #aaaa;
+        box-sizing: border-box;
+        background: #fff;
+      }
+
+      li:last-child {
+        position: absolute;
+        left: 1065px;
+      }
+      p {
+        text-align: center;
+      }
+      img {
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .left {
+        transform: rotate(-5deg);
+      }
+      .right {
+        transform: rotate(5deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="left">
+        <p><img src="images/photo1.jpg" alt="photo1" /></p>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+      <li class="right">
+        <p><img src="images/photo2.jpg" alt="photo2" /></p>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+      <li class="left">
+        <p><img src="images/photo3.jpg" alt="photo3" /></p>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+      <li class="right">
+        <p><img src="images/photo4.jpg" alt="photo4" /></p>
+        <p>그린컴퓨터아트학원</p>
+      </li>
+    </ul>
+  </body>
+</html>
