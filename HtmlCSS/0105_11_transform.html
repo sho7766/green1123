@@ -11,27 +11,12 @@
         padding: 0;
       }
       body {
-        padding: 500px 0;
-      }
-      ul {
-        list-style: none;
-      }
-      ul li {
-        position: relative;
-        width: 270px;
-        height: 265px;
-        background: #eee;
-        text-align: center;
-      }
-      ul li div.text {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        line-height: 1.5;
+        font-family: Roboto, "Noto Sans Korean", sans-serif;
       }
       .last {
         width: 100%;
-        min-width: 1280px;
+        min-width: 1900px;
         margin: 0 auto;
         padding: 120px 0;
       }
@@ -42,46 +27,94 @@
         text-align: center;
         line-height: 70px;
       }
-
-      /* h3 {
-        width: 100%;
-        height: 60px;
-        font-size: 40px;
-        position: relative;
-        line-height: 50px;
-        margin: 0 auto 20px;
-      } */
       .sub {
         width: 100%;
         height: 24px;
         margin: 0 0 16px;
       }
-      div.box {
+      div.mid {
+        width: 1280px;
+        height: 650px;
+        padding: 80px 0 0;
+        margin: 0 auto;
+      }
+      div.images ul{
+        float: left;
+        width: 680px;
+        height: 550px;
+        margin: 0 35px 0 0;
+      }
+      div.images ul li {
+        position: relative;
+        float: left;
+        width: 340px; 
+        height: 550px;
+        overflow: hidden;
+      }
+      ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1s;
+      }
+      ul li:hover img{
+        transform: scale(1.2);
+      }
+      div.images ul li:first-child{
+        margin-top: -40px;
+      }
+      div.images ul li div.pic{
+        position: absolute;
+        top: 300px;
+        left: 30px;
+        font-size: 14px;
+        color: #fff;
+      }
+      div.images ul li div.pic2{
+        position: absolute;
+        top: 320px;
+        left: 30px;
+        font-size: 14px;
+        color: #fff;
+      }
+      .title{
+        font-size: 50px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      ul {
+        list-style: none;
         width: 565px;
         height: 570px;
-        margin: 100px auto;
-        color: #000;
+        float: right;
       }
-      div.box ul {
-        /* position: relative; */
-        width: 1080px;
-        margin: 0 auto;
-        height: 200px;
-        text-align: center;
-      }
-      div.box ul li {
-        /* position: absolute; */
-        float: left;
-        width: 25%;
-        height: 100%;
-      }
-      ul li p {
+      ul li {
         position: relative;
-        top: 30px;
+        height: 265px;
+        background: #eee;
+        display: inline-block;
+        width: 270px;
+        /* margin: 0 22px 20px 0; */
+      }
+      ul li div.text {
+        position: absolute;
+        text-align: left;
+        margin: 40px 30px;
+        font-size: 14px;
+        color: #444;
+      }
+      ul li p.tit {
+        text-align: left;
+        font-size: 25px;
+        margin: 0 0 16px;
+      }
+      ul li p.arrow {
+        position: relative;
+        top: 50px;
         width: 50px;
         border-bottom: 1px solid;
       }
-      ul li p::after {
+      ul li p.arrow::after {
         position: absolute;
         bottom: 6px;
         right: -2.5px;
@@ -91,7 +124,26 @@
         background: #000;
         transform: rotate(45deg);
       }
-      ul li:hover p {
+      ul li:hover p.arrow {
+        left: 20px;
+      }
+      ul li p.arrow2 {
+        position: relative;
+        top: 40px;
+        width: 50px;
+        border-bottom: 1px solid;
+      }
+      ul li p.arrow2::after {
+        position: absolute;
+        bottom: 6px;
+        right: -2.5px;
+        content: "";
+        width: 20px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(45deg);
+      }
+      ul li:hover p.arrow2 {
         left: 20px;
       }
       .line {
@@ -102,46 +154,50 @@
         width: 100%;
         height: 5px;
         left: 0;
-        transform: scale(0);
+        transform: scaleX(0);
         transform-origin: 0 100%;
+        transition: all 0.1s ease-in-out 0.3s;
       }
       ul li:hover .line-top {
-        transform: scale(1);
-        transition: all 0.2s ease;
+        transform: scaleX(1);
+        transition: all 0.1s ease-in-out 0s;
       }
       .line-left {
         width: 5px;
         height: 100%;
         left: 0;
-        transform: scale(0);
+        transform: scaleY(0);
         transform-origin: 0 100%;
+        transition: all 0.1s ease-in-out 0s;
       }
       ul li:hover .line-left {
-        transform: scale(1);
-        transition: all 0.2s ease-in-out 0.3s;
+        transform: scaleY(1);
+        transition: all 0.1s ease-in-out 0.3s;
       }
       .line-right {
         width: 5px;
         height: 100%;
         right: 0;
-        transform: scale(0);
+        transform: scaleY(0);
         transform-origin: 0 0;
+        transition: all 0.1s ease-in-out 0.2s;
       }
       ul li:hover .line-right {
-        transform: scale(1);
-        transition: all 0.3s ease-in-out 0.1s;
+        transform: scaleY(1);
+        transition: all 0.1s ease-in-out 0.1s;
       }
       .line-bottom {
         width: 100%;
         height: 5px;
         left: 0;
         bottom: 0;
-        transform: scale(0);
+        transform: scaleX(0);
         transform-origin: 100% 0;
+        transition: all 0.1s ease-in-out 0.1s;
       }
       ul li:hover .line-bottom {
-        transform: scale(1);
-        transition: all 0.2s ease-in-out 0.2s;
+        transform: scaleX(1);
+        transition: all 0.1s ease-in-out 0.2s;
       }
     </style>
   </head>
@@ -154,65 +210,86 @@
           선도합니다.
         </p>
       </div>
-      <div class="box">
-        <ul>
-          <li>
-            <div class="text">
-              <h3>
-                언론속의<br />
-                <strong>극동</strong>
-              </h3>
-              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
-              <p></p>
-            </div>
-            <span class="line line-top"></span>
-            <span class="line line-right"></span>
-            <span class="line line-bottom"></span>
-            <span class="line line-left"></span>
-          </li>
-          <li>
-            <div class="text">
-              <h3>
-                언론속의<br />
-                <strong>극동</strong>
-              </h3>
-              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
-              <p></p>
-            </div>
-            <span class="line line-top"></span>
-            <span class="line line-right"></span>
-            <span class="line line-bottom"></span>
-            <span class="line line-left"></span>
-          </li>
-          <li>
-            <div class="text">
-              <h3>
-                언론속의<br />
-                <strong>극동</strong>
-              </h3>
-              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
-              <p></p>
-            </div>
-            <span class="line line-top"></span>
-            <span class="line line-right"></span>
-            <span class="line line-bottom"></span>
-            <span class="line line-left"></span>
-          </li>
-          <li>
-            <div class="text">
-              <h3>
-                언론속의<br />
-                <strong>극동</strong>
-              </h3>
-              <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
-              <p></p>
-            </div>
-            <span class="line line-top"></span>
-            <span class="line line-right"></span>
-            <span class="line line-bottom"></span>
-            <span class="line line-left"></span>
-          </li>
-        </ul>
+      <div class="mid">
+        <div class="images">
+          <ul>
+            <li>
+              <img src="https://www.kukdong.co.kr/images/main/pr_img1.jpg" alt="">
+              <div class="pic">
+                <p class="title">극동뉴스</p>
+                <p>극동건설의 다양한 소식을 가장 빠르게<br>
+                전달해드립니다.</p>
+                <p class="arrow2"></p>
+              </div>
+            </li>
+            <li><img src="https://www.kukdong.co.kr/images/main/pr_img2.jpg" alt="">
+              <div class="pic2">
+                <p class="title">R&D</p>
+                <p>끊임없는 신기술 개발과 혁신으로 극동건설이<br>
+                건축기술의 진보를 위해 노력하고 있습니다</p>
+                <p class="arrow2"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+          <ul>
+            <li>
+              <div class="text">
+                <p class="tit">
+                  언론속의<br />
+                  <strong>극동</strong>
+                </p>
+                <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+                <p class="arrow"></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+            <li>
+              <div class="text">
+                <p class="tit">
+                  언론속의<br />
+                  <strong>극동</strong>
+                </p>
+                <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+                <p class="arrow"></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+            <li>
+              <div class="text">
+                <p class="tit">
+                  언론속의<br />
+                  <strong>극동</strong>
+                </p>
+                <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+                <p class="arrow"></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+            <li>
+              <div class="text">
+                <p class="tit">
+                  언론속의<br />
+                  <strong>극동</strong>
+                </p>
+                <span>언론에 소개되는 극동의 소식을<br />안내해드립니다.</span>
+                <p class="arrow"></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+          </ul>
       </div>
     </div>
   </body>
