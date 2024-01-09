@@ -4,13 +4,186 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>해피바스</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #555;
+      }
+      body {
+        font-family: "Nanum Gothic", 나눔고딕, 맑은 고딕;
+        background: #def;
+      }
+      .top {
+        position: relative;
+        width: 1000px;
+        margin: 50px auto 20px;
+      }
+      header {
+        border-bottom: 1px solid #ccc;
+      }
+
+      span {
+        font-size: 8px;
+      }
+
+      header .logo {
+        text-align: center;
+      }
+
+      header > div.menu {
+        width: 1000px;
+      }
+
+      header > div.menu > ul {
+        float: right;
+        width: 720px;
+        margin-top: 30px;
+      }
+
+      header > div.menu > ul > li {
+        /* position: relative; */
+        font-size: 18px;
+        float: left;
+        width: 25%;
+        text-align: center;
+        background: #fff;
+      }
+
+      header > div.menu > ul > li > a {
+        display: block;
+        line-height: 40px;
+      }
+
+      header > div.menu > ul > li .sub a {
+        /* line-height: 30px; */
+        margin: 20px;
+        display: block;
+      }
+
+      header > div.menu > ul > li .sub {
+        width: 700px;
+        background: #fff;
+        margin-top: 30px;
+        height: 0px;
+        overflow: hidden;
+        transition: all 1s;
+        font-size: 16px;
+      }
+
+      header > div.menu > ul > li .sub a {
+        text-align: left;
+        margin-left: 35px;
+      }
+
+      header > div.menu > ul > li .sub li.happy {
+        font-size: 14px;
+        margin-left: 20px;
+      }
+
+      header > div.menu > ul:hover .sub {
+        height: 150px;
+      }
+      header > div.menu > ul .sub > li:hover a {
+        text-decoration: underline;
+      }
+      .right {
+        position: absolute;
+        right: 120px;
+        top: 80px;
+      }
+      .right ul li {
+        float: left;
+      }
+      .right ul li a {
+        font-size: 14px;
+        margin: 20px;
+      }
+      .right ul li a img {
+        width: 18px;
+        height: 18px;
+      }
+      .right li a ::after {
+        content: "l";
+        background: #ddd;
+        padding: 0 10px;
+      }
+    </style>
   </head>
   <body>
-    <div class="wrap">
-      <header>
-        <div>Happy Bath</div>
-      </header>
-    </div>
+    <header>
+      <div class="top">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://www.happybath.com/kr/ko/resource/images/common/img-logo_01.png"
+              alt=""
+            />
+          </a>
+          <div class="right">
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">구매하기</a></li>
+              <li><a href="#">매장찾기</a></li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="https://www.happybath.com/kr/ko/resource/images/common/bg-header-searchbtn.png"
+                    alt="돋보기"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#">해피바스 <strong>이야기</strong></a>
+            <ul class="sub">
+              <li><a href="#">브랜드 히스토리</a></li>
+              <li><a href="#">영상 갤러리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">해피바스 <strong>선물</strong></a>
+            <ul class="sub">
+              <li><a href="#">행복의 순간</a></li>
+              <li class="happy">
+                <a href="#"><span>></span> 내추럴 성분</a>
+              </li>
+              <li class="happy">
+                <a href="#"><span>></span> 풍성한 향</a>
+              </li>
+              <li class="happy">
+                <a href="#"><span>></span> 즐거운 경험</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">해피바스 <strong>뷰티톡</strong></a>
+            <ul class="sub">
+              <li><a href="#">피부고민X뷰티팁</a></li>
+              <li><a href="#">자산화 원료</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">해피바스 <strong>제품</strong></a>
+            <ul class="sub">
+              <li><a href="#">유형별 제품</a></li>
+              <li><a href="#">고민별 제품</a></li>
+              <li><a href="#">전체 제품 보기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
   </body>
 </html>
