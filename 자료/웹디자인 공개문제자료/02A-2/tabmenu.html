@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "돋움", Dotum, sans-serif;
+      }
+      .contents {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .contents div.notice {
+        width: 33.333%;
+        height: 200px;
+        padding: 10px 0;
+        box-sizing: border-box;
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      label {
+        position: relative;
+        left: 20px;
+        display: block;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid #333;
+        border-left: none;
+        float: left;
+        cursor: pointer;
+        z-index: 1;
+        background: #ccc;
+      }
+      label:first-of-type {
+        border-left: 1px solid #333;
+      }
+      #notice:checked ~ label:first-of-type,
+      #gallery:checked ~ label:last-of-type {
+        border-bottom: 1px solid #fff;
+        background: #fff;
+      }
+      .contents .notice > ul {
+        position: relative;
+        top: -1px;
+        clear: both;
+        border: 1px solid #333;
+        width: 95%;
+        height: 150px;
+        margin: 0 auto;
+      }
+      .contents .notice > ul table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .contents .notice > ul table td {
+        line-height: 1.5;
+      }
+      .contents .notice > ul table td:first-child {
+        width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .contents .notice > ul table td:last-child {
+        width: 30%;
+        text-align: right;
+      }
+      .contents .notice > ul ul {
+        line-height: 150px;
+        text-align: center;
+      }
+      .contents .notice > ul ul li {
+        display: inline-block;
+      }
+      .contents .notice > ul ul li img {
+        width: 110px;
+        vertical-align: middle;
+        margin: 5px;
+      }
+      .contents .notice > ul > li:first-child {
+        padding: 5px;
+      }
+      #notice:checked ~ ul > li:last-child,
+      #gallery:checked ~ ul > li:first-child {
+        display: none;
+      }
+      .contents .notice > ul table td a:hover {
+        text-decoration: underline;
+      }
+      #popup {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+      #popup .pop {
+        position: absolute;
+        width: 600px;
+        height: 350px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border: 1px solid #333;
+        padding: 20px;
+      }
+      #popup .pop ul {
+        margin: 50px 0;
+      }
+      #popup .pop ul h2 {
+        margin-top: 10px;
+      }
+      #popup .pop p {
+        float: right;
+        border: 1px solid #333;
+        padding: 10px;
+      }
+      #popup:target {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <div class="notice">
+        <input type="radio" name="tab" id="notice" checked />
+        <input type="radio" name="tab" id="gallery" />
+        <label for="notice">공지사항</label>
+        <label for="gallery">갤러리</label>
+        <ul>
+          <li>
+            <table>
+              <tr>
+                <td>
+                  <a href="#popup"
+                    >서울특별시약사회와 함께하는 의료비지원사업</a
+                  >
+                </td>
+                <td>2019.10.04</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#">개그맨 김재우 부부와 함께하는 '카레한상'</a>
+                </td>
+                <td>2019.09.25</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#">MBC 장애인식개선 <우리동네 피터팬> 방송 안내</a>
+                </td>
+                <td>2018.09.10</td>
+              </tr>
+              <tr>
+                <td><a href="#">2019 국내선물보내기 캠페인 결과보고</a></td>
+                <td>2019.10.21</td>
+              </tr>
+              <tr>
+                <td><a href="#">2019년 서울형 뉴딜일자리 참여자 모집</a></td>
+                <td>2019.10.10</td>
+              </tr>
+              <tr>
+                <td><a href="#">2019년 제5회 에너지나눔 대축제</a></td>
+                <td>2019.09.28</td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <a href="#"><img src="images/gallery01.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/gallery02.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/gallery03.jpg" alt="" /></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="popup">
+      <div class="pop">
+        <h2>
+          서울특별시약사회와 함게하는 희귀난치성질환 의료비지원사업 '희喜스토리'
+          수행기관 모집
+        </h2>
+        <h4>
+          희귀난치성질환으로 고통 받는 환자들에게 의료비 및 치료에 필요한 제반
+          비용을 지원함으로 대상자와 그 가족의 사회, 경제적 심리 안년을
+          도모하고자 합니다.
+        </h4>
+        <ul>
+          <li>사업명 : 2019년 희귀난치성질환 의료비 지원사업 '희(喜)스토리'</li>
+          <li>신청기간 : 2019.10.07(월) ~ 2019.10.25(금) 18:00까지</li>
+          <li>
+            지원대상 : 희귀난치성질환을 앓고 있는 저소득 가구 대상자(중위소득80%
+            미만)
+          </li>
+          <li>지원금액 : 1인당 450만원 한도 내</li>
+          <li>접수방법 : 이메일 접수(apply@greenwelfare.org)</li>
+        </ul>
+        <p><a href="#"> x 닫기</a></p>
+      </div>
+    </div>
+  </body>
+</html>
