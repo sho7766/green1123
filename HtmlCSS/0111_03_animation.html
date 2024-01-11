@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        animation-name: ani;
+        animation-duration: 5s;
+        border-radius: 50%;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+      @keyframes ani {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(500px); /* 단위 꼭 입력하기 */
+        }
+      }
+      .ease {
+        animation-timing-function: ease;
+      }
+      .ease {
+        animation-timing-function: ease-in;
+      }
+      .ease {
+        animation-timing-function: ease-out;
+      }
+      .ease {
+        animation-timing-function: ease-in-out;
+      }
+      .ease {
+        animation-timing-function: linear;
+      }
+      .ease {
+        animation-timing-function: cubic-bezier(0, 1.04, 1, -0.09);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>animation-timing-function : ease</h2>
+    <div class="ease"></div>
+    <h2>animation-timing-function : ease-in</h2>
+    <div class="ease-in"></div>
+    <h2>animation-timing-function : ease-out</h2>
+    <div class="ease-out"></div>
+    <h2>animation-timing-function : ease-in-out</h2>
+    <div class="ease-in-out"></div>
+    <h2>animation-timing-function : linear</h2>
+    <div class="linear"></div>
+    <h2>animation-timing-function : cubic-bezier(0.075, 0.82, 0.165, 1)</h2>
+    <div class="cubic-bezier"></div>
+  </body>
+</html>
