@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        text-align: center;
+      }
+      label {
+        border: 1px solid #333;
+        padding: 10px;
+        border-radius: 100px;
+        width: 80px;
+        display: inline-block;
+        cursor: pointer;
+      }
+      #start:checked ~ p {
+        animation-play-state: running;
+      }
+      #stop:checked ~ p {
+        animation-play-state: paused;
+      }
+
+      p {
+        margin: 150px auto;
+        width: 0;
+        height: 0;
+        border: 20px solid #000;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        animation-name: move;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+      @keyframes move {
+        from {
+          transform: translate(0);
+        }
+        to {
+          transform: translate(10px);
+        }
+        /* 0% 이랑 100% 으로도 가능. {}안에 서식은 동일. */
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="btn" id="start" checked />
+    <input type="radio" name="btn" id="stop" />
+    <p></p>
+    <label for="start">start</label>
+    <label for="stop">stop</label>
+  </body>
+</html>
