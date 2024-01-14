@@ -18,19 +18,21 @@
         color: #333;
       }
       .wrap {
+        width: 1224px;
         margin: 0 auto;
       }
       header {
-        height: 130px;
+        position: relative;
+        width: 100%;
+        height: 128px;
         background: url(images/colorbag/images/color_topbg.jpg);
       }
       header div.top {
-        width: 100%;
-        height: 92px;
-        text-align: center;
+        width: 245px;
+        margin: 0 auto;
       }
       .logo {
-        padding-top: 10px;
+        padding-top: 20px;
       }
       .topmenu ul {
         margin-top: -10px;
@@ -38,8 +40,125 @@
       .topmenu ul li {
         float: left;
       }
+      .menu {
+        position: absolute;
+        top: 92px;
+        left: 10%;
+      }
       .menu ul li {
         float: left;
+      }
+      .slider {
+        position: relative;
+        overflow: hidden;
+        width: 1000px;
+        height: 377px;
+        margin: 0 auto;
+      }
+      .slide {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 100%;
+        animation: slider 7.5s infinite ease-in-out;
+        background-repeat: no-repeat;
+      }
+      .slide:nth-child(1) {
+        background-image: url(images/colorbag/images/color_main1.jpg);
+        animation-delay: 0;
+      }
+      .slide:nth-child(2) {
+        background-image: url(images/colorbag/images/color_main3.jpg);
+        animation-delay: -2.5s;
+      }
+      .slide:nth-child(3) {
+        background-image: url(images/colorbag/images/color_main2.jpg);
+        animation-delay: -5s;
+      }
+
+      @keyframes slider {
+        0% {
+          transform: translateX(0);
+        }
+
+        26% {
+          transform: translateX(0);
+        }
+        33% {
+          transform: translateX(-100%);
+          animation-timing-function: step-end;
+        }
+        93% {
+          transform: translateX(100%);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .banner {
+        width: 1000px;
+        height: 33px;
+        background: rgb(144, 202, 200);
+
+        margin: 0 auto;
+      }
+      .banner p {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        color: #fff;
+        font-weight: 600;
+        padding-top: 6px;
+      }
+      .middle {
+        width: 1000px;
+        height: 1080px;
+        margin: 0 auto;
+      }
+      .middle ul li {
+        width: 25%;
+        float: left;
+        text-align: center;
+        color: #333;
+        font-size: 14px;
+      }
+      .middle ul li img {
+        padding-top: 30px;
+      }
+      .contents {
+        width: 1100px;
+        height: 100px;
+        margin: 0 0 0 100px;
+      }
+      .contents div {
+        float: left;
+        width: 33.33%;
+      }
+      .contents .notice table td {
+        font-size: 14px;
+        color: #666;
+      }
+      .contents .more ul li {
+        float: left;
+      }
+      footer ul {
+        width: 1055px;
+        margin: 30px 0 20px 100px;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-left: none;
+        border-right: none;
+      }
+      footer ul li {
+        line-height: 40px;
+        float: left;
+        color: #333;
+      }
+      footer div:last-child {
+        width: 1020px;
+        margin: 0 auto;
+        color: #333;
       }
     </style>
   </head>
@@ -167,6 +286,138 @@
           </ul>
         </div>
       </header>
+      <div class="slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+      <div class="banner">
+        <p>스퀘어 토드 숄더백(합성피혁)</p>
+        <p>사각 누빔 체인백(합성피혁)</p>
+        <p>사각 퀼팅 백(합성피혁)</p>
+      </div>
+      <div class="middle">
+        <ul>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro1.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro2.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro3.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro4.jpg" alt="" /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>사각 누빔 체인백<br />콤인디핑크/아이보리/에나멜 블랙</li>
+          <li>뱀피 라인 체인백<br />아이보리/블랙/브라운</li>
+          <li>골드 체인라인 백<br />합성피혁/블랙</li>
+          <li>밍크백<br />블랙/Free</li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro5.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro6.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro7.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro8.jpg" alt="" /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>스퀘어 토드 숄더백<br />핑크/레드/블랙/소라</li>
+          <li>레오파트 비비드 백<br />그레이/민트/핫핑크</li>
+          <li>마르젤라 클러치 백<br />블랙/아이보리/핑크/블랙</li>
+          <li>엠보싱클러치 백<br />골드/실버/블랙</li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"><img src="images/colorbag/images/pro9.jpg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/colorbag/images/pro10.jpg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/colorbag/images/pro11.jpg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/colorbag/images/pro12.jpg" alt=""
+            /></a>
+          </li>
+        </ul>
+        <ul>
+          <li>Free 숄더백<br />블랙/브라운</li>
+          <li>은장 장식 클러치백<br />블랙/아이보리/핑크/핫핑크</li>
+          <li>구슬 백팩<br />블랙/아이보리/핑크/핫핑크</li>
+          <li>숄더백<br />브라운/블랙/아이보리/핑크/핫핑크</li>
+        </ul>
+      </div>
+      <div class="contents">
+        <div class="notice">
+          <p><img src="images/colorbag/images/title_notice.jpg" alt="" /></p>
+          <table>
+            <tr>
+              <td>[2012-12-25] 사랑해요 고객님 이벤트에...</td>
+            </tr>
+            <tr>
+              <td>[2012-12-25] 신규회원 가입고객 이벤트 응모...</td>
+            </tr>
+            <tr>
+              <td>[2012-12-25] 후기를 남겨주시면 할인쿠폰...</td>
+            </tr>
+          </table>
+        </div>
+        <div class="more">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="images/colorbag/images/csbanner.jpg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/colorbag/images/csbanner-02.jpg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/colorbag/images/csbanner-03.jpg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="cs">
+          <img src="images/colorbag/images/cscenter.jpg" alt="" />
+        </div>
+      </div>
+      <footer>
+        <div>
+          <ul>
+            <li>회사소개</li>
+            <li>개인정보취급방침</li>
+            <li>서비스이용약관 이메일문의</li>
+          </ul>
+        </div>
+        <div>
+          <p>
+            상호:(주)디자인아트 플러스. 대표:임화연. 주소:서울구로구 구로동
+            에이스 하이앤드타워2차.
+          </p>
+          <p>copyrights ⓒ 2000 designartplus allrights reserved.</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
