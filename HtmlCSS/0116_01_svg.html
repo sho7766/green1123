@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      svg {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+      }
+      #mic path,
+      img {
+        transform: scale(20);
+      }
+      .st0 {
+        fill: #4285f4;
+      }
+      .st1 {
+        fill: #f4b400;
+      }
+      .st2 {
+        fill: #34a853;
+      }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <rect
+        x="100"
+        y="100"
+        width="100"
+        height="100"
+        fill="rgb(0, 0, 225)"
+        stroke-width="3"
+        stroke="rgb(0,0,0)"
+      />
+    </svg>
+    <svg>
+      <rect
+        x="100"
+        y="100"
+        width="100"
+        height="100"
+        fill="rgb(0, 0, 225)"
+        stroke-width="3"
+        stroke="rgb(0,0,0)"
+      />
+    </svg>
+    <svg>
+      <circle
+        cx="100"
+        cy="100"
+        r="100"
+        fill="rgb(0, 0, 225)"
+        stroke-width="3"
+        stroke="rgb(0,0,0)"
+      />
+      <g fill="rgb(0, 0, 225)" stroke-width="3" stroke="rgb(0,0,0)">
+        <circle cx="400" cy="400" r="100" />
+        <circle cx="200" cy="200" r="100" />
+        <circle cx="300" cy="300" r="100" />
+      </g>
+    </svg>
+    <svg>
+      <ellipse
+        cx="100"
+        cy="100"
+        rx="100"
+        ry="50"
+        fill="rgb(0, 0, 225)"
+        stroke-width="3"
+        stroke="rgb(0,0,0)"
+      />
+    </svg>
+    <svg>
+      <ellipse
+        style="
+          cx: 100;
+          cy: 100;
+          rx: 100;
+          ry: 50;
+          fill: rgb(0, 0, 225);
+          stroke-width: 3;
+          stroke: rgb(0, 0, 0);
+        "
+      />
+    </svg>
+    <svg>
+      <line
+        x1="50"
+        y1="50"
+        x2="200"
+        y2="200"
+        fill="rgb(0, 0, 225)"
+        stroke-width="50"
+        stroke="rgb(0,0,0)"
+        stroke-linecap="square"
+      />
+    </svg>
+    <svg>
+      <polyline
+        points="20,20 40,40 60,40 80,120"
+        fill="none"
+        stroke-width="3"
+        stroke="rgb(0,0,0)"
+      />
+    </svg>
+    <svg>
+      <polygon
+        points="0,50 50,0 450,0 500,50 500,450 450,500 50,500 0,450"
+        fill="none"
+        stroke-width="3"
+        stroke="rgb(0,0,0)"
+      />
+    </svg>
+    <svg>
+      <path
+        d="M250 0 L75 200 L225 200 Z"
+        fill="none"
+        stroke-width="3"
+        stroke="rgb(0,0,0)"
+      />
+    </svg>
+    <svg id="mic">
+      <path
+        class="st0"
+        d="M 12 14 L 12 14 c -1.7 0 -3 -1.3 -3 -3 V 5 c 0 -1.6 1.3 -3 3 -3 h
+      0 c 1.6 0 3 1.3 3 3 v 6 C 15 12.7 13.7 14 12 14 Z"
+      />
+      <path
+        class="st1"
+        d="M 5 11 h 2 c 0 0 0 1.9 1 3 l -1.5 1.4 c 0 0 -0.8 -0.9 -1.1 -2 C 5 12.3 5 11 5 11 Z"
+      />
+    </svg>
+    <img src="images/mic.gif" alt="mic" />
+  </body>
+</html>
