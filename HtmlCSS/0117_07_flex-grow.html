@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-basis/flex-grow</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex {
+        background: #ccc;
+        display: flex;
+        width: 500px;
+      }
+      .flex div {
+        background: #ddd;
+        /* width: 100px; */
+        /* flex-basis: 100px; */
+        border: 1px solid;
+      }
+      .flex div:first-child {
+        flex-grow: 1;
+      }
+      .flex div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .flex div:nth-child(3) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div>11111111111111</div>
+      <div>222</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>
