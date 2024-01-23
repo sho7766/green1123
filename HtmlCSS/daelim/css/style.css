@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: arial, "맑은 고딕", sans-serif;
+}
+.businessArea {
+  width: 1904px;
+  margin: 0 auto;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.business {
+  position: relative;
+}
+.business li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1904px;
+  height: 249px;
+  opacity: 0;
+  animation: hide 1s forwards;
+}
+.business li img {
+  position: absolute;
+  left: 1000px;
+  top: -220px;
+  animation: hide 1s forwards;
+}
+.business li:first-child {
+  background: url(../images/business_daelim2.png), url(../images/business01.png);
+}
+.business li:nth-child(2) {
+  background: url(../images/business_daelim2.png), url(../images/business02.png);
+}
+.business li:nth-child(3) {
+  background: url(../images/business_daelim2.png), url(../images/business03.png);
+}
+.business li:nth-child(4) {
+  background: url(../images/business_daelim2.png), url(../images/business04.png);
+}
+.business li:nth-child(5) {
+  background: url(../images/business_daelim2.png), url(../images/business05.png);
+}
+#one:checked ~ .businessArea .business li:first-child,
+#two:checked ~ .businessArea .business li:nth-child(2),
+#three:checked ~ .businessArea .business li:nth-child(3),
+#four:checked ~ .businessArea .business li:nth-child(4),
+#five:checked ~ .businessArea .business li:nth-child(5) {
+  animation: show 1s forwards;
+}
+#one:checked ~ .businessArea .business li:first-child img,
+#two:checked ~ .businessArea .business li:nth-child(2) img,
+#three:checked ~ .businessArea .business li:nth-child(3) img,
+#four:checked ~ .businessArea .business li:nth-child(4) img,
+#five:checked ~ .businessArea .business li:nth-child(5) img {
+  animation: show 1s 1s forwards;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
