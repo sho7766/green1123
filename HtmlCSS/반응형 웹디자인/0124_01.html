@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 바로 위의 구문이 반응형에 중요! 꼭 있어야함 -->
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        width: 100%;
+        height: 500px;
+        max-width: 1280px;
+        background: #def;
+        margin: 0 auto;
+      }
+      #wrap .main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #wrap .main .left {
+        background: dodgerblue;
+        flex-basis: 300px;
+      }
+      #wrap .main .center {
+        background: turquoise;
+        /* flex-grow: 1; */
+        /* width: calc(100% - 600px); */
+        flex-basis: calc(100% - 600px);
+      }
+      #wrap .main .right {
+        background: blue;
+        flex-basis: 300px;
+      }
+      @media screen and (max-width: 768px) {
+        #wrap .main .left {
+          flex-basis: 50%;
+        }
+        #wrap .main .center {
+          flex-basis: 50%;
+        }
+        #wrap .main .right {
+          flex-basis: 100%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        #wrap .main {
+          display: block;
+        }
+        #wrap .main > div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="main">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+      </div>
+    </div>
+  </body>
+</html>
