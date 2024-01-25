@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* with teacher */
+@font-face {
+  font-family: Pretendard;
+  src: url(../../../webfonts/Pretendard-Regular.woff) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, Helvetica, Pretendard, sans-serif;
+  font-weight: 400;
+}
+.ecoArea {
+  width: 100%;
+  padding-bottom: 200px;
+}
+.area {
+  width: 1420px;
+  height: 1563px;
+  margin: 0 auto;
+}
+.ecoText {
+  padding-top: 160px;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+}
+.ecoText .bold {
+  display: block;
+  font-weight: 700;
+  font-size: 56px;
+  margin: 10px 0 30px;
+}
+.ecoText p {
+  font-size: 24px;
+}
+.ecoImages {
+  width: 100%;
+  max-width: 1140px;
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin: 0 auto;
+}
+.ecoImages > a {
+  display: block;
+  border-radius: 20px;
+}
+.ecoImages > a.imgBlock_01 {
+  height: 640px;
+  background: url(../images/energy_1.jpg) center/cover no-repeat;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+.ecoImages > a.imgBlock_02 {
+  height: 480px;
+  background: url(../images/energy_2.jpg);
+}
+.ecoImages > a.imgBlock_03 {
+  height: 530px;
+  background: url(../images/energy_3.jpg);
+  margin-right: 100px;
+}
+@media screen and (max-width: 1280px) {
+  .ecoImages {
+    display: block;
+  }
+  .ecoImages > a {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .ecoImages > a.imgBlock_01 {
+    margin-top: 60px;
+  }
+  .ecoImages > a.imgBlock_01,
+  .ecoImages > a.imgBlock_02,
+  .ecoImages > a.imgBlock_03 {
+    height: 327px;
+  }
+  .ecoImages > a.imgBlock_03 {
+    margin-right: 0;
+    margin: 0 auto;
+  }
+}
