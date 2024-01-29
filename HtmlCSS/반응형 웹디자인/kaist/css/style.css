@@ -120,7 +120,7 @@ body {
   gap: 2.4rem;
   height: calc(800px + 2.4rem);
 }
-.sec03_wrap > li {
+.sec03_wrap li {
   position: relative;
   width: calc(25% - 1.2rem);
   height: calc(50% - 1.2rem);
@@ -128,6 +128,7 @@ body {
   border-radius: 20px;
 }
 .sec03_wrap .tit {
+  height: 40rem;
   border-radius: 0;
   padding-left: 6rem;
 }
@@ -142,10 +143,9 @@ body {
   font-size: 2rem;
   line-height: 1.65;
 }
-
 .sec03_wrap > li p img {
   width: 1.2rem;
-  margin: -0.1rem 0.8rem;
+  margin-left: 10px;
 }
 .sec03_wrap .tit p strong {
   font-family: monsterrat;

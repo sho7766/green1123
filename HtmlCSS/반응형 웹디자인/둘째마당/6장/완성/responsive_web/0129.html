@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset_2.css" />
+    <style>
+      #wrap {
+        width: 95%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+      }
+      #wrap > div {
+        width: 33.33%;
+        height: 100px;
+      }
+      #wrap > div:first-child {
+        background: #def;
+      }
+      #wrap > div:nth-child(2) {
+        background: dodgerblue;
+      }
+      #wrap > div:last-child {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div><a href="#">하나</a></div>
+      <div><a href="#">둘</a></div>
+      <div><a href="#">셋</a></div>
+    </div>
+  </body>
+</html>

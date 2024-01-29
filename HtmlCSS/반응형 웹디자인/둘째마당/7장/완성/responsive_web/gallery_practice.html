@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLAT DESIGN - 갤러리</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css" /> -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="images/icon/flat-design-touch.png"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      html {
+        font-size: 10px;
+      }
+      .wrap {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 1200px;
+      }
+      .menu_icon {
+        order: 1;
+        width: 100%;
+        background: #2ecc71;
+        border-bottom: 1px solid #39d67c;
+      }
+      .menu_icon ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+      }
+      .menu_icon ul li {
+        width: 25%;
+        padding: 15px 0;
+      }
+      header {
+        position: relative;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+      }
+      .logo {
+        position: relative;
+        width: 100%;
+        background: #2ecc71;
+      }
+      .logo h1 {
+        text-align: center;
+        font-size: 1.9rem;
+        padding: 2rem;
+      }
+      .logo h1 a {
+        color: #fff;
+      }
+      .menubar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      nav ul li {
+        width: 100%;
+        background: #2c3e50;
+        display: flex;
+      }
+      nav ul li a {
+        width: 80%;
+        color: #fff;
+        font-weight: bold;
+        padding: 2rem;
+        font-size: 1.5rem;
+      }
+      nav ul li span {
+        width: 20%;
+        display: block;
+        background: url(images/s_images/sub_menu_toggle_btn.png) center center
+          no-repeat;
+        text-indent: -9999px;
+      }
+      .gallery {
+        order: 3;
+        text-align: center;
+        background: #219af7;
+        padding: 4.8rem 0;
+      }
+      .gallery a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+      .gallery h2 a {
+        font-size: 2.1rem;
+      }
+      @media screen and (min-width: 768px) {
+        header {
+          flex-direction: row;
+        }
+        .logo h1 {
+          order: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 5rem;
+        }
+        .menubar {
+          top: 50%;
+        }
+        nav {
+          position: relative;
+          min-height: 5rem;
+        }
+        nav ul {
+          position: absolute;
+          top: 100%;
+          right: 0;
+        }
+        nav ul li {
+          width: 40%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="menu_icon">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="images/s_images/info_icon_01.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/s_images/info_icon_02.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/s_images/info_icon_03.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/s_images/info_icon_04.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <header>
+        <div class="logo">
+          <h1>
+            <a href="#"
+              >FLAT <br />
+              DESIGN</a
+            >
+          </h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">홈</a><span>d</span></li>
+            <li><a href="#">플랫 디자인이란?</a><span>d</span></li>
+            <li><a href="#">갤러리</a><span>d</span></li>
+            <li><a href="#">문의사항</a><span>d</span></li>
+          </ul>
+        </nav>
+        <a href="#" class="menubar"
+          ><img src="images/s_images/menu_toggle_btn.png" alt=""
+        /></a>
+      </header>
+      <div class="gallery">
+        <h2><a href="#">갤러리</a></h2>
+        <a href="#">홈/갤러리</a>
+      </div>
+    </div>
+  </body>
+</html>
