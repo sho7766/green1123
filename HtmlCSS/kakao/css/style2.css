@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.better_wrap {
+  width: 100%;
+  max-width: 1712px;
+  margin: 200px auto;
+}
+.better_wrap h1 {
+  font-size: 52px;
+  line-height: 78px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+.better_wrap h1::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/ico_tit_service.gif);
+  width: 78px;
+  height: 78px;
+  vertical-align: top;
+  background-size: 100%;
+  margin-right: 20px;
+}
+.better_wrap .inner {
+  margin-top: 60px;
+}
+.better_wrap .inner ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -16px 0 0 -16px;
+}
+.better_wrap .inner ul li {
+  background: #f3f3f3;
+  display: flex;
+  flex: 1 1 40%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 62px;
+  border-radius: 24px;
+  margin: 16px 0 0 16px;
+}
+.better_wrap .inner ul li strong {
+  font-size: 30px;
+}
+.item_service a {
+  margin-left: 5px;
+}
+.item_service a img {
+  width: 56px;
+  height: 56px;
+}
+.item_service a:last-of-type:hover {
+}
+.service_btn {
+  width: 316px;
+  height: 76px;
+  background: #f3f3f3;
+  border-radius: 38px;
+  margin: 60px auto;
+  text-align: center;
+  line-height: 76px;
+}
+.service_btn a {
+  font-size: 22px;
+}
+.service_btn a::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  background: #000;
+  border-radius: 50%;
+  background-image: url(../images/arrow-right-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  margin: -5px 0 0 5px;
+}
+.service_btn a::after:hover {
+}
+
+@media screen and (max-width: 1902px) {
+  .better_wrap {
+    width: 100%;
+    max-width: 1316px;
+    margin: 120px auto;
+  }
+  .better_wrap h1 {
+    font-size: 48px;
+    height: 72px;
+  }
+  .better_wrap .inner {
+    margin-top: 43px;
+  }
+  .better_wrap .inner ul li {
+    padding: 52px 42px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .better_wrap {
+    width: 100%;
+    max-width: 948px;
+    margin: 80px auto;
+  }
+  .better_wrap h1 {
+    height: 48px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .better_wrap h1::before {
+    width: 48px;
+    height: 48px;
+  }
+  .better_wrap .inner {
+    margin-top: 24px;
+  }
+  .better_wrap .inner ul {
+    margin: -12px 0 0 -12px;
+  }
+  .better_wrap .inner ul li {
+    padding: 32px 36px;
+    margin: 12px 0 0 12px;
+  }
+  .better_wrap .inner ul li strong {
+    font-size: 18px;
+  }
+  .item_service a {
+    margin-left: 2px;
+  }
+  .item_service a img {
+    width: 46px;
+    height: 46px;
+  }
+  .service_btn {
+    width: 280px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+  }
+  .service_btn a {
+    font-size: 15px;
+  }
+  .service_btn a::after {
+    width: 22px;
+    height: 22px;
+    background-size: 40%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .better_wrap {
+    width: 100%;
+    max-width: 712px;
+  }
+  .better_wrap .inner ul {
+    margin: -8px 0 0 -8px;
+  }
+  .better_wrap .inner ul li {
+    padding: 32px 24px;
+    margin: 8px 0 0 8px;
+    height: 110px;
+  }
+  .hide {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .better_wrap {
+    width: 100%;
+    max-width: 384px;
+  }
+  .better_wrap h1 {
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: -4px;
+  }
+  .better_wrap h1::before {
+    display: none;
+  }
+  .better_wrap .inner ul {
+    margin: -12px 0 0 -12px;
+  }
+  .better_wrap .inner ul li {
+    position: relative;
+    display: block;
+    width: calc(50% - 12px);
+    height: auto;
+    padding: 20px 20px 82px;
+    margin: 12px 0 0 12px;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+  .better_wrap .inner ul li strong {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .item_service {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+  .service_btn {
+    width: 384px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 30px;
+  }
+}
