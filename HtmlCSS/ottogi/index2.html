@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ::selection {
+        color: #000;
+        background-color: #ffed00;
+      }
+      .font_yellow::selection {
+        color: #ffed00;
+      }
+      .wrap {
+        position: relative;
+        width: 100%;
+        max-width: 1462px;
+        margin: 0 auto;
+        font-weight: 500;
+      }
+      h3 {
+        text-align: center;
+        margin-top: 100px;
+        font-size: 48px;
+      }
+      .one {
+        display: flex;
+        padding-top: 180px;
+      }
+      .svg1 {
+        position: absolute;
+        top: -30px;
+        left: 150px;
+        margin: 200px auto;
+        transform: scale(2);
+        z-index: 9;
+      }
+      .svg2 {
+        position: absolute;
+        top: 200px;
+        right: 150px;
+        margin: 200px auto;
+        transform: scale(1.5);
+        z-index: 9;
+      }
+      .txt {
+        width: 554px;
+        height: 500px;
+        padding: 97px 113px 0 0;
+      }
+      .txt h1 {
+        font-size: 48px;
+        letter-spacing: -4px;
+      }
+      .font_yellow {
+        -webkit-text-stroke: 1px #000;
+        color: #ffed00;
+        font-size: 50px;
+      }
+      .txt p {
+        font-size: 18px;
+        margin-top: 30px;
+      }
+      .txt a img {
+        margin-top: 30px;
+        width: 100px;
+        height: 30px;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(5px);
+        }
+      }
+      .txt a:hover img {
+        animation: move 0.5s ease-in-out infinite alternate;
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        width: 780px;
+        height: 500px;
+        margin-left: 128px;
+      }
+      .item .img_box {
+        width: 450px;
+        height: 500px;
+      }
+      .item .img_box .thumb {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .item .img_box .thumb img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .item1 .thumb {
+        border-radius: 200px;
+      }
+      .item .clipped {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .item .svg {
+        position: absolute;
+      }
+      .clipped.path1 {
+        clip-path: url(#my-clip-path);
+      }
+      .clipped.path2 {
+        clip-path: url(#my-clip-path2);
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .fade1 {
+        animation: fadeOut 3.5s ease-in-out 1.5s infinite alternate;
+      }
+      .fade2 {
+        opacity: 0;
+        animation: fadeIn 3.5s ease-in-out 1.5s infinite alternate;
+      }
+      .two {
+        position: relative;
+        display: flex;
+      }
+      .two .txt {
+        width: 690px;
+        height: 500px;
+        margin-left: 90px;
+        padding-top: 154px;
+      }
+      .three {
+        display: flex;
+      }
+      .three .txt {
+        padding: 194px 113px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h3>
+        인류 식생활을 향상시키는 <br />
+        글로벌 식품 기업
+      </h3>
+      <div class="one">
+        <dotlottie-player
+          class="svg1"
+          src="https://lottie.host/5766fa6a-ab0a-4e98-ad64-c0675ecae19c/CCOBM5IRLU.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <div class="item item1">
+          <div class="img_box">
+            <div class="thumb">
+              <img src="images/smile.jpg" alt="" class="fade1" />
+              <img src="images/curry.jpg" alt="" class="fade2" />
+            </div>
+          </div>
+        </div>
+        <div class="txt">
+          <h1>
+            보다 좋은 품질의 <br />
+            <span class="font_yellow">제품</span>을
+          </h1>
+          <p>
+            자동화된 생산라인과 첨단설비, 위생적인 환경을 구축하여 오뚜기의 1등
+            제품을 우수한 품질로 제공합니다.
+          </p>
+          <a href="#"><img src="images/btn_more.svg" alt="" /></a>
+        </div>
+      </div>
+      <div class="two">
+        <dotlottie-player
+          class="svg2"
+          src="https://lottie.host/18f446f7-416a-4ef8-9224-794dbbefc295/AI5hzUrvPF.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <div class="txt">
+          <h1>
+            보다 높은 영양을 위해<br />
+            <span class="font_yellow">1969년</span>부터 한결같이
+          </h1>
+          <p>
+            식품이 사람들의 심신 건강을 지키는 영양분이 될 수 있도록 과거부터
+            현재까지 이어온 그리고 앞으로도 계속 이어갈 오뚜기의 마음입니다.
+          </p>
+          <a href="#"><img src="images/btn_more.svg" alt="" /></a>
+        </div>
+        <div class="item item2">
+          <div class="img_box">
+            <div class="thumb">
+              <div class="clipped path1">
+                <img src="images/blackbean.jpg" alt="" class="fade1" />
+                <img src="images/smile2.jpg" alt="" class="fade2" />
+              </div>
+            </div>
+          </div>
+          <svg class="svg">
+            <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+              <path
+                d="M0.1,0.1C0.04,0.11,0,0.17,0,0.22l0.01,0.56c0,0.05,0.04,0.11,0.1,0.13l0.3,0.08C0.45,1,0.54,1,0.59,0.99l0.32-0.08
+            c0.05-0.01,0.1-0.07,0.1-0.13L1.01,0.23c0-0.05-0.04-0.11-0.1-0.13L0.59,0.02c-0.05-0.01-0.14-0.01-0.19,0L0.1,0.1z"
+              />
+            </clipPath>
+          </svg>
+        </div>
+      </div>
+      <div class="three">
+        <div class="item item3">
+          <div class="img_box">
+            <div class="thumb">
+              <div class="clipped path2">
+                <img src="images/smile3.jpg" alt="" class="fade1" />
+                <img src="images/sauce.jpg" alt="" class="fade2" />
+              </div>
+            </div>
+          </div>
+          <svg class="svg">
+            <clipPath id="my-clip-path2">
+              <path
+                d="M56.54546,96.22727c0,0,86.36363-56.81818,165.90909-55.68182s176.70454,46.02273,176.70454,46.02273  s23.29547,80.96387,22.15909,149.71387c-1.13635,68.75002-30.68182,169.03612-30.68182,169.03612S317.61365,432.60089,225,432.03271  S63.36364,397.93182,63.36364,397.93182S37.43889,282.02274,37.79546,236.28644  C38.17954,187.01978,56.54546,96.22727,56.54546,96.22727z"
+              />
+            </clipPath>
+          </svg>
+        </div>
+        <div class="txt">
+          <h1>
+            보다 앞선 <span class="font_yellow">식품개발</span> 에 <br />
+            노력하고 있습니다.
+          </h1>
+          <p>
+            오뚜기는 항상 앞장서서 창조의 기쁨과 보람을 경험하고 앞선 식품을우리
+            인류에게 선보입니다.
+          </p>
+          <a href="#"><img src="images/btn_more.svg" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
