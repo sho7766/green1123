@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function myFnc1() {
+        // document.getElementsByClassName("demo")[0].style.display = "block";
+        // document.getElementsByClassName("demo")[1].style.display = "none";
+        // document.getElementsByTagName("p")[0].style.display = "block";
+        // document.getElementsByTagName("p")[1].style.display = "none";
+        document.getElementsByName("fname")[0].style.display = "block";
+        document.getElementsByTagName("p")[1].style.display = "none";
+      }
+      function myFnc2() {
+        document.getElementsByClassName("demo")[0].style.display = "none";
+        document.getElementsByClassName("demo")[1].style.display = "block";
+      } //또는 function myFnc2() {document.getElementsByClassName("demo")[1].style.display = "none";document.getElementsByClassName("demo")[0].style.display = "block";}
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p class="demo" name="fname">demo1</p>
+    <p class="demo">demo2</p>
+    <button type="button" onclick="myFnc1()">demo1</button>
+    <button type="button" onclick="myFnc2()">demo2</button>
+  </body>
+</html>

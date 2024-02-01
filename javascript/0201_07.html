@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="example">하나</p>
+    <p class="example">둘</p>
+    <p class="example">셋</p>
+    <p class="example">넷</p>
+    <p class="example">다섯</p>
+    <div>
+      <p class="example">하나</p>
+      <p class="example">둘</p>
+      <p class="example">셋</p>
+      <p class="example">넷</p>
+      <p class="example">다섯</p>
+    </div>
+    <h3>제목</h3>
+    <h4>제목</h4>
+    <script>
+      // document.getElementsByClassName("example")[0].style.color = "red";
+      // document.querySelector(".example").style.color = "red";
+      // document.querySelector("div > p").style.color = "red";
+      document.querySelectorAll("div")[0].style.color = "red";
+      document.querySelector("h3,h4").style.color = "blue";
+    </script>
+  </body>
+</html>

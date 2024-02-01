@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p class="demo" name="fname">demo1</p>
+    <p class="demo">demo2</p>
+    <button type="button" onclick="myFnc1()">demo1</button>
+    <button type="button" onclick="myFnc2()">demo2</button>
+    <script>
+      document.getElementsByTagName("body")[0].innerHTML = "변경하였습니다.";
+      window.alert("경고입니다"); //-> window 객체 생략 가능
+      window.confirm("확인요망"); //-> window 객체 생략 가능
+      window.prompt("당신의 성별은?", "남"); //-> window 객체 생략 가능
+    </script>
+  </body>
+</html>
