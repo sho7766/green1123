@@ -42,9 +42,16 @@
     <div><img src="images/photo1.jpg" alt="photo" /></div>
     <button id="btn">이미지 보기/이미지 숨기기</button>
     <script>
-      document.getElementById("btn").onclick = function () {
+      // document.getElementById("btn").onclick = function () {
+      //   document.getElementsByTagName("img")[0].classList.toggle("on");
+      // }; -> .onclick으로 코딩
+
+      document.getElementById("btn").addEventListener("click", function () {
         document.getElementsByTagName("img")[0].classList.toggle("on");
-      };
+      });
+      // -> .addEventListener로 코딩
+
+      // -->결과는 같음
     </script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- with teacher -->
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -43,9 +44,8 @@
         background: #9cc;
         padding: 10px 0;
       }
-      label.off {
-        display: block;
-        background: #699;
+      label.on {
+        color: red;
       }
       label:hover {
         cursor: pointer;
@@ -70,17 +70,24 @@
       <img src="images/photo6.jpg" alt="photo6" />
     </p>
     <script>
+      function myFnc() {
+        menu.forEach(function (keys, items) {
+          keys.classList.remove("on");
+        });
+      }
+      document.getElementsByTagName("label")[0].classList.add("on");
       document.getElementsByTagName("img")[0].classList.add("on");
       let menu = document.querySelectorAll("label");
-      let hover = document.getElementsByTagName("label");
       let img = document.querySelectorAll("img");
       menu.forEach(function (keys, items) {
         keys.onclick = function () {
+          myFnc();
           console.log("items" + items);
           img.forEach(function (key, item) {
             key.classList.remove("on");
           });
           img[items].classList.add("on");
+          menu[items].classList.add("on");
         };
       });
     </script>

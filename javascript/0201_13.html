@@ -44,8 +44,8 @@
         padding: 10px 0;
       }
       label.off {
-        display: block;
-        background: #699;
+        color: #fff;
+        text-decoration: underline;
       }
       label:hover {
         cursor: pointer;
@@ -72,11 +72,13 @@
     <script>
       document.getElementsByTagName("img")[0].classList.add("on");
       let menu = document.querySelectorAll("label");
-      let hover = document.getElementsByTagName("label");
       let img = document.querySelectorAll("img");
       menu.forEach(function (keys, items) {
         keys.onclick = function () {
-          console.log("items" + items);
+          menu.forEach(function (ke, ite) {
+            ke.classList.remove("off");
+          });
+          menu[items].classList.add("off");
           img.forEach(function (key, item) {
             key.classList.remove("on");
           });
