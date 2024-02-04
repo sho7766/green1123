@@ -13,36 +13,38 @@
         <a href="#">Better Food</a>
         <a href="#">Better Life</a>
       </div>
-      <div class="Food">
-        <div class="contents">
-          <p>
-            롯데중앙연구소의 노력 끝에 탄생한 Better Food를 소개합니다. <br />
-            개발부터 출시까지, 그 이면에 숨겨진 생생한 이야기를 만나보세요.
-          </p>
-          <div class="image">
-            <ul>
-              <li>
-                <a href="#"><img src="images/drink.jpg" alt="drink" /></a>
-                <div class="hover">
-                  <p><img src="images/link-arrow.png" alt="" /></p>
-                </div>
-              </li>
-              <li>
-                <a href="#"><img src="images/cookkick.jpg" alt="drink" /></a>
-                <div class="hover">
-                  <p><img src="images/link-arrow.png" alt="cookkick" /></p>
-                </div>
-              </li>
-              <li>
-                <a href="#"><img src="images/snack.jpg" alt="snack" /></a>
-                <div class="hover">
-                  <p><img src="images/link-arrow.png" alt="arrow" /></p>
-                </div>
-              </li>
-            </ul>
+      <article>
+        <div class="Food">
+          <div class="contents">
+            <p>
+              롯데중앙연구소의 노력 끝에 탄생한 Better Food를 소개합니다. <br />
+              개발부터 출시까지, 그 이면에 숨겨진 생생한 이야기를 만나보세요.
+            </p>
+            <div class="image">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/drink.jpg" alt="drink" /></a>
+                  <div class="hover">
+                    <p><img src="images/link-arrow.png" alt="" /></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="#"><img src="images/cookkick.jpg" alt="drink" /></a>
+                  <div class="hover">
+                    <p><img src="images/link-arrow.png" alt="cookkick" /></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="#"><img src="images/snack.jpg" alt="snack" /></a>
+                  <div class="hover">
+                    <p><img src="images/link-arrow.png" alt="arrow" /></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </article>
       <section>
         <div class="contents">
           <p>
@@ -85,20 +87,25 @@
       </section>
     </div>
     <script>
-      document.getElementsByClassName("Food")[0].classList.add("on");
+      document.getElementsByTagName("article")[0].classList.add("on");
       document.getElementsByTagName("a")[0].classList.add("red");
       let menu = document.querySelectorAll("a");
-      let page = document.querySelectorAll("section");
+      let img1 = document.querySelectorAll("article");
+      let img2 = document.querySelectorAll("section");
+
       menu.forEach(function (keys, items) {
         keys.onclick = function () {
+          console.log("items" + items);
           menu.forEach(function (key, item) {
             key.classList.remove("red");
           });
           menu[items].classList.add("red");
-          page.forEach(function (a, b) {
-            a.classList.remove("on2");
+          img1.forEach(function (k, i) {
+            k.classList.toggle("on");
           });
-          page[items].classList.add("on2");
+          img2.forEach(function (a, b) {
+            a.classList.toggle("on2");
+          });
         };
       });
     </script>

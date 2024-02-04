@@ -74,6 +74,7 @@
       let text = document.querySelectorAll("p");
       menu.forEach(function (keys, items) {
         keys.onclick = function () {
+          console.log("items" + items);
           menu.forEach(function (ke, ite) {
             ke.classList.remove("red");
           });

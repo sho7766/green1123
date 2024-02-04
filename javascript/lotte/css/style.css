@@ -67,9 +67,6 @@ img.bg {
   transform: translate(-50%, -50%);
   font-size: 22px;
 }
-.txt.on {
-  display: block;
-}
 .txt h3 {
   display: none;
   font-size: 38px;
@@ -78,9 +75,9 @@ img.bg {
 .txt p {
   display: none;
 }
-p.on2 {
+h3.on {
   display: block;
 }
-h3.on {
+p.on2 {
   display: block;
 }

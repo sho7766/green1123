@@ -20,10 +20,10 @@ body {
   margin: 200px auto;
   text-align: center;
 }
-.Food {
+article {
   display: none;
 }
-.Food.on {
+article.on {
   display: block;
 }
 .btn {
@@ -80,12 +80,11 @@ ul li .hover {
   height: 430px;
   background: #da291c;
   text-align: center;
-  opacity: 0.9;
-  display: none;
+  opacity: 0;
   transition: 0.5s;
 }
 ul li:hover .hover {
-  display: block;
+  opacity: 0.9;
 }
 ul li .hover p {
   position: absolute;
@@ -95,7 +94,7 @@ ul li .hover p {
   display: block;
   width: 53px;
   height: 53px;
-  line-height: 45px;
+  line-height: 40px;
   background: #fff;
   border-radius: 50%;
 }
