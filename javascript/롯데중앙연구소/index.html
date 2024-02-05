@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>롯데중앙연구소</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="video">
+        <video autoplay muted loop>
+          <source src="images/company_bg2.mp4" type="video/mp4" />
+        </video>
+        <img src="images/section3-bg.jpg" alt="" />
+      </div>
+      <div class="inner">
+        <div class="menu">
+          <div class="tit">
+            <h2>FIELDS OF RESEARCH</h2>
+            <p>
+              유수의 전문가들로 구성된 연구진들이 다양한 분야에서 활약하고
+              있습니다.
+            </p>
+          </div>
+          <ul class="research">
+            <li>연구개발</li>
+            <li>기초연구</li>
+            <li>패키지연구</li>
+            <li>기술연구</li>
+            <li>안전관리</li>
+            <li>연구전략</li>
+          </ul>
+        </div>
+        <ul class="contents">
+          <li class="on">
+            <div class="desc">
+              <div class="left on">
+                <img src="images/research-img1.png" alt="" />
+              </div>
+              <div class="right on">
+                <h1>01</h1>
+                <h2>연구개발</h2>
+                <p>
+                  소비자 및 시장 니즈에 부합하는 <br />
+                  신제품을 개발하고 품질을 <br />개선합니다.
+                </p>
+                <a href="#"
+                  >Learn more
+                  <span><img src="images/link-arrow.png" alt="" /></span
+                ></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="desc">
+              <div class="left">
+                <img src="images/research-img2.png" alt="" />
+              </div>
+
+              <div class="right">
+                <h1>02</h1>
+                <h2>기초연구</h2>
+                <p>
+                  BIO 연구, 신소재 발굴 등 개발의<br />
+                  기틀을 마련하고<br />
+                  신규 솔루션을 개척합니다.
+                </p>
+                <a href="#"
+                  >Learn more
+                  <span><img src="images/link-arrow.png" alt="" /></span
+                ></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="desc">
+              <div class="left">
+                <img src="images/research-img3.png" alt="" />
+              </div>
+
+              <div class="right">
+                <h1>03</h1>
+                <h2>패키지연구</h2>
+                <p>
+                  제품 포장을 설계하고 디자인하여<br />
+                  품질 유지와 아이덴티티<br />
+                  강화를 이룹니다.
+                </p>
+                <a href="#"
+                  >Learn more
+                  <span><img src="images/link-arrow.png" alt="" /></span
+                ></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="desc">
+              <div class="left">
+                <img src="images/research-img4.png" alt="" />
+              </div>
+
+              <div class="right">
+                <h1>04</h1>
+                <h2>기술연구</h2>
+                <p>
+                  첨단 기술을 현장에 적용하여<br />
+                  식품 제조 방식의 <br />선진화를 이끕니다.
+                </p>
+                <a href="#"
+                  >Learn more
+                  <span><img src="images/link-arrow.png" alt="" /></span
+                ></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="desc">
+              <div class="left">
+                <img src="images/research-img5.png" alt="" />
+              </div>
+
+              <div class="right">
+                <h1>05</h1>
+                <h2>안전관리</h2>
+                <p>
+                  위생 관리와 위해 사고 예방을 통해 <br />롯데 식품 및 상품의<br />
+                  안전을 책임집니다.
+                </p>
+                <a href="#"
+                  >Learn more
+                  <span><img src="images/link-arrow.png" alt="" /></span
+                ></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="desc">
+              <div class="left">
+                <img src="images/research-img6.png" alt="" />
+              </div>
+              <div class="right">
+                <h1>06</h1>
+                <h2>연구전략</h2>
+                <p>
+                  진행 방향을 설계하고 <br />실질적 연구활동을<br />
+                  지원합니다.
+                </p>
+                <a href="#"
+                  >Learn more
+                  <span><img src="images/link-arrow.png" alt="" /></span
+                ></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".research li").classList.add("on");
+      // document.querySelector(".contents li").classList.add("on");
+
+      let menu = document.querySelectorAll(".research li");
+      let con = document.querySelectorAll(".contents li");
+      function myfnc() {
+        menu.forEach(function (o, i) {
+          o.classList.remove("on");
+        });
+        con.forEach(function (o, i) {
+          o.querySelector(".left").classList.remove("on");
+          o.querySelector(".right").classList.remove("on");
+        });
+      }
+      menu.forEach(function (o, i) {
+        console.log(i);
+        o.onclick = function () {
+          myfnc();
+          con.forEach(function (keys, item) {
+            console.log(keys);
+            keys.classList.remove("on");
+          });
+          menu[i].classList.add("on");
+          con[i].classList.add("on");
+          con[i].querySelector(".left").classList.add("on");
+          con[i].querySelector(".right").classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .btn {
+        display: flex;
+      }
+      .btn p {
+        width: 25%;
+        line-height: 50px;
+        text-align: center;
+      }
+      .btn p:first-child.on {
+        background: red;
+        color: #fff;
+      }
+      .btn p:nth-child(2).on2 {
+        background: blue;
+        color: #fff;
+      }
+      .btn p:nth-child(3).on3 {
+        background: green;
+        color: #fff;
+      }
+      .btn p:nth-child(4).on4 {
+        background: yellow;
+        color: #fff;
+      }
+      .con {
+        position: relative;
+      }
+      .con li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        color: #fff;
+        /* display: none; */
+        text-align: center;
+        line-height: 300px;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .con li:first-child {
+        background: red;
+      }
+      .con li:nth-child(2) {
+        background: blue;
+      }
+      .con li:nth-child(3) {
+        background: green;
+      }
+      .con li:nth-child(4) {
+        background: yellow;
+      }
+      .con li.on {
+        display: block;
+        height: 300px;
+      }
+      p {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      <p>하나</p>
+      <p>둘</p>
+      <p>셋</p>
+      <p>넷</p>
+    </div>
+    <ul class="con">
+      <li>하나</li>
+      <li>둘</li>
+      <li>셋</li>
+      <li>넷</li>
+    </ul>
+    <script>
+      document.querySelector(".con li").classList.add("on");
+      document.querySelector(".btn p").classList.add("on");
+      let btn = document.querySelectorAll(".btn p");
+      let con = document.querySelectorAll(".con li");
+      function myfnc() {
+        btn.forEach(function (a, b) {
+          a.classList.remove("on");
+        });
+      }
+      btn.forEach(function (a, b) {
+        // console.log(a);
+        // console.log(b);
+
+        // a.onclick = function () {
+        a.addEventListener("mouseenter", function () {
+          // myfnc();
+          // console.log(a);
+          console.log(b);
+          con.forEach(function (c, d) {
+            // console.log(c);
+            // console.log(d);
+            c.classList.remove("on");
+          });
+          btn[b].classList.add("on");
+          btn[b].classList.add("on2");
+          btn[b].classList.add("on3");
+          btn[b].classList.add("on4");
+          con[b].classList.add("on");
+        });
+      });
+    </script>
+  </body>
+</html>
