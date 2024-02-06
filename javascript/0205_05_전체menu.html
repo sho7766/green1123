@@ -132,7 +132,7 @@
     <div class="visual">
       <img src="images/photo1.jpg" alt="" />
     </div>
-    <script>
+    <!-- <script>
       let menu = document.querySelectorAll(".gnb ul li");
       let sub = document.querySelector(".lnb");
       // let subm = document.querySelectorAll(".lnb ul li");
@@ -165,6 +165,33 @@
         o.onmouseleave = function () {
           // this.classList.remove("on");
           subm.classList.remove("on");
+          menu[i].classList.remove("on");
+        };
+      });
+    </script> -->
+    <script>
+      let menu = document.querySelectorAll(".gnb ul li");
+      let subMenu = document.querySelector(".lnb");
+      let sub = document.querySelectorAll(".lnb .sub>ul>li");
+      menu.forEach(function (o, i) {
+        o.onmouseenter = function () {
+          //선택한 개체에 마우스 오버시
+          document.querySelector(".lnb").classList.add("on");
+        };
+        o.onmouseleave = function () {
+          //선택한 개체에 마우스 이탈시
+          document.querySelector(".lnb").classList.remove("on");
+        };
+      });
+      sub.forEach(function (o, i) {
+        o.onmouseenter = function () {
+          //선택한 개체에 마우스 오버시
+          subMenu.classList.add("on");
+          menu[i].classList.add("on");
+        };
+        o.onmouseleave = function () {
+          //선택한 개체에 마우스 오버시
+          subMenu.classList.remove("on");
           menu[i].classList.remove("on");
         };
       });
