@@ -98,99 +98,7 @@ body {
 .topmain .visual_btn img {
   width: 200px;
 }
-.topmain .icon ul {
-  position: fixed;
-  right: 24px;
-  bottom: 14%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
-.topmain .icon ul li {
-  width: 56px;
-  height: 56px;
-}
-.topmain .icon ul li a {
-  width: 56px;
-  height: 56px;
-}
-.topmain .icon ul li:first-child a {
-  display: inline-block;
-  background: #fae100 url(../images/ico_kakao_quick.png) no-repeat center center;
-  background-size: 32px;
-  border-radius: 50%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.topmain .icon ul li:nth-child(2) a {
-  display: inline-block;
-  position: relative;
-  background: #222 url(../images/ico_store.svg) no-repeat center center;
-  border-radius: 50%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.topmain .icon ul li:nth-child(3) a {
-  display: inline-block;
-  background: #222 url(../images/ico_arrowT.svg) no-repeat center center;
-  border-radius: 50%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.topmain .qrbox {
-  padding-right: 70px;
-  position: absolute;
-  top: -30px;
-  left: -200px;
-  z-index: -1;
-  font-size: 12px;
-}
-.topmain .qrbox .mainqr {
-  width: 142px;
-  background: #fff;
-  padding: 24px 19px;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-.topmain .qrbox .mainqr img.qr {
-  object-fit: cover;
-  max-width: 100%;
-  width: 142px;
-}
-.topmain .qrbox .mainqr p.txt {
-  margin-top: 8px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 22px;
-}
-.topmain .qrbox .mainqr::before {
-  content: "";
-  position: absolute;
-  /* display: block; */
-  top: calc(50% - 8px);
-  left: 181px;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-left-color: rgba(0, 0, 0, 0.1);
-}
-.topmain .qrbox .mainqr::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 10px);
-  left: 180px;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-left-color: #fff;
-}
-.topmain .qrbox .mainqr button {
-  border: none;
-  position: absolute;
-  top: 8px;
-  left: 145px;
-  background: #fff;
-  cursor: pointer;
-}
+
 .lush_app {
   width: 100%;
   height: 669px;
@@ -397,6 +305,7 @@ body {
   margin-top: 8px;
   letter-spacing: -1px;
 }
+
 .lush_share {
   width: 1224px;
   margin: 155px auto;
@@ -419,9 +328,13 @@ body {
 .lush_share .inner .share_txt h2 {
   font-size: 18px;
   margin-bottom: 32px;
+  font-weight: 700;
 }
 .lush_share .inner .share_txt p {
   font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -2px;
 }
 .lush_share .inner .share_txt .share_btn {
   border: 1px solid #000;
@@ -439,4 +352,265 @@ body {
 }
 .share_btn:hover a {
   color: #fff;
+}
+.lush_category {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 176px;
+  margin-left: calc(50% - 612px);
+}
+.lush_shop {
+  margin: 176px auto 0;
+}
+.lush_shop .inner {
+  width: 1224px;
+  margin: 0 auto;
+  padding-left: 208px;
+  display: flex;
+  gap: 0 64px;
+}
+.lush_shop .inner .share_img {
+  width: 808px;
+  height: 560px;
+  overflow: hidden;
+}
+.lush_shop .inner img {
+  transform: translate3d(0px, 12px, 0px) scale(1.3);
+  max-width: 100%;
+}
+.lush_shop .inner .share_txt h2 {
+  font-size: 18px;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+.lush_shop .inner .share_txt p {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -2px;
+}
+.lush_shop .inner .share_txt .shop_btn {
+  border: 1px solid #000;
+  text-align: center;
+  width: 218px;
+  margin-top: 48px;
+  cursor: pointer;
+}
+.shop_btn a {
+  font-size: 18px;
+  line-height: 60px;
+}
+.shop_btn:hover {
+  background: #000;
+}
+.shop_btn:hover a {
+  color: #fff;
+}
+.lush_value {
+  width: 100%;
+  height: 720px;
+  margin: 176px auto 0;
+  display: flex;
+}
+.lush_value ul {
+  margin: 133px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 94px 177px;
+}
+.lush_value ul li {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgb(34, 34, 34);
+}
+.lush_value ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.lush_value ul li:first-child a {
+  background: url(../images/ico_main_value01.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+}
+.lush_value ul li:nth-child(2) a {
+  background: url(../images/ico_main_value02.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+}
+.lush_value ul li:nth-child(3) a {
+  background: url(../images/ico_main_value03.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+}
+.lush_value ul li:nth-child(4) a {
+  background: url(../images/ico_main_value04.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+}
+.lush_value ul li:nth-child(5) a {
+  background: url(../images/ico_main_value05.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+}
+.lush_value ul li:last-child a {
+  background: url(../images/ico_main_value06.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+}
+footer {
+  padding: 80px 0;
+  background-color: #000;
+}
+footer .inner {
+  width: 1224px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0 30px;
+  border: 1px solid #fff;
+  font-weight: 500;
+}
+footer .inner .footer_info {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer_info .tit {
+  color: #fff;
+  font-weight: 700;
+}
+.down_app ul {
+  margin-top: 16px;
+}
+.down_app ul li {
+  width: 128px;
+}
+.down_app ul li:last-child {
+  margin-top: 8px;
+}
+.down_app ul li a img {
+  width: 128px;
+}
+.cs {
+  margin-left: 80px;
+}
+.cs a {
+  color: #fff;
+}
+.cs a:hover {
+  text-decoration: underline;
+}
+.cs ul {
+  margin-top: 24px;
+  font-size: 14px;
+}
+.cs ul li {
+  color: #fff;
+}
+.cstalk::after {
+  content: "";
+  width: 16px;
+  height: 14px;
+  background: url(../images/ico_talk.svg) no-repeat;
+  display: inline-block;
+  margin-left: 5px;
+}
+.com_gift {
+  max-width: 24px;
+}
+.quickmenu ul {
+  position: fixed;
+  right: 24px;
+  bottom: 14%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.quickmenu ul li {
+  width: 56px;
+  height: 56px;
+}
+.quickmenu ul li a {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.quickmenu ul li:first-child a {
+  background: #fae100 url(../images/ico_kakao_quick.png) no-repeat center center;
+  background-size: 32px;
+}
+.quickmenu ul li:nth-child(2) a {
+  position: relative;
+  background: #222 url(../images/ico_store.svg) no-repeat center center;
+}
+.quickmenu ul li:nth-child(3) a {
+  background: #222 url(../images/ico_arrowT.svg) no-repeat center center;
+}
+.qrbox {
+  padding-right: 70px;
+  position: absolute;
+  top: -30px;
+  left: -200px;
+  font-size: 12px;
+  z-index: -1;
+}
+.qrbox .mainqr {
+  width: 142px;
+  background: #fff;
+  padding: 24px 19px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.qrbox .mainqr img.qr {
+  object-fit: cover;
+  max-width: 100%;
+  width: 142px;
+}
+.qrbox .mainqr p.txt {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+.qrbox .mainqr::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 181px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: rgba(0, 0, 0, 0.1);
+}
+.qrbox .mainqr::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 180px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #fff;
+}
+.qrbox .mainqr button {
+  border: none;
+  position: absolute;
+  top: 8px;
+  left: 145px;
+  background: #fff;
+  cursor: pointer;
 }

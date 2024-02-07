@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 20;
+      a = 20;
+      document.write("a : " + a + "<br>");
+      document.write("a + b : " + (a + b) + "<br>");
+      document.write("a + b : ", a + b, "<br>");
+      document.write("a : " + (a - b) + "<br>");
+      document.write("a : " + a * b + "<br>");
+      document.write("a : " + a / b + "<br>");
+      document.write("a : " + (a % b) + "<br>");
+      document.write("a : " + a ** b + "<br>");
+
+      let c = 20;
+      document.write("c= c+1 : ", (c = c + 1), "<br>");
+      document.write("c= c+1 : ", (c += 1), "<br>");
+      document.write("c= c-1 : ", (c -= 1), "<br>");
+      document.write("c= c*1 : ", (c *= 1), "<br>");
+      document.write("c= c/1 : ", (c /= 1), "<br>");
+      document.write("c= c%1 : ", (c %= 1), "<br>");
+      document.write("++c : ", ++c, "<br>");
+      // 전위연산 c=c+1 c+=1 ++C -> 다같은값 **짱중요!!!!!!!!!!!
+      document.write("c : ", c, "<br>");
+      document.write("c++ : " + c++, "<br>"); //후위연산
+      //c를 우선출력한 후에 덧셈
+      document.write("c : " + c, "<br>");
+    </script>
+  </body>
+</html>

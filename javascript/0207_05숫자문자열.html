@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = "123";
+      let b = 123;
+      let c = Number(a);
+      let d = String(b);
+      let e = Number("");
+      let f = Number("문자");
+      let g = parseFloat(10.333);
+      let h = parseFloat("10.333");
+
+      document.write("문자123 : " + Number(a) + "<br>");
+      document.write("숫자123 : " + String(b) + "<br>");
+      document.write("c의 type : " + typeof c + "<br>");
+      document.write("d의 type : " + typeof d + "<br>");
+      document.write("e : " + e + "<br>");
+      document.write("f : " + f + "<br>");
+      document.write("parseFloat() : " + parseFloat(10.33) + "<br>");
+      document.write("parseFloat() : " + parseFloat("10.33") + "<br>");
+      document.write("parseFloat() : " + typeof g + "<br>");
+      document.write("parseFloat() : " + typeof h + "<br>");
+
+      let int1 = parseInt(10.333);
+      let int2 = parseInt("10.333");
+      document.write("int1 : " + typeof int1 + int1 + "<br>");
+      document.write("int2 : " + typeof int2 + int2 + "<br>");
+
+      // let y = "5"; // y is a string
+      let y = "abc";
+      let x = +y; // x is a number
+      document.write(x + "<br>");
+      document.write("123" + "123" + "<br>");
+      document.write(String(123) + String(123) + "<br>");
+      document.write(String(123 + 123) + "<br>");
+      document.write((123).toString() + "<br>");
+      document.write((123 + 123).toString() + "<br>");
+
+      let num1 = 5.345678;
+      let num2 = 10000000;
+      document.write(num1.toExponential(3) + "<br>");
+      document.write(num1.toPrecision(3) + "<br>");
+      document.write(num1.toFixed(3) + "<br>");
+
+      document.write(num2.toExponential(3) + "<br>");
+      document.write(num2.toPrecision(3) + "<br>");
+      document.write(num2.toFixed(3) + "<br>");
+    </script>
+  </body>
+</html>
