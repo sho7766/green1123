@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>red</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>purple</p>
+    <script>
+      // const color = ["red", "blue", "green", "purple"];
+      // let bg = document.querySelectorAll("p");
+      // bg.forEach(function (value, index) {
+      //   value.style.backgroundColor = color[index];
+      // });
+      // document.querySelector("p").style.backgroundColor = color[0];
+
+      const photo = ["photo1", "photo2", "photo3", "photo4"];
+      let bg = document.querySelectorAll("p");
+      bg.forEach(function (value, index) {
+        // value.style.backgroundImage = "url(images/" + photo[index] + ".jpg)";
+        value.style.backgroundImage =
+          "url(images/photo" + (index + 1) + ".jpg)";
+      });
+      // document.querySelector("p").style.backgroundColor = color[0];
+    </script>
+  </body>
+</html>

@@ -412,6 +412,7 @@ body {
   height: 720px;
   margin: 176px auto 0;
   display: flex;
+  background: #fafafa center/cover no-repeat;
 }
 .lush_value ul {
   margin: 133px auto;
@@ -425,48 +426,28 @@ body {
   height: 180px;
   border-radius: 50%;
   cursor: pointer;
+  background: rgb(34, 34, 34) center no-repeat;
+}
+.lush_value ul li.on {
   background: rgb(34, 34, 34);
 }
-.lush_value ul li a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+.lush_value ul li:first-child {
+  background-image: url(../images/ico_main_value01.svg);
 }
-.lush_value ul li:first-child a {
-  background: url(../images/ico_main_value01.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 55%;
+.lush_value ul li:nth-child(2) {
+  background-image: url(../images/ico_main_value02.svg);
 }
-.lush_value ul li:nth-child(2) a {
-  background: url(../images/ico_main_value02.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 55%;
+.lush_value ul li:nth-child(3) {
+  background-image: url(../images/ico_main_value03.svg);
 }
-.lush_value ul li:nth-child(3) a {
-  background: url(../images/ico_main_value03.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 55%;
+.lush_value ul li:nth-child(4) {
+  background-image: url(../images/ico_main_value04.svg);
 }
-.lush_value ul li:nth-child(4) a {
-  background: url(../images/ico_main_value04.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 55%;
+.lush_value ul li:nth-child(5) {
+  background-image: url(../images/ico_main_value05.svg);
 }
-.lush_value ul li:nth-child(5) a {
-  background: url(../images/ico_main_value05.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 55%;
-}
-.lush_value ul li:last-child a {
-  background: url(../images/ico_main_value06.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 55%;
+.lush_value ul li:last-child {
+  background-image: url(../images/ico_main_value06.svg);
 }
 footer {
   padding: 80px 0;
@@ -477,8 +458,8 @@ footer .inner {
   margin: 0 auto;
   display: flex;
   gap: 0 30px;
-  border: 1px solid #fff;
   font-weight: 500;
+  color: #fff;
 }
 footer .inner .footer_info {
   display: flex;
@@ -486,7 +467,6 @@ footer .inner .footer_info {
   flex-wrap: wrap;
 }
 .footer_info .tit {
-  color: #fff;
   font-weight: 700;
 }
 .down_app ul {
@@ -514,9 +494,6 @@ footer .inner .footer_info {
   margin-top: 24px;
   font-size: 14px;
 }
-.cs ul li {
-  color: #fff;
-}
 .cstalk::after {
   content: "";
   width: 16px;
@@ -526,8 +503,62 @@ footer .inner .footer_info {
   margin-left: 5px;
 }
 .com_gift {
-  max-width: 24px;
+  margin-left: 24px;
+  font-weight: 400;
 }
+.com_gift p {
+  font-weight: 700;
+}
+.com_gift ul li:first-child:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.com_gift ul li a {
+  color: #fff;
+}
+.foot_menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 60px;
+}
+.foot_menu .address {
+  color: #a7a7a7;
+  font-size: 14px;
+}
+.foot_menu .address p {
+  line-height: 1.6;
+}
+.foot_menu .copyright {
+  margin-top: 16px;
+}
+.foot_menu .sns {
+  margin-top: 32px;
+}
+
+.foot_menu .sns ul li {
+  display: inline-block;
+  margin-left: 7px;
+}
+.foot_menu .sns ul li:first-child {
+  margin-left: 0;
+}
+.foot_menu .menu {
+  font-weight: 400;
+}
+.foot_menu .menu li {
+  padding-top: 5px;
+}
+.foot_menu .menu li:first-child {
+  padding-top: 0;
+}
+.foot_menu .menu a {
+  color: #fff;
+}
+
+.foot_menu .menu li:first-child a {
+  color: #fae100;
+}
+
 .quickmenu ul {
   position: fixed;
   right: 24px;

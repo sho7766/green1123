@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //string : 자바스크립트에서 문자열을 다루는 객체
+
+      let str = new String("nice M to meet you");
+      let str1 = "nice to meet you";
+      document.write(str.search("m") + "<br>");
+      document.write(str.search(/m/i) + "<br>");
+
+      let text =
+        "Mr. Blue has a blue house and painting the wall with blue paint";
+      document.write(text.search(/blue/) + "<br>");
+      document.write(text.search(/blue/) + "<br>");
+
+      document.write(str.indexOf("to") + "<br>");
+      document.write(str.indexOf("tot") + "<br>");
+
+      document.write(str.lastIndexOf("to") + "<br>");
+
+      document.write(text.replace("blue", "red") + "<br>");
+      document.write(text.replaceAll("blue", "red") + "<br>");
+
+      document.write(text.replace(/blue/i, "red") + "<br>");
+      document.write(text.replaceAll(/blue/gi, "red") + "<br>");
+
+      document.write(text.replace(/blue/g, "red") + "<br>");
+      document.write(text.replace(/blue/gi, "red") + "<br>");
+
+      document.write(str.match("to") + "<br>");
+      document.write(str.charAt(3) + "<br>");
+      document.write(str.substr(2, 2) + "<br>");
+      document.write("str음수 : " + str.substr(-2, 2) + "<br>");
+      //음수인수는 앞에서는 순번 0,1,2 뒤에서는 순번 1,2,3
+      document.write(str.substring(0) + "<br>");
+      document.write(str.substring(0, 3) + "<br>");
+      document.write("substring음수 : " + str.substring(-2, 2) + "<br>");
+      //substring()인수값에 음수가 입력되면 0으로 처리
+      let txt = "123456 - 123456";
+      document.write(txt.substr(-7), "******" + "<br>");
+      document.write(txt.substring(8) + "<br>");
+      document.write(txt.substring(8), "******" + "<br>");
+      document.write(txt.length + "<br>");
+      document.write(txt.replace(txt.length - 6), "******" + "<br>");
+      document.write(txt.substring(0, txt.length - 6), "******" + "<br>");
+      document.write(txt.substr(0, txt.length - 6), "******" + "<br>");
+
+      let per_num = "123456-123456";
+      document.write(per_num.slice(0, 7).padEnd(per_num.length, "*"));
+
+      let result = "Hello world!";
+      document.write(result.slice(0, 3) + "<br>");
+      document.write(result.slice(0, 5) + "<br>");
+      document.write(result.slice(6, 11) + "<br>");
+      document.write(result.slice(3) + "<br>");
+      document.write(result.slice(-1) + "<br>");
+      document.write(result.slice(-3, -1) + "<br>");
+      document.write(result.slice(-6, -1) + "<br>");
+
+      document.write(result.toUpperCase() + "<br>");
+      document.write(result.toLocaleLowerCase() + "<br>");
+
+      let hello = "Hello World";
+      let result1 = hello.repeat(2);
+      document.write(result1 + "<br>");
+
+      let text2 = "How are you doing today?";
+      document.write(text2.split(" ", 2) + "<br>");
+      document.write(text2.split(" ").length + "<br>");
+      document.write(text2.split(" ")[0] + "<br>");
+      document.write(text2.split(" ")[1] + "<br>");
+      document.write(text2.split(" ")[2] + "<br>");
+      document.write(text2.split(" ")[3] + "<br>");
+      document.write(text2.split(" ")[4] + "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cars = ["Saab", "Volvo", "BMW"];
+      cars[3] = 1000000;
+      cars[4] = "black";
+      cars[5] = true;
+      console.log(cars);
+
+      const arr1 = [];
+      arr1[0] = "국어";
+      arr1[1] = "수학";
+      arr1[2] = "영어";
+
+      const arr2 = new Array();
+      arr2[0] = "국어";
+      arr2[1] = "수학";
+      arr2[2] = "영어";
+
+      const arr3 = new Array("하나", "둘", "셋", 1, 2, 3);
+
+      const student = ["홍길동", 80, 90, 100];
+      student[4] = function () {
+        return student[1] + student[2] + student[3];
+      };
+      student[5] = function () {
+        document.write(
+          student[0] + "님의 총점은" + student[4]() + "점 입니다."
+        );
+      };
+      student[5]();
+    </script>
+  </body>
+</html>
