@@ -426,10 +426,10 @@ body {
   height: 180px;
   border-radius: 50%;
   cursor: pointer;
-  background: rgb(34, 34, 34) center no-repeat;
+  background: none center no-repeat;
 }
 .lush_value ul li.on {
-  background: rgb(34, 34, 34);
+  background: rgb(34, 34, 34) center no-repeat;
 }
 .lush_value ul li:first-child {
   background-image: url(../images/ico_main_value01.svg);

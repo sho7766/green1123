@@ -21,20 +21,7 @@
         line-height: 50px;
         text-align: center;
       }
-      .btn p:first-child.on {
-        background: red;
-        color: #fff;
-      }
-      .btn p:nth-child(2).on2 {
-        background: blue;
-        color: #fff;
-      }
-      .btn p:nth-child(3).on3 {
-        background: green;
-        color: #fff;
-      }
-      .btn p:nth-child(4).on4 {
-        background: yellow;
+      .btn p.on {
         color: #fff;
       }
       .con {
@@ -42,8 +29,8 @@
       }
       .con li {
         position: absolute;
-        top: 0;
         left: 0;
+        top: 0;
         width: 100%;
         height: 0;
         color: #fff;
@@ -51,26 +38,26 @@
         text-align: center;
         line-height: 300px;
         overflow: hidden;
-        transition: 0.5s;
+        transition: height 0.5s;
       }
+      .btn p:first-child,
       .con li:first-child {
         background: red;
       }
+      .btn p:nth-child(2),
       .con li:nth-child(2) {
         background: blue;
       }
+      .btn p:nth-child(3),
       .con li:nth-child(3) {
         background: green;
       }
-      .con li:nth-child(4) {
+      .btn p:last-child,
+      .con li:last-child {
         background: yellow;
       }
       .con li.on {
-        display: block;
         height: 300px;
-      }
-      p {
-        cursor: pointer;
       }
     </style>
   </head>
@@ -88,34 +75,31 @@
       <li>넷</li>
     </ul>
     <script>
-      document.querySelector(".con li").classList.add("on");
       document.querySelector(".btn p").classList.add("on");
+      document.querySelector(".con li").classList.add("on");
       let btn = document.querySelectorAll(".btn p");
       let con = document.querySelectorAll(".con li");
       function myfnc() {
-        btn.forEach(function (a, b) {
-          a.classList.remove("on");
+        btn.forEach(function (o, i) {
+          o.classList.remove("on");
         });
       }
-      btn.forEach(function (a, b) {
-        // console.log(a);
-        // console.log(b);
+      btn.forEach(function (o, i) {
+        //console.log(o);
+        //console.log(i);
 
-        // a.onclick = function () {
-        a.addEventListener("mouseenter", function () {
-          // myfnc();
-          // console.log(a);
-          console.log(b);
-          con.forEach(function (c, d) {
-            // console.log(c);
-            // console.log(d);
-            c.classList.remove("on");
+        //o.onmouseenter = function () {
+        o.addEventListener("mouseenter", function () {
+          myfnc();
+          //console.log(o);
+          console.log(i);
+          con.forEach(function (keys, item) {
+            //console.log(keys);
+            //console.log(item);
+            keys.classList.remove("on");
           });
-          btn[b].classList.add("on");
-          btn[b].classList.add("on2");
-          btn[b].classList.add("on3");
-          btn[b].classList.add("on4");
-          con[b].classList.add("on");
+          btn[i].classList.add("on");
+          con[i].classList.add("on");
         });
       });
     </script>
