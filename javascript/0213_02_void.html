@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="javascript:void(0);">Useless link</a>
+    <p id="demo">
+      <a href="#">Usable link</a>
+    </p>
+    <script>
+      let menu = document.getElementById("demo").querySelector("a");
+      menu.onclick = function (event) {
+        event.preventDefault();
+        this.style.color = "red";
+        location.href = "http://www.naver.com";
+      };
+    </script>
+  </body>
+</html>

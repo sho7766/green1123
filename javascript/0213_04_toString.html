@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ----toString()
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(typeof fruits + "<br>");
+      document.write(typeof fruits.toString() + "<br>");
+      document.write(fruits.toString() + "<br>");
+      document.write(fruits.toString().length + "<br>");
+      document.write(fruits.length + "<br>");
+      //---------join()
+      document.write(fruits.join(" * ") + "<br>");
+      document.write(fruits.join(" * ").length + "<br>");
+      // --------pop()
+      fruits.pop();
+      document.write(fruits + "<br>");
+      document.write(`${fruits} <br>`);
+
+      // ------push()
+      fruits.push("Kiwi");
+      document.write(fruits + "<br>");
+
+      // -----shift()
+      document.write(`${fruits} <br>`);
+      // ----unshift()
+      fruits.unshift("Lemon" + "<br>");
+
+      // ---length()
+      let length = fruits.length;
+      document.write(fruits + "<br>");
+
+      // -----concat()
+      const myGirls = ["Cecilie", "Lone" + "<br>"];
+      const myBoys = ["Emil", "Tobias", "Linus" + "<br>"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(myChildren);
+      const array1 = ["Cecilie", "Lone" + "<br>"];
+
+      // ----splice()
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      document.write(fruits + "<br>");
+      fruits.splice(2, 1, "Lemon", "Kiwi");
+      document.write(`${fruits} <br>`);
+      fruits.splice(2, 1, "Lemon", "Kiwi" + "<br>");
+      document.write(`${fruits} <br>`);
+      // let txt = fruits.slice(2, 4);
+      let txt = fruits.slice(-3, -1 + "<br>");
+      document.write(`${txt}<br>`);
+      let txt1 = fruits.sort();
+      document.write(`${txt1}<br>`);
+
+      // ----indexOf()
+      document.write(`${fruits.indexOf("Kiwi")}<br>`);
+      document.write(`${fruits.indexOf("Kiwi", -2)}<br>`);
+      document.write(`${Object.keys(fruits)}<br>`);
+
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: "50",
+        eyecolor: "blue",
+      };
+
+      const numbers = [45, 4, 9, 16, 25];
+      let txt3 = "";
+      let sum = 0;
+      numbers.forEach(myFunction);
+      document.write(txt3);
+      function myFunction(value, index, array) {
+        sum += value;
+        txt3 += `누적합 : ${sum} <br>`;
+      }
+    </script>
+  </body>
+</html>

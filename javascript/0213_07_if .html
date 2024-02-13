@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show/hide</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        padding-top: 60px;
+      }
+      button {
+        position: relative;
+        width: 100%;
+        height: 67px;
+        background: #f3f5fb;
+        font-size: 30px;
+        line-height: 67px;
+        color: #6c768e;
+        text-align: center;
+        cursor: pointer;
+      }
+      .title:after {
+        content: url(images/icon-80-dropdown.png);
+        position: absolute;
+        top: -18px;
+        right: 0;
+        transform: scale(0.5) rotate(180deg);
+      }
+      .title.on:after {
+        transform: scale(0.5) rotate(0deg);
+      }
+      .study_item {
+        padding: 24px 32px;
+        border-bottom: 2px solid #f3f5fb;
+        font-size: 22px;
+        line-height: 38px;
+        color: #555;
+        word-break: keep-all;
+      }
+
+      .study_item li:first-child,
+      .study_item li:nth-child(3) {
+        float: left;
+        width: 400px;
+      }
+      .tit {
+        font-weight: bold;
+      }
+      .cont {
+        display: inline-block;
+        width: 220px;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <button>
+        <div class="title"><strong>어떻게 연구했나요?</strong></div>
+      </button>
+      <div class="content">
+        <div class="study_item">
+          <p class="text">
+            쥬니버스쿨을 꾸준히 사용한 만 3-6세 아동의 수학능력(수와 연산, 측정,
+            기하 영역)과 인지능력(처리속도, 언어이해, 시공간 영역)이 향상됨을
+            검증하였습니다.
+          </p>
+        </div>
+        <div class="study_item">
+          <strong class="subject">[논리]</strong>
+          <ul class="desc">
+            <li>
+              <span class="tit">연구대상ㅣ</span
+              ><span class="cont">3-6세 아동 100명</span>
+            </li>
+            <li>
+              <span class="tit">연구기간ㅣ</span><span class="cont">4주</span>
+            </li>
+            <li>
+              <span class="tit">연구도구ㅣ</span
+              ><span class="cont">한국 웩슬러 유아지능검사도구</span>
+            </li>
+            <li>
+              <span class="tit">연구기관ㅣ</span
+              ><span class="cont">서울대 아동가족학과 박유정 교수 연구실</span>
+            </li>
+          </ul>
+        </div>
+        <div class="study_item">
+          <strong class="subject">[수학]</strong>
+          <ul class="desc">
+            <li>
+              <span class="tit">연구대상ㅣ</span
+              ><span class="cont">3-6세 아동 98명</span>
+            </li>
+            <li>
+              <span class="tit">연구기간ㅣ</span><span class="cont">10주</span>
+            </li>
+            <li>
+              <span class="tit">연구도구ㅣ</span
+              ><span class="cont">유아 그림수학능력 검사도구</span>
+            </li>
+            <li>
+              <span class="tit">연구기관ㅣ</span
+              ><span class="cont">중앙대 유아교육과 조형숙 교수 연구실</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let title = document.querySelector(".title");
+      let bool = false;
+      title.onclick = function () {
+        if (bool) {
+          document.querySelector(".content").style.display = "none";
+          this.classList.remove("on");
+        } else {
+          document.querySelector(".content").style.display = "block";
+          this.classList.add("on");
+        }
+        bool = !bool;
+      };
+    </script>
+  </body>
+</html>
