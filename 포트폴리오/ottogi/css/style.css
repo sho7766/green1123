@@ -1,1 +1,276 @@
 @charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+::selection {
+  color: #000;
+  background-color: #ffed00;
+}
+.font_yellow::selection {
+  color: #ffed00;
+}
+.wrap {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+header a {
+  color: #fff;
+}
+header .inner {
+  margin: 0 75px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+header .inner .logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 58px;
+}
+header .inner .logo a {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background: url(../images/logo_wh.svg) no-repeat;
+}
+header nav {
+  width: 100%;
+}
+header .inner .gnb {
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+header .inner .gnb > li {
+  position: relative;
+  height: 100%;
+  padding: 0 35px;
+}
+header .inner .gnb > li > a {
+  line-height: 100px;
+  text-shadow: rgba(0, 0, 0, 0.6);
+}
+header .inner .gnb > li:last-child a {
+  display: block;
+  width: 30px;
+  height: 100%;
+  background: url(../images/btn_menu_w_hover.svg) center no-repeat;
+}
+header .inner .sub {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  height: 358px;
+  padding-left: 35px;
+}
+header .inner .lang {
+  position: absolute;
+  top: 50%;
+  right: 282px;
+  transform: translateX(-50%);
+}
+header .top_icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.top_icon li:first-child {
+  width: 30px;
+  height: 30px;
+  background: url(../images/gnb_search.svg) no-repeat;
+}
+.main {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+.main_visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/main_vagetables.jpg) 100% / cover no-repeat;
+  z-index: -1;
+}
+.info_wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1462px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+h3 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 48px;
+}
+.one {
+  display: flex;
+  padding-top: 180px;
+}
+.svg1 {
+  position: absolute;
+  top: -30px;
+  left: 150px;
+  margin: 200px auto;
+  transform: scale(2);
+  z-index: 9;
+}
+.svg2 {
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  margin: 200px auto;
+  transform: scale(1.5);
+  z-index: 9;
+}
+.txt {
+  width: 554px;
+  height: 500px;
+  padding: 97px 113px 0 0;
+}
+.txt h1 {
+  font-size: 48px;
+  letter-spacing: -4px;
+}
+.font_yellow {
+  -webkit-text-stroke: 1px #000;
+  color: #ffed00;
+  font-size: 50px;
+}
+.txt p {
+  font-size: 18px;
+  margin-top: 30px;
+}
+.txt a img {
+  margin-top: 30px;
+  width: 100px;
+  height: 30px;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+.txt a:hover img {
+  animation: movㄴe 0.5s ease-in-out infinite alternate;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  width: 780px;
+  height: 500px;
+  margin-left: 128px;
+}
+.item .img_box {
+  width: 450px;
+  height: 500px;
+}
+.item .img_box .thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.item .img_box .thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item1 .thumb {
+  border-radius: 200px;
+}
+.item .clipped {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.item .svg {
+  position: absolute;
+}
+.clipped.path1 {
+  clip-path: url(#my-clip-path);
+}
+.clipped.path2 {
+  clip-path: url(#my-clip-path2);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade1 {
+  animation: fadeOut 3.5s ease-in-out 1.5s infinite alternate;
+}
+.fade2 {
+  opacity: 0;
+  animation: fadeIn 3.5s ease-in-out 1.5s infinite alternate;
+}
+.two {
+  position: relative;
+  display: flex;
+}
+.two .txt {
+  width: 690px;
+  height: 500px;
+  margin-left: 90px;
+  padding-top: 154px;
+}
+.three {
+  display: flex;
+}
+.three .txt {
+  padding: 194px 113px;
+}
