@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .tab {
+        width: 800px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        margin: 0 auto;
+      }
+      .tab button {
+        width: 33.33%;
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        text-align: center;
+      }
+      .tab button:hover {
+        background-color: #ddd;
+      }
+      .tab button.active {
+        background-color: #ccc;
+      }
+      .tabcontent {
+        width: 800px;
+        margin: 0 auto;
+        display: none;
+        padding: 12px 0;
+        border: 1px solid #ccc;
+        border-top: none;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <button class="tablinks">London</button>
+      <button class="tablinks">Paris</button>
+      <button class="tablinks">Tokyo</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    <div id="Paris" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital city of France.</p>
+    </div>
+    <div id="Tokyo" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital city of Japan.</p>
+    </div>
+    <script>
+      let content = document.querySelectorAll(".tabcontent");
+      let btn = document.querySelectorAll(".tablinks");
+      content[0].style.display = "block";
+      function myfnc() {
+        content.forEach(function (value, index) {
+          value.style.display = "none";
+        });
+      }
+      btn.forEach(function (value, index) {
+        value.onclick = function () {
+          myfnc();
+          content[index].style.display = "block";
+        };
+      });
+    </script>
+  </body>
+</html>
