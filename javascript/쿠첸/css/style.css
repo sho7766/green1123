@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}
+section {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .head {
+  transition: 0.3s;
+}
+header .head.on {
+  background: #fff;
+}
+header .head .top {
+  width: 1500px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .head .top ul.menu {
+  display: flex;
+  width: 680px;
+}
+
+header .head .top ul.menu > li {
+  position: relative;
+  height: 100%;
+  line-height: 80px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+header .head .top ul.menu > li > a {
+  color: #fff;
+}
+header .head .top ul.menu > li > a.on {
+  color: #333;
+}
+header .head .top ul.menu > li:hover > a {
+  color: #e85400;
+}
+header .head .top ul.menu > li .sub {
+  position: absolute;
+  width: 680px;
+  top: 80px;
+  left: 0;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 2;
+  transition: 0s;
+}
+header .head .top ul.menu > li .sub.on {
+  transition: 0.3s;
+  opacity: 1;
+}
+header .head .top ul.menu > li:first-child .sub > ul {
+  display: flex;
+}
+header .head .top ul.menu > li .sub > ul li {
+  flex: 1;
+  line-height: 34px;
+}
+header .head .top ul.menu > li .sub > ul li a {
+  font-size: 15px;
+}
+header .head .top ul.menu > li .sub > ul li a:hover {
+  color: #e85400;
+}
