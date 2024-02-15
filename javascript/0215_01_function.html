@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 100px;
+        height: 30px;
+        background-color: powderblue;
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo">함수호출</p>
+    <script>
+      function myfnc() {
+        document.write("오늘은 평가일 입니다.");
+      }
+      // document.getElementById("demo").onclick = function () {
+      //   myfnc();
+      // };
+      document.getElementById("demo").onclick = myfnc;
+      // myfnc();
+
+      (function my() {
+        document.write("자체호출");
+      })();
+      // my();
+
+      function multiply(a, b) {
+        return a * b;
+      }
+      document.write(multiply(9, 9));
+      document.write(multiply(5, 9));
+      const x = function (a, b) {
+        return a * b;
+      };
+      document.write(x(7, 7));
+      document.write(x());
+      function myFunction(a, b) {
+        return a * b;
+      }
+
+      let y = myFunction(4, 3);
+      document.getElementById("demo").innerHTML = y;
+
+      function myfnc1(a, b, c) {
+        return arguments.length;
+      }
+      document.write("<br>" + myfnc1(4, 3));
+
+      function myfnc2(f) {
+        return (5 / 9) * (f - 32);
+      }
+      document.write("<br>" + myfnc2(77));
+    </script>
+  </body>
+</html>
