@@ -1,4 +1,5 @@
 let bg = document.querySelector("header");
+let nav = document.querySelector(".menu");
 let menu = document.querySelectorAll(".gnb>li");
 let sub = document.querySelectorAll(".sub");
 let logo = document.querySelector(".logo a");
@@ -8,29 +9,37 @@ function myfnc() {
     value.style.height = 0 + "px";
   });
   bg.style.background = "none";
-  bg.style.height = 0 + "px";
+  document.querySelector(".inner").classList.remove("on");
 }
+nav.onmouseenter = function () {
+  menu.forEach(function (value, index) {
+    value.querySelector("a").classList.add("on");
+    logo.style.background = "url(images/logo_white.svg)";
+    document.querySelector(".linkmenu").classList.add("on");
+  });
+};
+nav.onmouseleave = function () {
+  menu.forEach(function (value, index) {
+    value.querySelector("a").classList.remove("on");
+  });
+  document.querySelector(".linkmenu").classList.remove("on");
+};
 
 menu.forEach(function (value, index) {
   value.onmouseenter = function () {
+    document.querySelector(".inner").classList.add("on");
+    document.querySelector(".search").classList.add("on");
+    document.querySelector(".lang").classList.add("on");
     bg.style.background = "#fff";
     logo.style.background = "url(images/logo.svg)";
-    value.querySelector("a").classList.add("on");
-    sub.forEach(function (keys, item) {
-      let ht = value.offsetHeight + 375;
-      console.log(ht);
-      value.querySelector(".sub").style.height = ht + "px";
-      bg.style.height = ht + "px";
+    sub.forEach(function (value, index) {
+      value.style.height = "295px";
     });
-    // document.querySelectorAll(".gnb>li a").forEach(function (o, i) {
-    //   o.style.color = "#333";
-    //   classList.add("on");
-    // });
   };
   value.onmouseleave = function () {
-    bg.style.background = "none";
+    document.querySelector(".search").classList.remove("on");
+    document.querySelector(".lang").classList.remove("on");
     logo.style.background = "url(images/logo_white.svg)";
     myfnc();
-    value.querySelector("a").classList.remove("on");
   };
 });

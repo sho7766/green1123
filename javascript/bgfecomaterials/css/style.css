@@ -30,13 +30,20 @@ header {
   height: 80px;
   display: flex;
 }
+
 header .inner {
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 0;
   padding: 0 100px;
   margin: 0 auto;
+  transition: 0.3s;
 }
+header .inner.on {
+  height: 375px;
+  background: #fff;
+}
+
 .inner .logo {
   position: absolute;
   top: 29px;
@@ -49,6 +56,9 @@ header .inner {
   height: 22px;
   background: url(../images/logo_white.svg) 100% no-repeat;
 }
+.inner .menu {
+  width: 100%;
+}
 .inner .gnb {
   width: 670px;
   height: 80px;
@@ -59,29 +69,38 @@ header .inner {
   font-size: 18px;
 }
 
+.inner .gnb > li {
+  position: relative;
+}
 .inner .gnb > li > a {
   display: block;
   padding: 34px 40px 28px 40px;
   color: #fff;
   line-height: 1;
 }
-
-.inner .gnb > li:hover > a.on {
+.inner .gnb > li > a.on {
+  color: #333;
+}
+.inner .gnb > li:hover > a {
   color: #70d44b;
 }
 .inner .gnb .sub {
-  /* padding: 27px 0 50px; */
   width: 100%;
   text-align: center;
   height: 0;
   overflow: hidden;
-  font-size: 14px;
-  line-height: 2.5;
+  transition: 0.3s;
 }
+.inner .gnb .sub.on {
+  height: 295px;
+}
+
 .inner .gnb .sub li a {
   position: relative;
+  line-height: 2;
+  font-size: 14px;
 }
-.inner .gnb .sub li a:after {
+.inner .sub li a:after {
   content: "";
   width: 100%;
   height: 2px;
@@ -99,10 +118,12 @@ header .inner {
   top: 80px;
   left: 100px;
   width: 380px;
-  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
 }
 .inner .linkmenu.on {
-  opacity: 1;
+  height: 295px;
 }
 .inner .linkmenu li {
   display: inline-block;
@@ -159,6 +180,9 @@ header .inner {
   background: url(../images/search_white_icon.svg) no-repeat;
   cursor: pointer;
 }
+.inner .search.on {
+  background: url(../images/search_icon.svg) no-repeat;
+}
 .inner .lang {
   position: absolute;
   top: 28px;
@@ -167,4 +191,7 @@ header .inner {
   height: 44px;
   background: url(../images/country_white_icon.svg) no-repeat;
   cursor: pointer;
+}
+.inner .lang.on {
+  background: url(../images/country_icon.svg) no-repeat;
 }
