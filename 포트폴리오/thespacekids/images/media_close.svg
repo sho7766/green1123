@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="close" transform="translate(-1560 -183)">
+    <g id="사각형_14933" data-name="사각형 14933" transform="translate(1560 183)" fill="none" stroke="#fff" stroke-width="2">
+      <rect width="60" height="60" rx="29" stroke="none"/>
+      <rect x="1" y="1" width="58" height="58" rx="28" fill="none"/>
+    </g>
+    <g id="X" transform="translate(-709.512 -795.334) rotate(-45)">
+      <line id="_" data-name="+" x2="26" transform="translate(900 2339)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <line id="_2" data-name="+" x2="26" transform="translate(913 2326) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
