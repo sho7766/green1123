@@ -145,6 +145,7 @@
           showSlide((currentIdx = index));
         };
       });
+
       let interval = setInterval(function () {
         next.onclick();
       }, 1500);
@@ -156,6 +157,7 @@
           next.onclick();
         }, 1500);
       };
+
       prev.onclick = function () {
         console.log(currentIdx);
         if (currentIdx >= 0) {
