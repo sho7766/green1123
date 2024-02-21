@@ -1,4 +1,9 @@
 @charset "utf-8";
+@font-face {
+  font-family: Noto Sans KR;
+  src: url(../../../HtmlCSS/webfonts/NotoSansKR-Regular.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +23,7 @@ body {
   min-width: 1224px;
 }
 .topmain {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: url(../images/visual_main.gif);
   background-size: cover;
@@ -59,10 +64,11 @@ body {
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
 }
+
 .topmain header .logo {
   width: 81px;
   height: 21px;
-  background-image: url(https://weare.lush.co.kr/images/logo.svg);
+  background-image: url(../images/logo.svg);
 }
 .topmain nav ul {
   height: 96px;
@@ -71,7 +77,7 @@ body {
   gap: 0 48px;
 }
 .topmain nav ul li a {
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
 }
 .topmain nav ul li:hover a {

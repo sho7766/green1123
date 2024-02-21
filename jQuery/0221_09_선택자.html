@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("p[class$='3']").css("border", "1px solid"); // 3이 포함되어있는 모든 요소
+        // $("p[class|='java']").css("border", "1px solid"); //'java'가 포함된 요소들
+        // $("p[class|='css']").css("border", "1px solid"); //'css'가 포함된 요소들
+        // $("p[class^='css']").css("border", "1px solid"); //css가 포함된 모든 요소
+        // $("p[class^='java']").css("border", "1px solid"); //java가 포함된 모든 요소
+        // $("p[class~='java']").css("border", "1px solid"); //java가 포함된 모든 요소
+        $("p[class*='java']").css("border", "1px solid"); //java가 포함된 모든 요소
+      });
+    </script>
+  </head>
+  <body>
+    <p class="css">hidden</p>
+    <p class="css3">hidden</p>
+    <p class="css-3">hidden</p>
+    <p class="javascript">hidden</p>
+    <p class="java script">hidden</p>
+    <p class="java">hidden</p>
+  </body>
+</html>
