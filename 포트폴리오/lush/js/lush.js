@@ -9,16 +9,15 @@ circle.forEach(function (value, index) {
   };
   value.onmouseleave = function () {
     circle[index].classList.remove("on");
-    circle.classList.add("on");
   };
 });
 
 bg.onmouseleave = function () {
   bg.style.backgroundImage = "none";
 };
+
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
-  console.log(ht);
   if (ht >= 0 && ht < 440) {
     document.querySelector("header").style.background = "none";
     document.querySelector("header").style.borderBottom = "none";

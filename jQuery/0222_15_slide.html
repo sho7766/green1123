@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+      }
+      p {
+        width: 100%;
+        height: 100%;
+        background: url(../javascript/images/photo1.jpg) center;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#slideup").click(function () {
+          $("p").slideUp(500, "linear");
+        });
+        $("#slidedown").click(function () {
+          $("p").slideDown(500, "linear");
+        });
+        $("#slidetoggle").click(function () {
+          $("p").slideToggle(500, "linear");
+        });
+
+        $("span").eq(0).siblings().css("display", "block");
+        // -> eq() 괄호안에 인덱스 번호요소를 제외한 모든 형제요소(자식요소)들을 없애줌
+        $("a").click(function () {
+          let i = $(this).index();
+          console.log(i);
+          $("a").css("color", "black");
+          $(this).css("color", "red");
+          $("span").css("display", "none");
+          $("span").eq(i).siblings().css("display", "block");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+    <button id="slideup">slideup</button>
+    <button id="slidedown">slidedown</button>
+    <button id="slidetoggle">slidetoggle</button>
+    <div>
+      <a href="#">link1</a>
+      <a href="#">link2</a>
+      <a href="#">link3</a>
+      <a href="#">link4</a>
+      <a href="#">link5</a>
+    </div>
+    <div>
+      <span>link1 하단</span>
+      <span>link2 하단</span>
+      <span>link3 하단</span>
+      <span>link4 하단</span>
+      <span>link5 하단</span>
+    </div>
+  </body>
+</html>
