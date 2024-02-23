@@ -2,6 +2,9 @@ let bg = document.querySelector(".lush_value");
 let circle = document.querySelectorAll(".lush_value ul li");
 let gnb = document.querySelectorAll(".topmain nav ul li a");
 
+// circle.forEach(function (value, index) {
+//   value.classList.add("on");
+// });
 circle.forEach(function (value, index) {
   value.onmouseenter = function () {
     bg.style.backgroundImage = "url(images/main_value" + (index + 1) + ".jpg)";
@@ -36,3 +39,7 @@ window.onscroll = function () {
     });
   }
 };
+
+$(".mainqr button").click(function () {
+  $(".qrbox").hide();
+});

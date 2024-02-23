@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // let a = $("div").attr("id", "demo");
+        //선택한 객체의 속성을 가져올수도, 변경할수도, 추가할수도 있다.
+        // let a = $("div").attr("class", "demo");
+        // let a = $("div").attr({ class: "demo", id: "demo" });
+        // let a = $("div").prop("id");
+        // let a = $("div").prop("id", "demo");
+        // let a = $("div").prop("class", "demo");
+        $("div").data("no");
+        console.log(a);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="page" data-no="523">
+      data()method : 사용자의 필요에 의하여 속성을 설정하는것을 커스텀
+      속성이라고 한다. 이러한 속성은 사용자의 필요에 의하여 별도로 정의하는데
+      제이쿼리의 내장된 속성과 구분되지 않으면 혼란을 줄 수 있어 data() method
+      가 필요하다.
+    </div>
+  </body>
+</html>

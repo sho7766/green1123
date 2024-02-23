@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 0;
+        height: 300px;
+        background: #def;
+      }
+      p {
+        width: 0;
+        height: 300px;
+        background: #eef;
+      }
+      div.on {
+        width: 300px;
+        transition: 1s;
+        background: #aae;
+        transition: 1s linear;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          $("div").addClass("on");
+          $("p").animate({ width: "300px", background: "red" }, 1000, "linear");
+        });
+        //애니메이션은 수치데이터가 아니면 실행이 되지않음
+      });
+    </script>
+  </head>
+  <body>
+    <section>
+      <div></div>
+      <p></p>
+    </section>
+    <button>click</button>
+  </body>
+</html>
