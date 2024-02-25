@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("div:has(p)").css("font-size", "50px");
+        $("div:empty").text("empty");
+        $("p:parent").css("color", "red");
+        $("p:last").hide();
+        $("p:hidden").show();
+        $("p:visible").text("visible");
+      });
+    </script>
+  </head>
+  <body>
+    <div><p>문단태그</p></div>
+    <div>문단태그</div>
+    <div></div>
+    <p>hidden</p>
+  </body>
+</html>

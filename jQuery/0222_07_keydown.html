@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #def;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+      /* button {
+        float: left;
+        margin-right: 10px;
+      } */
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".left").click(function () {
+          $("div").css("left", "-=10px");
+        });
+        $(".right").click(function () {
+          $("div").css("left", "+=10px");
+        });
+        $(".top").click(function () {
+          $("div").css("top", "-=10px");
+        });
+        $(".bottom").click(function () {
+          $("div").css("top", "+=10px");
+        });
+        // $(document).keydown(function (event) {
+        //   console.log(event.keyCode);
+        // });
+        $(document).keyup(function (event) {
+          console.log(event.keyCode);
+        });
+        // $(document).keypress(function (event) {
+        //   console.log(event.keyCode);
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <p><input type="text" /></p>
+    <button class="left">left</button>
+    <button class="right">right</button>
+    <button class="top">top</button>
+    <button class="bottom">bottom</button>
+    <div></div>
+  </body>
+</html>

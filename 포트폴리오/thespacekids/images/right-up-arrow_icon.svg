@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="right-up-arrow_icon" transform="translate(-446 -455)">
+    <path id="right-up-arrow" d="M15.158,3.867H6a.495.495,0,0,0,0,.989h8.185L4.037,15.008a.495.495,0,1,0,.7.7L14.888,5.556v8.185a.495.495,0,1,0,.989,0V4.586a.72.72,0,0,0-.719-.719Z" transform="translate(443.123 452.133)" fill="#191919" stroke="#191919" stroke-width="0.5"/>
+    <rect id="영역" width="14" height="14" transform="translate(446 455)" fill="#191919" opacity="0"/>
+  </g>
+</svg>

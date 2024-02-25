@@ -8,7 +8,6 @@ function myfnc() {
   sub.forEach(function (a, b) {
     a.style.height = "0px";
   });
-  // sub.style.height = "0";
 }
 
 gnb.forEach(function (a, b) {
@@ -23,3 +22,8 @@ gnb.forEach(function (a, b) {
 inner.onmouseleave = function () {
   myfnc();
 };
+
+$("bg").mouseenter(function () {
+  $(".gnb>li>a").css("color", "#333");
+  $(".sub li a").css("color", "#333");
+});

@@ -1,4 +1,9 @@
 @charset "utf-8";
+@font-face {
+  font-family: Noto Sans KR;
+  src: url(../../../HtmlCSS/webfonts/NotoSansKR-Regular.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +23,11 @@ body {
   min-width: 1224px;
 }
 .topmain {
+  position: relative;
   width: 100%;
   height: 100vh;
+  min-height: 670px;
+  overflow: hidden;
   background-image: url(../images/visual_main.gif);
   background-size: cover;
   background-position: 50% 0;
@@ -48,6 +56,7 @@ body {
   justify-content: center;
   gap: 0 102px;
   margin: 0 auto;
+  transition: top ease-in-out, 0.5s, background-color ease-in-out 0.1s;
 }
 .topmain header::before {
   content: "";
@@ -62,7 +71,7 @@ body {
 .topmain header .logo {
   width: 81px;
   height: 21px;
-  background-image: url(https://weare.lush.co.kr/images/logo.svg);
+  background-image: url(../images/logo.svg);
 }
 .topmain nav ul {
   height: 96px;
@@ -71,23 +80,22 @@ body {
   gap: 0 48px;
 }
 .topmain nav ul li a {
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
 }
 .topmain nav ul li:hover a {
   font-weight: 700;
 }
-.topmain .visual {
-  width: 100%;
-}
+
 .topmain .visual_txt {
   position: absolute;
+  width: 1224px;
   left: 23%;
   bottom: 13%;
   color: #fff;
   font-size: 56px;
 }
-.topmain .visual .visual_txt span {
+.topmain .visual_txt span {
   display: block;
   line-height: 72px;
   font-weight: 700;
@@ -201,6 +209,7 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 .info {
+  position: relative;
   background: #fff;
   padding-top: 176px;
 }
@@ -209,6 +218,7 @@ body {
   height: 738px;
   margin: 0 auto;
   font-size: 16px;
+  clip-path: inset(0 -100vw 0 0);
 }
 .info .inner h2 {
   font-size: 18px;
@@ -321,7 +331,7 @@ body {
   height: 408px;
   overflow: hidden;
 }
-.lush_share .inner img {
+.lush_share .inner .share_img img {
   transform: translate3d(0px, 21px, 0px) scale(1.3);
   max-width: 100%;
 }
@@ -429,7 +439,7 @@ body {
   background: none center no-repeat;
 }
 .lush_value ul li.on {
-  background: rgb(34, 34, 34) center no-repeat;
+  background-color: rgb(34, 34, 34);
 }
 .lush_value ul li:first-child {
   background-image: url(../images/ico_main_value01.svg);

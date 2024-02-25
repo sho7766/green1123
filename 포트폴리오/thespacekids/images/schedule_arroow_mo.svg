@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="arrow_icon" transform="translate(4268.856 -934.856) rotate(90)">
+    <g id="box" transform="translate(934.146 4240.146)">
+      <g id="box-2" data-name="box" transform="translate(0.709 0.71)" fill="none" stroke="#8e72d8" stroke-width="2">
+        <circle cx="14" cy="14" r="14" stroke="none"/>
+        <circle cx="14" cy="14" r="13" fill="none"/>
+      </g>
+    </g>
+    <g id="arrow_icon-2" data-name="arrow_icon" transform="translate(941.524 4248.524)">
+      <path id="arrow" d="M950.224,4255.137l4,5-4,5" transform="translate(-943.894 -4253.805)" fill="none" stroke="#8e72d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="영역" width="12" height="12" transform="translate(1.331 0.332)" fill="#403bef" opacity="0"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      .info {
+        background: #fff;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="info">
+      <div class="inner">
+        <h2>러쉬 소개</h2>
+        <div class="swiper mySwiper">
+          <ul class="swiper-wrapper">
+            <li>
+              <a href="#">
+                <div class="info_menu">
+                  <div class="hover_dimmed">
+                    <div class="info_txt">
+                      "러쉬는 어떤 이유에서도 제품을 동물실험 하지 않고,
+                      동물실험을 거친 원재료조차 사용하지 않습니다."
+                    </div>
+                  </div>
+                </div>
+                <h3>러쉬 소개</h3>
+                <p>
+                  러쉬는 자연에서 얻은 신선한 재료와 동물실험을 하지 않는 정<br />직한
+                  재료를 사용하여 모든 제품을 손으로 만듭니다.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="info_menu">
+                  <div class="hover_dimmed">
+                    <div class="info_txt">
+                      "한국은 러쉬의 네 번째 해외 진출 국가입니다."
+                    </div>
+                  </div>
+                </div>
+                <h3>러쉬 역사</h3>
+                <p>
+                  1995년, 러쉬는 영국에 항구도시 풀(Poole)에<br />서
+                  탄생했습니다.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="info_menu">
+                  <div class="hover_dimmed">
+                    <div class="info_txt">
+                      "우리는 제조자의 얼굴 스티커를 제품 라벨에 붙임으로써
+                      자부심을 자길 수 있다고 믿습니다."
+                    </div>
+                  </div>
+                </div>
+                <h3>이념과 가치</h3>
+                <p>
+                  신선한 과일과 채소,최상의 에센셜 오일,그리고 안전한 원료를<br />
+                  사용하여 효과적인 제품을 만들 수 있다는 것을 믿습니다.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="info_menu">
+                  <div class="hover_dimmed">
+                    <div class="info_txt">
+                      "더불어 공장 거래, 인권보호, 포장 최소화 등 다양한 캠페인
+                      활동을 통해 기업 윤리와 신념을 알리고 있습니다."
+                    </div>
+                  </div>
+                </div>
+                <h3>브랜드 정책</h3>
+                <p>
+                  동물과 자연과 사람이 조화롭게 공존하는 세상을 바라는 러쉬<br />
+                  비즈니스의 중심에는 강력한 브랜드 윤리가 자리 잡고 있습니다.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 0,
+        grabCursor: true,
+      });
+    </script>
+  </body>
+</html>
