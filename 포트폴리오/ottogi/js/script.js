@@ -23,7 +23,9 @@ inner.onmouseleave = function () {
   myfnc();
 };
 
-$("bg").mouseenter(function () {
+$(bg).mouseenter(function () {
   $(".gnb>li>a").css("color", "#333");
   $(".sub li a").css("color", "#333");
+  $(".lang a").css("color", "#333");
+  $(".sub").css("width", "100%");
 });
