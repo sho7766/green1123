@@ -2,22 +2,23 @@ let bg = document.querySelector(".lush_value");
 let circle = document.querySelectorAll(".lush_value ul li");
 let gnb = document.querySelectorAll(".topmain nav ul li a");
 
-// circle.forEach(function (value, index) {
-//   value.classList.add("on");
-// });
+// lush_value 시작
 circle.forEach(function (value, index) {
+  value.classList.add("on");
   value.onmouseenter = function () {
     bg.style.backgroundImage = "url(images/main_value" + (index + 1) + ".jpg)";
-    circle[index].classList.add("on");
-  };
-  value.onmouseleave = function () {
-    circle[index].classList.remove("on");
   };
 });
-
 bg.onmouseleave = function () {
   bg.style.backgroundImage = "none";
 };
+$(circle).mouseenter(function () {
+  $(this).siblings().removeClass("on");
+});
+$(circle).mouseleave(function () {
+  $(this).siblings().addClass("on");
+});
+// lush_value 끝
 
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
