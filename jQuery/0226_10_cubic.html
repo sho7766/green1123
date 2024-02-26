@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cubic {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 100px auto;
+        perspective: 800px;
+
+        /* 수치가 너무 크거나 작으면 극단적으로 원근감이 커지고 작아짐 */
+      }
+      #content {
+        width: 400px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transition: 1s;
+      }
+      div img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+      }
+      div img:first-child {
+        transform: translateZ(-200px);
+        opacity: 1;
+      }
+      div img:nth-child(2) {
+        transform: translateZ(200px);
+      }
+      div img:nth-child(3) {
+        transform: rotateY(90deg) translateZ(200px);
+      }
+      div img:nth-child(4) {
+        transform: rotateY(90deg) translateZ(-200px);
+      }
+      div img:nth-child(5) {
+        transform: rotateX(90deg) translateZ(-200px);
+      }
+      div img:nth-child(6) {
+        transform: translateZ(200px);
+        /* opacity: 0.5; */
+      }
+      #btn {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let y = 0;
+        $("#left").click(function () {
+          // $("#content").css("transform", "rotateY(" + (y -= 90) + "deg)");
+          $("#content").css("transform", `rotateY(${(y -= 90)}deg)`);
+        });
+        $("#right").click(function () {
+          $("#content").css("transform", `rotateY(${(y += 90)}deg)`);
+        });
+        $("#top").click(function () {
+          $("#content").css("transform", `rotateX(${(y += 90)}deg)`);
+        });
+        $("#bottom").click(function () {
+          $("#content").css("transform", `rotateX(${(y -= 90)}deg)`);
+        });
+        $(document).keydown(function (e) {
+          console.log(e.keyCode);
+          switch (e.keyCode) {
+            case 37:
+              $("#content").css("transform", `rotateY(${(y -= 90)}deg)`);
+              break;
+            case 38:
+              $("#content").css("transform", `rotateX(${(y += 90)}deg)`);
+              break;
+            case 39:
+              $("#content").css("transform", `rotateY(${(y += 90)}deg)`);
+              break;
+            case 40:
+              $("#content").css("transform", `rotateX(${(y -= 90)}deg)`);
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="cubic">
+      <div id="content">
+        <img src="../HtmlCSS/images/cubic_css1.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css2.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css3.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css4.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css5.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css6.jpg" alt="" />
+      </div>
+    </div>
+    <div id="btn">
+      <button id="left">left</button>
+      <button id="right">right</button>
+      <button id="top">top</button>
+      <button id="bottom">bottom</button>
+    </div>
+  </body>
+</html>

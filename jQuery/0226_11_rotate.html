@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #slide {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        perspective: 800px;
+      }
+      #content {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition: 1s linear;
+      }
+      div img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      div img:first-child {
+        transform: translateZ(-200px);
+      }
+      div img:nth-child(2) {
+        transform: rotateY(60deg) translateZ(200px);
+        z-index: 1;
+      }
+      div img:nth-child(3) {
+        transform: rotateY(-60deg) translateZ(200px);
+        z-index: 1;
+      }
+      div img:nth-child(4) {
+        transform: rotateY(-60deg) translateZ(-200px);
+      }
+      div img:nth-child(5) {
+        transform: rotateY(60deg) translateZ(-200px);
+      }
+      div img:nth-child(6) {
+        transform: translateZ(200px);
+        opacity: 0.8;
+      }
+      #btn {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let y = 0;
+        $("#left").click(function () {
+          $("#content").css("transform", `rotateY(${(y -= 60)}deg)`);
+        });
+        $("#right").click(function () {
+          $("#content").css("transform", `rotateY(${(y += 60)}deg)`);
+        });
+        $("#top").click(function () {
+          $("#content").css("transform", `rotateX(${(y += 90)}deg)`);
+        });
+        $("#bottom").click(function () {
+          $("#content").css("transform", `rotateX(${(y -= 90)}deg)`);
+        });
+
+        $(document).keydown(function (e) {
+          console.log(e.keyCode);
+          switch (e.keyCode) {
+            case 37:
+              $("#content").css("transform", `rotateY(${(y -= 60)}deg)`);
+              break;
+            case 38:
+              $("#content").css("transform", `rotateX(${(y += 60)}deg)`);
+              break;
+            case 39:
+              $("#content").css("transform", `rotateY(${(y += 90)}deg)`);
+              break;
+            case 40:
+              $("#content").css("transform", `rotateX(${(y -= 90)}deg)`);
+              break;
+          }
+        });
+        let interval = setInterval(function () {
+          $("#left").trigger("click");
+        }, 1000);
+        $("#slide,#btn").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(function () {
+              $("#left").trigger("click");
+            }, 1000);
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="slide">
+      <div id="content">
+        <img src="../HtmlCSS/images/cubic_css1.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css2.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css3.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css4.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css5.jpg" alt="" />
+        <img src="../HtmlCSS/images/cubic_css6.jpg" alt="" />
+      </div>
+    </div>
+    <div id="btn">
+      <button id="left">left</button>
+      <button id="right">right</button>
+      <button id="top">top</button>
+      <button id="bottom">bottom</button>
+    </div>
+  </body>
+</html>
