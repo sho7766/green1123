@@ -25,12 +25,22 @@ a {
 header {
   width: 100%;
   height: 100px;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   z-index: 999;
+}
+header.on:before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 388px;
+  background: #fff;
+  transition: height 0.2s linear;
 }
 header a {
   color: #fff;
@@ -42,6 +52,7 @@ header .inner {
   height: 100%;
   text-align: center;
 }
+
 header .inner .logo {
   position: absolute;
   top: 50%;
@@ -74,11 +85,16 @@ header .inner .gnb > li {
   padding: 0 35px;
 }
 header .inner .gnb > li > a {
+  font-size: 18px;
+  font-weight: bold;
   line-height: 100px;
   text-shadow: rgba(0, 0, 0, 0.6);
 }
 header .inner .gnb > li > a.on {
   color: #333;
+}
+header .inner .gnb > li:hover a {
+  color: #dc2f34;
 }
 header .inner .gnb > li:last-child a {
   display: block;
@@ -97,7 +113,13 @@ header .inner .sub {
   padding-left: 35px;
   transition: 0.3s;
 }
-.sub > li > a.on {
+.sub li {
+  margin-bottom: 20px;
+}
+.sub li a {
+  font-size: 14px;
+}
+.sub li a.on {
   color: #333;
 }
 header .inner .lang {
