@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        /* overflow: hidden; */
+      }
+      .boxwrap {
+        display: table;
+        table-layout: fixed;
+        width: 300%;
+        height: 100vh;
+      }
+      section {
+        display: table-cell;
+      }
+      section:first-child {
+        background: red;
+      }
+      section:nth-child(2) {
+        background: magenta;
+      }
+      section:nth-child(3) {
+        background: blue;
+      }
+      .page {
+        width: 80px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      .page li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+      }
+      .page li.on {
+        background: #000;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let content = $("section");
+        $(".page li").eq(0).addClass("on");
+        $(".page li").click(function () {
+          let i = $(this).index();
+          let moveTop = $(content).eq(i).offset().left;
+          $("html,body")
+            .stop()
+            .animate({ scrollLeft: moveTop + "px" }, 500);
+          $(".page li").removeClass("on");
+          $(this).addClass("on");
+        });
+        $(content).each(function (index, value) {
+          $(this).on("wheel", function () {
+            let moveTop = $(window).scrollLeft();
+            let contentIndex = $(content).eq(index);
+
+            if (event.wheelDelta < 0) {
+              if ($(contentIndex).next() != undefined) {
+                try {
+                  moveTop = $(contentIndex).next().offset().left;
+                  $(".page li").removeClass("on");
+                  $(".page li")
+                    .eq(index + 1)
+                    .addClass("on");
+                } catch (error) {}
+              }
+            } else {
+              if ($(contentIndex).prev() != undefined) {
+                try {
+                  moveTop = $(contentIndex).prev().offset().left;
+                  $(".page li").removeClass("on");
+                  $(".page li")
+                    .eq(index - 1)
+                    .addClass("on");
+                } catch (error) {}
+              }
+            }
+            $("html,body")
+              .stop()
+              .animate({ scrollLeft: moveTop + "px" }, 500);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="boxwrap">
+        <section></section>
+        <section></section>
+        <section></section>
+      </div>
+      <ul class="page">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+      }
+      section:first-child {
+        background: red;
+      }
+      section:nth-child(2) {
+        background: magenta;
+      }
+      section:nth-child(3) {
+        background: blue;
+      }
+      body {
+        overflow: hidden;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let content = $("section");
+        $(content).each(function (index, value) {
+          // console.log(index);
+          // console.log(value);
+          $(this).on("wheel", function () {
+            // console.log(event.wheelDelta);
+            let moveTop = $(window).scrollTop();
+            let contentIndex = $(content).eq(index);
+            if (event.wheelDelta < 0) {
+              if ($(contentIndex).next() != undefined) {
+                try {
+                  moveTop = $(contentIndex).next().offset().top;
+                } catch (error) {}
+              } else {
+                if ($(contentIndex).prev() != undefined) {
+                  try {
+                    moveTop = $(contentIndex).prev().offset().top;
+                  } catch (error) {}
+                }
+                moveTop = $(contentIndex).next().offset().top;
+              }
+            }
+            $("html,body")
+              .stop()
+              .animate({ scrollTop: moveTop + "px" }, 500);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <section></section>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      document.addEventListener("wheel", function (e) {
+        let moveTop = document.documentElement.scrollTop;
+        console.log("자바스크립트휠" + e.deltaY);
+        console.log("자바스크립트" + moveTop);
+      });
+      $(function () {
+        $(window).on("wheel", function () {
+          let moveTop = $(this).scrollTop();
+          console.log("제이쿼리휠" + event.wheelDelta);
+          console.log("제이쿼리" + moveTop);
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

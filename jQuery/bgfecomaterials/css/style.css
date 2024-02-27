@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Nunito Sans";
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.wrap {
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 70px;
+}
+
+h3 {
+  width: 100%;
+  position: relative;
+  font-size: 100px;
+  font-weight: 700;
+  margin-left: 300px;
+}
+.arrow {
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(../images/arrow_green.svg) no-repeat;
+  transition: all 0.2s;
+  opacity: 0;
+}
+.arrow.on {
+  opacity: 1;
+  margin-left: 100px;
+}
+#my {
+  position: relative;
+  margin-top: 80px;
+}
+#my .swiper {
+  width: 100%;
+}
+
+#my .swiper-slide {
+  position: relative;
+  width: 1190px;
+  height: 577px;
+  margin-right: 50px;
+}
+
+#my .swiper-slide {
+  background: url(../images/sec03_img01.jpg) center/cover;
+}
+
+#my .swiper-slide:nth-child(2) {
+  background: url(../images/sec03_img02.jpg) center/cover;
+}
+
+#my .swiper-slide:nth-child(3) {
+  background: url(../images/sec03_img03.jpg) center/cover;
+}
+.txt {
+  position: absolute;
+  left: 60px;
+  bottom: 60px;
+  color: #fff;
+  font-family: Pretendard;
+}
+.txt span {
+  font-weight: 700;
+  font-size: 45px;
+}
+.txt span::after {
+  content: url(../images/arrow.svg);
+  opacity: 0;
+  transition: all 0.2s;
+}
+.txt span.on::after {
+  opacity: 1;
+  margin-left: 20px;
+}
+.txt p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.btn {
+  margin-top: 50px;
+  float: right;
+}
