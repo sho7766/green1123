@@ -107,6 +107,9 @@ header .inner .gnb > li:last-child a {
   display: block;
   width: 30px;
   height: 100%;
+  background: url(../images/btn_menu_w.svg) center no-repeat;
+}
+header .inner .gnb > li:last-child:hover a {
   background: url(../images/btn_menu_w_hover.svg) center no-repeat;
 }
 header .inner .lang {
@@ -119,6 +122,7 @@ header .inner .lang {
 header .inner .lang a {
   position: relative;
   padding-right: 25px;
+  color: #fff;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 header .inner .lang a:after {
@@ -263,9 +267,9 @@ header .inner .sub {
   bottom: 15px;
   left: 50%;
   margin-left: -8px;
-  animation: ani 1s infinite;
+  animation: down 1s infinite;
 }
-@keyframes ani {
+@keyframes down {
   0% {
     transform: translateY(0);
   }
