@@ -3,34 +3,16 @@ let inner = document.querySelector(".inner");
 let gnb = document.querySelectorAll(".gnb>li");
 let sub = document.querySelectorAll(".sub");
 
-function myfnc() {
-  bg.style.background = "none";
-  sub.forEach(function (a, b) {
-    a.style.height = "0px";
-  });
-}
-
-gnb.forEach(function (a, b) {
-  a.onmouseenter = function () {
-    a.classList.add("on");
-    bg.style.background = "#fff";
-    sub.forEach(function (a, b) {
-      a.style.height = "358px";
-      a.style.background = "#fff";
-    });
-  };
-});
-inner.onmouseleave = function () {
-  myfnc();
-};
-
-$(bg).mouseenter(function () {
-  $("header.inner").addClass("on");
+$(gnb).mouseenter(function () {
   $(".gnb>li>a").addClass("on");
-  $(".sub li a").css("color", "#555");
-  $(".lang a").css("color", "#333");
+  $(".lang a").css({ color: "#333", textShadow: "none" }).addClass("on");
+  $(bg).addClass("on");
+  $(sub).css("height", "358px");
 });
-$(bg).mouseleave(function () {
+$(gnb).mouseleave(function () {
   $(".gnb>li>a").removeClass("on");
   $(".lang a").css("color", "#fff");
+  $(".lang a").removeClass("on");
+  $(sub).css("height", "0");
+  $(bg).removeClass("on");
 });

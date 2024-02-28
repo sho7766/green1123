@@ -3,7 +3,7 @@ let gnbA = document.querySelectorAll(".menu>li>a");
 let sub = document.querySelectorAll(".sub");
 
 function menu_in() {
-  document.querySelector("header").classList.add("on", "on2");
+  document.querySelector("header").classList.add("on");
   gnbA.forEach(function (value, index) {
     value.classList.add("on");
   });
