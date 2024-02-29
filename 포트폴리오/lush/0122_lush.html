@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>프레쉬 핸드메이드 코스메틱 러쉬</title>
     <script src="../../jQuery/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image" sizes="16x16" href="images/favicon.ico" />
   </head>
@@ -102,11 +103,11 @@
           <img src="images/main_survey@3x.jpg" alt="" />
         </div>
       </div>
-      <div class="info">
-        <div class="inner">
+      <div class="info_slide">
+        <div class="swiper mySwiper">
           <h2>러쉬 소개</h2>
-          <ul>
-            <li>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
               <a href="#">
                 <div class="info_menu">
                   <div class="hover_dimmed">
@@ -122,8 +123,8 @@
                   재료를 사용하여 모든 제품을 손으로 만듭니다.
                 </p>
               </a>
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
               <a href="">
                 <div class="info_menu">
                   <div class="hover_dimmed">
@@ -138,8 +139,8 @@
                   탄생했습니다.
                 </p>
               </a>
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
               <a href="">
                 <div class="info_menu">
                   <div class="hover_dimmed">
@@ -155,8 +156,8 @@
                   사용하여 효과적인 제품을 만들 수 있다는 것을 믿습니다.
                 </p>
               </a>
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
               <a href="">
                 <div class="info_menu">
                   <div class="hover_dimmed">
@@ -172,13 +173,24 @@
                   비즈니스의 중심에는 강력한 브랜드 윤리가 자리 잡고 있습니다.
                 </p>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 0,
+          grabCursor: true,
+        });
+      </script>
       <div class="lush_share">
         <div class="inner">
-          <div class="share_img">
+          <div class="share_img scroll_motion">
             <img src="images/main_share@3x.jpg" alt="" />
           </div>
           <div class="share_txt">
@@ -367,13 +379,10 @@
       </footer>
       <div class="quickmenu">
         <ul>
-          <li>
-            <a
-              target="_blank"
-              href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fpf.kakao.com%2F_VEbUM%2Fchat%3Fuuid%3D%2540njm0mjywmsvfqiu#login"
-            ></a>
+          <li class="q_kakao">
+            <a target="_blank" href="#"></a>
           </li>
-          <li>
+          <li class="q_store">
             <a href="#"></a>
             <div class="qrbox">
               <div class="mainqr">
@@ -389,9 +398,7 @@
               </div>
             </div>
           </li>
-          <li>
-            <a href="#"></a>
-          </li>
+          <li class="q_gotop"></li>
         </ul>
       </div>
     </div>

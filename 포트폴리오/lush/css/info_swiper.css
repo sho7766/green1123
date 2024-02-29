@@ -195,10 +195,8 @@ body {
 .survey .survey_tit .survey_btn:hover a {
   color: #000;
 }
-
 .survey_img img {
   width: 1432px;
-  height: 362px;
 }
 .survey_img::after {
   content: "";
@@ -211,7 +209,7 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 .info_slide {
-  margin-left: calc(50% - 612px);
+  margin-left: 18%;
   position: relative;
   background: #fff;
   padding-top: 176px;
@@ -591,32 +589,26 @@ footer .inner .footer_info {
 }
 .quickmenu ul li a {
   display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.quickmenu ul .q_kakao a {
-  background: #fae100 url(../images/ico_kakao_quick.png) no-repeat center;
-  background-size: 32px;
-}
-.quickmenu ul .q_store a {
-  position: relative;
-  background: #222 url(../images/ico_store.svg) no-repeat center;
-}
-.quickmenu ul .q_gotop {
-  display: inline-block;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: #222 url(../images/ico_arrowT.svg) no-repeat center;
-  cursor: pointer;
+}
+.quickmenu ul li:first-child a {
+  background: #fae100 url(../images/ico_kakao_quick.png) no-repeat center center;
+  background-size: 32px;
+}
+.quickmenu ul li:nth-child(2) a {
+  position: relative;
+  background: #222 url(../images/ico_store.svg) no-repeat center center;
+}
+.quickmenu ul li:nth-child(3) a {
+  background: #222 url(../images/ico_arrowT.svg) no-repeat center center;
 }
 .qrbox {
   padding-right: 70px;
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: -200px;
   font-size: 12px;
   z-index: -1;

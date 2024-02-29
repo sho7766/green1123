@@ -2,6 +2,12 @@ let bg = document.querySelector(".lush_value");
 let circle = document.querySelectorAll(".lush_value ul li");
 let gnb = document.querySelectorAll(".topmain nav ul li a");
 
+var image = document.getElementsByClassName("survey_img");
+new simpleParallax(image, {
+  orientation: "left",
+  // delay: 0.6,
+  // transition: "cubic-bezier(0,0,0,1)",
+});
 // lush_value 시작
 circle.forEach(function (value, index) {
   value.classList.add("on");
@@ -41,6 +47,11 @@ window.onscroll = function () {
   }
 };
 
+// qrbox숨기기
 $(".mainqr button").click(function () {
   $(".qrbox").hide();
+});
+// 클릭시 최상단으로
+$(".q_gotop").click(function () {
+  $("html,body").animate({ scrollTop: 0 }, 300);
 });

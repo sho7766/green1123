@@ -242,10 +242,23 @@ header .inner .sub {
   overflow: hidden;
 }
 .main_visual video {
+  position: relative;
   width: 100%;
   height: 100%;
 }
-.info_wrap {
+.btn_plus {
+  width: 54px;
+  height: 80px;
+  position: fixed;
+  bottom: 40%;
+  right: 0;
+  background: url(../images/btn_floating_open.svg) no-repeat;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 1;
+}
+.info {
   position: relative;
   width: 100%;
   max-width: 1462px;
@@ -422,7 +435,60 @@ h3 {
 }
 .three {
   display: flex;
+  height: 477px;
 }
 .three .txt {
   padding: 194px 113px;
+}
+.global {
+  position: relative;
+  width: 100%;
+  padding: 230px 0 170px 0;
+  margin-top: 350px;
+  background: #fffdeb;
+  overflow: hidden;
+}
+.global::after {
+  content: url(../images/global_bg_pc.svg);
+  position: absolute;
+  right: -220px;
+  bottom: -150px;
+  width: 900px;
+  height: 900px;
+}
+.global .inner {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.global .inner .txt {
+  width: 100%;
+  height: 246px;
+}
+.global .inner .txt h2 {
+  font-size: 48px;
+}
+.global .inner .txt h1 {
+  font-size: 80px;
+  color: #dc2f34;
+  margin-top: 10px;
+}
+.global .inner .txt p {
+  margin-top: 34px;
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: -1.2px;
+}
+.global .inner .btn_more {
+  margin-top: 40px;
+  width: 100%;
+}
+.contet_global {
+  position: relative;
+  padding-top: 80px;
+  z-index: 1;
+}
+.contet_global img {
+  width: 1300px;
 }
