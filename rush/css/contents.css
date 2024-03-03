@@ -89,7 +89,8 @@ img {
 
 .lush_pro {
   overflow: hidden;
-  width: calc(100% - 475px); /* clip-path:inset(0 0 0 10px); */
+  width: calc(100% - 475px);
+  /* clip-path: inset(0 0 0 10px); */
 }
 .lush_pro .title_area {
   padding-bottom: 64px;
