@@ -7,6 +7,10 @@
     <title>153로지스틱스</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/faviconFile_1679551058_0.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="../js/jquery-3.7.1.min.js"></script>
   </head>
   <body>
@@ -62,13 +66,94 @@
           </nav>
           <div class="share_btn">
             <button type="button">
-              <img src="images/share_icon_w.svg" alt="" />
+              <img src="images/share_icon_w.svg" alt="share_icon white" />
+              <img
+                class="share_black"
+                src="images/share_icon.svg"
+                alt="share_icon black"
+              />
             </button>
           </div>
         </div>
       </header>
-      <div class="main"></div>
+      <div class="main">
+        <div class="swiper mySwiper main_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide main_one">
+              <div class="txt_box">
+                <div class="inner">
+                  <p class="tit">
+                    <span>수많은 고객사들의 선택에는 이유가 있다.</span>
+                    <span>Differentiation Services</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide main_two">
+              <div class="txt_box">
+                <div class="inner">
+                  <p class="tit">
+                    <span>상품을 담아 가치를 빚다.</span>
+                    <span>153 LOGISTICS</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide_move">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 100 100">
+                <path
+                  d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                  stroke="rgba(255,255,255,0.3)"
+                  stroke-width="7"
+                  fill-opacity="0"
+                ></path>
+                <path
+                  d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                  stroke="#FFFFFF"
+                  stroke-width="7"
+                  fill-opacity="0"
+                  style="
+                    stroke-dasharray: 292.273, 292.273;
+                    stroke-dashoffset: 0;
+                  "
+                ></path>
+              </svg>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".mySwiper", {
+        effect: "fade",
+        autoplay: {
+          delay: 10000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            // progressCircle.style.setProperty("--progress", 1 - progress);
+            // progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          },
+        },
+      });
+    </script>
   </body>
 </html>
