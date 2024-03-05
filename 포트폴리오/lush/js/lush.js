@@ -2,7 +2,7 @@ let bg = document.querySelector(".lush_value");
 let circle = document.querySelectorAll(".lush_value ul li");
 let gnb = document.querySelectorAll(".topmain nav ul li a");
 
-// 메뉴
+// menu
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   if (ht >= 0 && ht < 440) {
