@@ -28,6 +28,7 @@ window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   if (ht >= 0 && ht < 90) {
     menuOut();
+    $(".share_btn button").removeClass("on");
     $(menu).mouseleave(function () {
       menuOut();
     });
@@ -35,6 +36,7 @@ window.onscroll = function () {
     menuIn();
     $(sub).removeClass("on");
     $(".deps1_bg").removeClass("on");
+    $(".share_btn button").addClass("on");
     $(menu).mouseleave(function () {
       menuOut();
       $("header").addClass("on");
