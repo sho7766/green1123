@@ -24,29 +24,62 @@ $(menu).mouseenter(function () {
 $(menu).mouseleave(function () {
   menuOut();
 });
+// window.onscroll = function () {
+//   let ht = document.documentElement.scrollTop;
+//   if (ht >= 0 && ht < 90) {
+//     menuOut();
+//     $(".share_btn button").removeClass("on");
+//     $(menu).mouseleave(function () {
+//       menuOut();
+//     });
+//   } else {
+//     menuIn();
+//     $(sub).removeClass("on");
+//     $(".deps1_bg").removeClass("on");
+//     $(".share_btn button").addClass("on");
+//     $(menu).mouseleave(function () {
+//       // menuOut();
+//       $("header").addClass("on");
+//       $(menuA).addClass("on");
+//       $(".logo a").addClass("on");
+//     });
+//   }
+// };
+// menu끝
+$(".btn").on("click", function () {
+  $(this).toggleClass("on");
+  // $(".autoplay-progress svg").toggleClass("on");
+});
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   if (ht >= 0 && ht < 90) {
-    menuOut();
     $(".share_btn button").removeClass("on");
-    $(menu).mouseleave(function () {
-      menuOut();
+  } else {
+    $(menu).mouseenter(function () {
+      menuIn();
     });
-  } else if (ht > 90) {
-    menuIn();
-    $(sub).removeClass("on");
-    $(".deps1_bg").removeClass("on");
-    $(".share_btn button").addClass("on");
     $(menu).mouseleave(function () {
       menuOut();
       $("header").addClass("on");
       $(menuA).addClass("on");
       $(".logo a").addClass("on");
     });
+    $("header").addClass("on");
+    $(menuA).addClass("on");
+    $(".logo a").addClass("on");
+    $(".share_btn button").addClass("on");
   }
 };
-// menu끝
-$(".btn").on("click", function () {
-  $(this).toggleClass("on");
-  // $(".autoplay-progress svg").toggleClass("on");
+$(".con").mouseenter(function () {
+  $(".pointer").addClass("on");
+});
+$(".con").mouseleave(function () {
+  $(".pointer").removeClass("on");
+});
+
+let con = document.querySelector(".con");
+$(".con").mousemove(function (e) {
+  var mouseX = con.e.pageX;
+  var mouseY = e.pageY;
+  $(".pointer").css({ left: mouseX + "px", top: mouseY + "px" });
 });
