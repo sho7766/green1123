@@ -24,31 +24,10 @@ $(menu).mouseenter(function () {
 $(menu).mouseleave(function () {
   menuOut();
 });
-// window.onscroll = function () {
-//   let ht = document.documentElement.scrollTop;
-//   if (ht >= 0 && ht < 90) {
-//     menuOut();
-//     $(".share_btn button").removeClass("on");
-//     $(menu).mouseleave(function () {
-//       menuOut();
-//     });
-//   } else {
-//     menuIn();
-//     $(sub).removeClass("on");
-//     $(".deps1_bg").removeClass("on");
-//     $(".share_btn button").addClass("on");
-//     $(menu).mouseleave(function () {
-//       // menuOut();
-//       $("header").addClass("on");
-//       $(menuA).addClass("on");
-//       $(".logo a").addClass("on");
-//     });
-//   }
-// };
-// menu끝
+
+// menu끝;
 $(".btn").on("click", function () {
   $(this).toggleClass("on");
-  // $(".autoplay-progress svg").toggleClass("on");
 });
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
@@ -77,9 +56,18 @@ $(".con").mouseleave(function () {
   $(".pointer").removeClass("on");
 });
 
-let con = document.querySelector(".con");
-$(".con").mousemove(function (e) {
-  var mouseX = con.e.pageX;
-  var mouseY = e.pageY;
-  $(".pointer").css({ left: mouseX + "px", top: mouseY + "px" });
+const cursor = document.querySelector(".pointer");
+const circle = document.querySelector(".circle_v");
+const con = document.querySelector(".con");
+
+let posX = 0,
+  posY = 0,
+  mouseX = 0,
+  mouseY = 0;
+
+$(con).on("mouseenter", function () {
+  $(cursor).addClass("on");
+});
+$(con).on("mouseleave", function () {
+  $(cursor).removeClass("on");
 });
