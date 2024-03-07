@@ -32,6 +32,18 @@ body {
   width: 100%;
   height: 100vh;
 }
+.inner {
+  position: relative;
+  max-width: 100%;
+  width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.tit {
+  font-style: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+}
 header {
   position: fixed;
   top: 0;
@@ -330,7 +342,6 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
-
 .page_btn {
   display: flex;
   align-items: center;
@@ -370,27 +381,25 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
 .page_btn .swiper-pagination-total {
   opacity: 0.5;
 }
-/* sevice 시작 */
+/* service 시작 */
 .service {
   padding-top: 240px;
 }
-.service .txt_box {
-  position: relative;
-  max-width: 100%;
-  width: 1640px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-.service .txt_box .tit {
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 1.3;
+.service .tit {
+  font-size: 48px;
 }
 .service .fixed_cont {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: calc(800vh);
   margin-top: 120px;
+}
+.service .fixed_cont.on .content_box {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .service .fixed_cont .slide_box {
   position: absolute;
@@ -407,10 +416,6 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
 }
 .service .fade_box1 .tit_box {
   margin-top: 60px;
-}
-.service .fade_box1 .tit_box .tit {
-  font-size: 48px;
-  font-weight: 700;
 }
 .service .fade_box1 .tit_box .txt {
   font-size: 23px;
@@ -493,16 +498,8 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   width: 100%;
   padding-bottom: 280px;
 }
-.special .inner {
-  position: relative;
-  max-width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-.special .inner .tit_box {
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 1.3;
+.special .tit {
+  font-size: 48px;
 }
 .special .inner .content {
   margin-top: 140px;
@@ -564,16 +561,10 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   pointer-events: none;
 }
 .special .inner .content .pointer {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-  z-index: 10;
-  transform: translate(-50%, -50%);
-}
-.special .inner .content .pointer.on {
-  opacity: 1;
+  pointer-events: none;
 }
 .special .inner .content .pointer .circle_v {
   border-radius: 50%;
@@ -585,21 +576,21 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   align-items: center;
   font-weight: 800;
   transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.special .inner .content .pointer .circle_v.on {
+  opacity: 1;
 }
 .special .inner .content .pointer .circle_v span {
+  display: block;
   font-size: 17px;
 }
+
+/* onestop 시작 */
 .onestop {
   width: 100%;
   background: #1947ba;
   padding: 240px 0;
-}
-.onestop .inner {
-  position: relative;
-  max-width: 100%;
-  width: 1640px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 .onestop .tit_box {
   color: #fff;
@@ -732,23 +723,106 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   white-space: nowrap;
   display: flex;
   justify-content: center;
-  font-weight: 600;
+}
+.onestop .icon_box .i_con .text_box .txt li + li {
+  margin-top: 5px;
 }
 .onestop .icon_box .i_con .text_box .txt li span {
   margin-right: 5px;
   display: inline-block;
   transform: translateY(-15%);
 }
+/* onestop 끝 */
+
+/* capa 시작 */
 .capa {
   padding-top: 240px;
   background-color: #f3f5f9;
 }
-.capa .inner {
+.capa .inner .tit {
+  font-size: 48px;
+}
+.capa .scroll_cont {
   max-width: 100%;
-  width: 1640px;
-  padding: 0 20px;
-  margin: 0 auto;
-  position: relative;
+  width: 1240px;
+  margin: 140px auto;
+  display: flex;
+}
+.capa .scroll_cont .cont_wrap {
+  padding-bottom: 180px;
+}
+.capa .scroll_cont .cont_wrap .cont {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.capa .scroll_cont .cont_wrap .cont .img_box {
+  width: 55%;
+}
+.capa .scroll_cont .cont_wrap .cont .img_box .img {
+  text-align: right;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(2n) .img_box .img {
+  text-align: left;
+}
+.capa .scroll_cont .cont_wrap .cont .img_box .img img {
+  width: 70%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(2) .img img {
+  width: 55%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(3) .img img {
+  width: 70%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(4) .img img {
+  width: 38%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(5) .img img {
+  width: 55%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(6) .img img {
+  width: 61%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(7) .img img {
+  width: 61%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(8) .img img {
+  width: 72%;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(9) .img img {
+  width: 72%;
+}
+.capa .scroll_cont .cont_wrap .cont .text_box {
+  width: 45%;
+  margin-left: 80px;
+  padding-top: 40px;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(2n) .text_box {
+  margin-left: 0;
+  margin-right: 80px;
+  padding-left: 240px;
+}
+.capa .scroll_cont .cont_wrap .cont .text_box .num {
+  color: #1947ba;
+  font-weight: 800;
+  font-family: Montserrat;
+}
+.capa .scroll_cont .cont_wrap .cont .text_box .tit {
+  font-size: 45px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.capa .scroll_cont .cont_wrap .cont .text_box .txt {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.capa .scroll_cont .cont_wrap .cont:nth-child(2n) .text_box {
+  margin-left: 0;
+  margin-right: 80px;
+  padding-left: 240px;
 }
 .partner {
   padding: 240px 0;
@@ -760,25 +834,4 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-}
-.partner .inner .tit_box .tit {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.3;
-}
-@media (max-width: 2000px) {
-  .main .inner,
-  .special .inner,
-  .onestop .inner,
-  .slide_move,
-  .service .txt_box {
-    width: 1400px;
-  }
-  .service .txt_box .tit,
-  .tit_box {
-    font-size: 48px;
-  }
-  .service .fixed_cont .slide_box {
-    left: max(calc((100% - 1440px) / 2 +20px), 20px);
-  }
 }

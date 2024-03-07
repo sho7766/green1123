@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #fff;
+        background: #111;
+      }
+      #parallax {
+        overflow: hidden;
+      }
+      .item {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item:nth-child(2n) {
+        background: #333;
+      }
+      .item_num {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 5vw;
+      }
+      .item_img {
+        width: 10vw;
+        height: 10vw;
+        background-size: cover;
+        background-position: center;
+      }
+      .item:nth-child(1) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2019/11/14/16/12/ocean-4626520_1280.jpg);
+      }
+      .item:nth-child(2) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/04/13/09/56/alps-7922246_1280.jpg);
+      }
+      .item:nth-child(3) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/13/22/20/flower-meadow-8572000_1280.jpg);
+      }
+      .item:nth-child(4) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/23/21/25/landscape-8592826_1280.jpg);
+      }
+      .item:nth-child(5) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/17/13/38/huts-8579309_1280.jpg);
+      }
+      .item:nth-child(6) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/01/25/23/06/iceberg-8532935_1280.jpg);
+      }
+      .item:nth-child(7) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/11/16/05/02/mountains-8391433_1280.jpg);
+      }
+      .item:nth-child(8) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/11/20/10/40/vietnam-8400803_1280.jpg);
+      }
+      .item:nth-child(9) .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/06/14/37/groundhog-8557142_1280.png);
+      }
+    </style>
+  </head>
+  <body>
+    <main id="parallax">
+      <section id="section1" class="item">
+        <span class="item_num">01</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section2" class="item">
+        <span class="item_num">02</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section3" class="item">
+        <span class="item_num">03</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section4" class="item">
+        <span class="item_num">04</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section5" class="item">
+        <span class="item_num">05</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section6" class="item">
+        <span class="item_num">06</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section7" class="item">
+        <span class="item_num">07</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section8" class="item">
+        <span class="item_num">08</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section9" class="item">
+        <span class="item_num">09</span>
+        <div class="item_img"></div>
+      </section>
+    </main>
+    <script src="js/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.to("#section1 .item_img", {
+        x: 500,
+        duration: 2,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: { trigger: "#section1 .item_img" },
+      });
+      gsap.to("#section2 .item_img", {
+        x: 500,
+        duration: 4,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: { trigger: "#section2 .item_img" },
+      });
+      gsap.to("#section3 .item_img", {
+        x: 500,
+        duration: 6,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: {
+          trigger: "#section3 .item_img",
+          toggleActions: "play pause resume restart",
+        },
+      });
+      gsap.to("#section4 .item_img", {
+        x: 500,
+        duration: 6,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: {
+          trigger: "#section3 .item_img",
+          toggleActions: "play pause resume restart",
+        },
+      });
+      gsap.to("#section5 .item_img", {
+        x: 500,
+        duration: 10,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: {
+          trigger: "#section5 .item_img",
+          start: "top 50%",
+          end: "bottom 20%",
+          markers: true,
+          scrub: true,
+        },
+      });
+      gsap.to("#section6 .item_img", {
+        x: 500,
+        duration: 10,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: {
+          trigger: "#section6 .item_img",
+          start: "top 50%",
+          end: "bottom 20%",
+          markers: true,
+          scrub: true,
+          pin: true,
+        },
+      });
+      gsap.to("#section7 .item_img", {
+        x: 500,
+        duration: 10,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: {
+          trigger: "#section7 .item_img",
+          start: "top 50%",
+          end: "bottom 20%",
+          markers: true,
+          scrub: true,
+          pin: true,
+          toggleClass: "on",
+        },
+      });
+      gsap.to("#section8 .item_img", {
+        x: 500,
+        duration: 10,
+        rotation: 360,
+        borderRadius: 100,
+        scrollTrigger: {
+          trigger: "#section8 .item_img",
+          start: "top 50%",
+          end: "+=2000",
+          pin: true,
+          markers: true,
+          scrub: true,
+          pin: true,
+          toggleClass: "on",
+        },
+      });
+    </script>
+  </body>
+</html>

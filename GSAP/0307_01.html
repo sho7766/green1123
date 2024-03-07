@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        width: 500px;
+        height: 500px;
+        background-color: #ccc;
+      }
+      .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+    </section>
+    <script src="js/gsap.min.js"></script>
+    <script>
+      gsap.set(".circle", { x: 0, y: 0 });
+
+      let xSetter = gsap.quickSetter(".circle", "x", "px");
+      let ySetter = gsap.quickSetter(".circle", "y", "px");
+      let cir = document.querySelector(".circle");
+      let sec = document.querySelector("section");
+
+      sec.addEventListener("mouseenter", () => {
+        cir.style.display = "block";
+      });
+
+      sec.addEventListener("mouseleave", () => {
+        cir.style.display = "none";
+      });
+
+      sec.addEventListener("mousemove", (e) => {
+        if (
+          e.clientX >= sec.offsetLeft &&
+          e.clientX <= sec.offsetLeft + sec.offsetWidth &&
+          e.clientY >= sec.offsetTop &&
+          e.clientY <= sec.offsetTop + sec.offsetHeight
+        ) {
+          xSetter(e.clientX);
+          ySetter(e.clientY);
+        }
+      });
+    </script>
+  </body>
+</html>

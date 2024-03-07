@@ -24,11 +24,7 @@ $(menu).mouseenter(function () {
 $(menu).mouseleave(function () {
   menuOut();
 });
-
-// menu끝;
-$(".btn").on("click", function () {
-  $(this).toggleClass("on");
-});
+// 메뉴스크롤 이벤트
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
   if (ht >= 0 && ht < 90) {
@@ -49,25 +45,28 @@ window.onscroll = function () {
     $(".share_btn button").addClass("on");
   }
 };
-$(".con").mouseenter(function () {
-  $(".pointer").addClass("on");
-});
-$(".con").mouseleave(function () {
-  $(".pointer").removeClass("on");
+
+// menu끝;
+
+$(".btn").on("click", function () {
+  $(this).toggleClass("on");
 });
 
-const cursor = document.querySelector(".pointer");
-const circle = document.querySelector(".circle_v");
-const con = document.querySelector(".con");
+// .special section 마우스이벤트
+const sec = document.querySelector(".special");
+gsap.set(".pointer", { xPercent: -50, yPercent: -50 });
 
-let posX = 0,
-  posY = 0,
-  mouseX = 0,
-  mouseY = 0;
+let xSetter = gsap.quickSetter(".pointer", "x", "px");
+let ySetter = gsap.quickSetter(".pointer", "y", "px");
 
-$(con).on("mouseenter", function () {
-  $(cursor).addClass("on");
+$(".special .con").mouseenter(() => {
+  $(".circle_v").addClass("on");
 });
-$(con).on("mouseleave", function () {
-  $(cursor).removeClass("on");
+$(".special .con").mouseleave(() => {
+  $(".circle_v").removeClass("on");
+});
+
+window.addEventListener("mousemove", (e) => {
+  xSetter(e.x);
+  ySetter(e.y);
 });
