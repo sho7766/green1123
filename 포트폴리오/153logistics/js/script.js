@@ -70,3 +70,5 @@ window.addEventListener("mousemove", (e) => {
   xSetter(e.x);
   ySetter(e.y);
 });
+
+// partner view more 버튼
