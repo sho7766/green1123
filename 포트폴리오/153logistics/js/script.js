@@ -87,13 +87,13 @@ $(window).scroll(function () {
   }
 });
 
-let ani1 = gsap.timeline();
-ani1.from(".service .tit_box", { autoAlpha: 0, x: -100 });
-ScrollTrigger.create({
-  animation: ani1,
-  trigger: ".service",
-  start: "top",
-});
+// let ani1 = gsap.timeline();
+// ani1.from(".service .tit_box", { autoAlpha: 0, x: -100 });
+// ScrollTrigger.create({
+//   animation: ani1,
+//   trigger: ".service",
+//   start: "top",
+// });
 
 // let ani1 = gsap.timeline();
 // ani1
