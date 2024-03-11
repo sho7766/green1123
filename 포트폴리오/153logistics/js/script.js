@@ -105,6 +105,15 @@ ScrollTrigger.create({
   trigger: ".partner",
   start: "top 70%",
 });
+let ani7 = gsap.timeline();
+ani7.to(".service .fixed_cont .fade1", { opacity: 1, duration: 1 });
+ScrollTrigger.create({
+  animation: ani7,
+  trigger: ".service .fixed_cont",
+  start: "top top",
+  horizental: true,
+  pin: true,
+});
 
 // .special section 마우스이벤트
 const sec = document.querySelector(".special");
