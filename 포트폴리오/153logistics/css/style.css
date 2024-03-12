@@ -18,7 +18,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 img {
   object-fit: cover;
@@ -426,6 +426,9 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   opacity: 0;
   transition: all 1s;
 }
+.fade_box1 {
+  opacity: 1;
+}
 .service .fade_box.on {
   opacity: 1;
 }
@@ -520,6 +523,7 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 .service .text {
   display: flex;
@@ -534,6 +538,7 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
   animation: textLoop 50s linear infinite;
   color: #f5f6f8;
   text-transform: uppercase;
+  padding-right: 20px;
 }
 .service .move_text_below {
   position: absolute;
@@ -560,6 +565,7 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
     transform: translate3d(0, 0, 0);
   }
 }
+/* service 끝 */
 .data {
   max-width: 100%;
   padding: 360px 0 360px;

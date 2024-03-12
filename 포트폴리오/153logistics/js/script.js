@@ -53,9 +53,9 @@ $(".autoplay-progress .btn").on("click", function () {
   $(this).toggleClass("on");
 });
 
-// section .tit 스크롤 효과
+// // section .tit 스크롤 효과
 let ani1 = gsap.timeline();
-ani1.from(".service .tit", { x: -100, autoAlpha: 0, duration: 1 });
+ani1.from(".service .inner .tit", { x: -100, autoAlpha: 0, duration: 1 });
 ScrollTrigger.create({
   animation: ani1,
   trigger: ".service",
@@ -105,15 +105,6 @@ ScrollTrigger.create({
   trigger: ".partner",
   start: "top 70%",
 });
-let ani7 = gsap.timeline();
-ani7.to(".service .fixed_cont .fade1", { opacity: 1, duration: 1 });
-ScrollTrigger.create({
-  animation: ani7,
-  trigger: ".service .fixed_cont",
-  start: "top top",
-  horizental: true,
-  pin: true,
-});
 
 // .special section 마우스이벤트
 const sec = document.querySelector(".special");
@@ -146,3 +137,17 @@ $(window).scroll(function () {
     $(".goTop_btn").removeClass("on");
   }
 });
+
+// let fixed = document.querySelector("fixed_cont");
+// window.addEventListener("scroll", function () {
+//   let value = window.scrollY;
+//   console.log("scrollY", value);
+//   if (value > 1390 && value < 8000) {
+//     $(".fixed_cont").addClass("on");
+//     $(".fade_box").addClass("on");
+//   } else if (value < 1390) {
+//     $(".fixed_cont").removeClass("on");
+//   } else {
+//     $(".fixed_cont").removeClass("on");
+//   }
+// });
