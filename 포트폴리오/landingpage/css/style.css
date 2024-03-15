@@ -200,6 +200,20 @@ header {
   height: 674px;
   margin: 50px 0 0 150px;
 }
+.work1 .left .pointer,
+.work3 .left .pointer {
+  width: 100px;
+  height: 100px;
+  background-color: #ddea8e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #85a85c;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .work1 .thumb .mokup,
 .work3 .thumb .mokup {
   width: 100%;

@@ -25,6 +25,7 @@ intro
     },
     "txt"
   );
+
 ScrollTrigger.create({
   animation: intro,
   trigger: ".intro",
@@ -81,6 +82,7 @@ ScrollTrigger.create({
 });
 
 let work1 = gsap.timeline();
+
 work1.from(".work1 h1", {
   x: -20,
   autoAlpha: 0,
@@ -92,8 +94,6 @@ ScrollTrigger.create({
   pin: true,
   markers: true,
   onLeave: () => {
-    $(".nav li a").removeClass("on");
-    $(".nav li").eq(3).find("a").addClass("on");
     const nextSection = $(".work2");
     const scrollTop = nextSection.offset().top;
     $("html, body").stop().animate({ scrollTop: scrollTop }, 500);
@@ -107,54 +107,29 @@ ScrollTrigger.create({
   },
 });
 
-let work2 = gsap.timeline();
-work2.from(".work2 h1", {
-  x: -20,
+gsap.from(".work2 h1", {
+  x: 20,
   autoAlpha: 0,
+  delay: 0.5,
+  scrollTrigger: { trigger: ".work2", start: "top 90%" },
 });
-
-ScrollTrigger.create({
-  animation: work2,
-  trigger: ".work2",
-  scrub: true,
-  pin: true,
-  markers: true,
-  onLeave: () => {
-    $(".nav li a").removeClass("on");
-    $(".nav li").eq(4).find("a").addClass("on");
-    const nextSection = $(".work3");
-    const scrollTop = nextSection.offset().top;
-    $("html, body").stop().animate({ scrollTop: scrollTop }, 500);
-  },
-  onLeaveBack: () => {
-    $(".nav li a").removeClass("on");
-    $(".nav li").eq(2).find("a").addClass("on");
-    const prevSection = $(".work1");
-    const scrollTop = prevSection.offset().top;
-    $("html, body").stop().animate({ scrollTop: scrollTop }, 500);
-  },
+gsap.from(".work2 .tit", {
+  autoAlpha: 0,
+  delay: 0.5,
+  scrollTrigger: { trigger: ".work1", start: "top 90%" },
 });
-let work3 = gsap.timeline();
-work3.from(".work3 h1", {
+gsap.from(".work3 h1", {
   x: -20,
   autoAlpha: 0,
   delay: 0.5,
+  scrollTrigger: { trigger: ".work3", start: "top 90%" },
 });
-ScrollTrigger.create({
-  animation: work3,
-  trigger: ".work3",
-  scrub: true,
-  pin: true,
-  markers: true,
-  onLeaveBack: () => {
-    $(".nav li a").removeClass("on");
-    $(".nav li").eq(4).find("a").addClass("on");
-    const prevSection = $(".work2");
-    const scrollTop = prevSection.offset().top;
-    $("html, body").stop().animate({ scrollTop: scrollTop }, 500);
-  },
+gsap.from(".work3 .tit", {
+  autoAlpha: 0,
+  delay: 0.5,
+  scrollTrigger: { trigger: ".work1", start: "top 90%" },
 });
-
+let sectionDistance = $("section").height();
 $(".nav li").click(function (e) {
   e.preventDefault();
   let idx = $(this).index();
@@ -164,24 +139,5 @@ $(".nav li").click(function (e) {
 
   let section = $("section").eq(idx);
   let sectionDistance = section.offset().top;
-  $("html,body").stop().animate({ scrollTop: sectionDistance });
-});
-
-// pc 목업에 마우스오버 했을때 마우스 효과
-const sec = document.querySelector(".special");
-gsap.set(".pointer", { xPercent: -50, yPercent: -50 });
-
-let xSetter = gsap.quickSetter(".pointer", "x", "px");
-let ySetter = gsap.quickSetter(".pointer", "y", "px");
-
-$(".special .con").mouseenter(() => {
-  $(".circle_v").addClass("on");
-});
-$(".special .con").mouseleave(() => {
-  $(".circle_v").removeClass("on");
-});
-
-window.addEventListener("mousemove", (e) => {
-  xSetter(e.x);
-  ySetter(e.y);
+  $("html,body").stop().animate({ scrollTop: sectionDistance }, 1000);
 });
