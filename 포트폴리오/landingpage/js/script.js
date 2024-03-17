@@ -163,12 +163,12 @@ let work3 = gsap.timeline();
 work3.from(".work3 h1", {
   x: -20,
   autoAlpha: 0,
-  delay: 0.5,
 });
 ScrollTrigger.create({
   animation: work3,
   trigger: ".work3",
-  scrub: true,
+  start: "top 1%",
+  // scrub: true,
   pin: true,
   markers: true,
   onLeaveBack: () => {
@@ -180,14 +180,14 @@ ScrollTrigger.create({
   },
 });
 
-// $(".nav li").click(function (e) {
-//   e.preventDefault();
-//   let idx = $(this).index();
-//   console.log(idx);
-//   $(".nav li a").removeClass("on");
-//   $(".nav li").eq(idx).find("a").addClass("on");
+$(".nav li").click(function (e) {
+  e.preventDefault();
+  let idx = $(this).index();
+  console.log(idx);
+  $(".nav li a").removeClass("on");
+  $(".nav li").eq(idx).find("a").addClass("on");
 
-//   let section = $("section").eq(idx);
-//   let sectionDistance = section.offset().top;
-//   $("html,body").stop().animate({ scrollTop: sectionDistance });
-// });
+  let section = $("section").eq(idx);
+  let sectionDistance = section.offset().top;
+  $("html,body").stop().animate({ scrollTop: sectionDistance });
+});
