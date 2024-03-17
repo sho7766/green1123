@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
-  <g id="yotube_btn" transform="translate(-830 -7841)">
-    <circle id="box" cx="30" cy="30" r="30" transform="translate(830 7841)" fill="#fff"/>
-    <path id="youtube_icon" d="M153.915,168.9h-17.83A5.162,5.162,0,0,0,131,174.115v9.569a5.162,5.162,0,0,0,5.085,5.215h17.83A5.162,5.162,0,0,0,159,183.685v-9.569A5.17,5.17,0,0,0,153.915,168.9Zm-8.131,12.832-4.346,2.757V173.461l4.346,2.757,4.346,2.757Z" transform="translate(715 7692.1)" fill="#e62e22"/>
-  </g>
-</svg>

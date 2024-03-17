@@ -1,8 +1,0 @@
-<svg id="sns_instagram" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
-  <circle id="box" cx="21" cy="21" r="21" fill="#fff" opacity="0.13"/>
-  <g id="instagram_icon" transform="translate(10.343 10.333)">
-    <path id="box-2" data-name="box" d="M146.3,131H137.9a6.8,6.8,0,0,0-6.8,6.8V146.2a6.8,6.8,0,0,0,6.8,6.8H146.3a6.8,6.8,0,0,0,6.8-6.8V137.8A6.8,6.8,0,0,0,146.3,131Zm4.34,15.212a4.353,4.353,0,0,1-4.349,4.349h-8.407a4.353,4.353,0,0,1-4.349-4.349v-8.407a4.353,4.353,0,0,1,4.349-4.349h8.407a4.353,4.353,0,0,1,4.349,4.349Z" transform="translate(-131.443 -131.333)" fill="#fff"/>
-    <path id="box-3" data-name="box" d="M197.1,192.1a5,5,0,1,0,5,5A5.009,5.009,0,0,0,197.1,192.1Zm0,8.036a3.036,3.036,0,1,1,3.036-3.036A3.039,3.039,0,0,1,197.1,200.136Z" transform="translate(-186.443 -186.433)" fill="#fff"/>
-    <circle id="dot" cx="1" cy="1" r="1" transform="translate(14.657 4.667)" fill="#fff"/>
-  </g>
-</svg>
