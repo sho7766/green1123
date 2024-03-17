@@ -41,27 +41,47 @@ ScrollTrigger.create({
 //profile 타임라인
 let profile = gsap.timeline();
 profile
-  .from(".profile h1", {
-    x: -100,
-    autoAlpha: 0,
-    duration: 1,
-  })
-  .from(".circle", {
-    y: -20,
-    autoAlpha: 0,
-    duration: 0.5,
-    ease: "bounce.out",
-  })
-  .from(".right p:nth-child(2), .right p:nth-child(3), .right ul", {
-    x: -20,
-    autoAlpha: 0,
-    stagger: 0.2, // 요소들을 순차적으로 애니메이션합니다.
-  });
-
+  .from(
+    ".profile h1",
+    {
+      x: -100,
+      autoAlpha: 0,
+      duration: 1,
+    },
+    "same"
+  )
+  .from(
+    ".circle",
+    {
+      y: -20,
+      autoAlpha: 0,
+      duration: 0.5,
+      ease: "bounce.out",
+    },
+    "same"
+  )
+  .from(
+    ".right p:nth-child(2)",
+    {
+      x: -20,
+      autoAlpha: 0,
+      delay: 0.3,
+    },
+    "same"
+  )
+  .from(
+    ".right p:nth-child(3), .right ul",
+    {
+      x: -20,
+      autoAlpha: 0,
+      delay: 0.4,
+    },
+    "same"
+  );
 ScrollTrigger.create({
   animation: profile,
   trigger: ".profile",
-  scrub: true,
+  start: "top 1%",
   pin: true,
   markers: true,
   onLeave: () => {
@@ -81,14 +101,17 @@ ScrollTrigger.create({
 });
 
 let work1 = gsap.timeline();
-work1.from(".work1 h1", {
-  x: -20,
-  autoAlpha: 0,
-});
+work1
+  .from(".work1 h1", {
+    x: -20,
+    autoAlpha: 0,
+  })
+  .to(".work1 .tit .highlight", { width: 160, delay: 0.2 });
 ScrollTrigger.create({
   animation: work1,
   trigger: ".work1",
-  scrub: true,
+  start: "top 1%",
+  // scrub: true,
   pin: true,
   markers: true,
   onLeave: () => {
@@ -108,15 +131,17 @@ ScrollTrigger.create({
 });
 
 let work2 = gsap.timeline();
-work2.from(".work2 h1", {
-  x: -20,
-  autoAlpha: 0,
-});
-
+work2
+  .from(".work2 h1", {
+    x: -20,
+    autoAlpha: 0,
+  })
+  .to(".work2 .tit .highlight", { width: 308, delay: 0.2 });
 ScrollTrigger.create({
   animation: work2,
   trigger: ".work2",
-  scrub: true,
+  start: "top 1%",
+  // scrub: true,
   pin: true,
   markers: true,
   onLeave: () => {
@@ -148,40 +173,21 @@ ScrollTrigger.create({
   markers: true,
   onLeaveBack: () => {
     $(".nav li a").removeClass("on");
-    $(".nav li").eq(4).find("a").addClass("on");
+    $(".nav li").eq(3).find("a").addClass("on");
     const prevSection = $(".work2");
     const scrollTop = prevSection.offset().top;
     $("html, body").stop().animate({ scrollTop: scrollTop }, 500);
   },
 });
 
-$(".nav li").click(function (e) {
-  e.preventDefault();
-  let idx = $(this).index();
-  console.log(idx);
-  $(".nav li a").removeClass("on");
-  $(".nav li").eq(idx).find("a").addClass("on");
+// $(".nav li").click(function (e) {
+//   e.preventDefault();
+//   let idx = $(this).index();
+//   console.log(idx);
+//   $(".nav li a").removeClass("on");
+//   $(".nav li").eq(idx).find("a").addClass("on");
 
-  let section = $("section").eq(idx);
-  let sectionDistance = section.offset().top;
-  $("html,body").stop().animate({ scrollTop: sectionDistance });
-});
-
-// pc 목업에 마우스오버 했을때 마우스 효과
-const sec = document.querySelector(".special");
-gsap.set(".pointer", { xPercent: -50, yPercent: -50 });
-
-let xSetter = gsap.quickSetter(".pointer", "x", "px");
-let ySetter = gsap.quickSetter(".pointer", "y", "px");
-
-$(".special .con").mouseenter(() => {
-  $(".circle_v").addClass("on");
-});
-$(".special .con").mouseleave(() => {
-  $(".circle_v").removeClass("on");
-});
-
-window.addEventListener("mousemove", (e) => {
-  xSetter(e.x);
-  ySetter(e.y);
-});
+//   let section = $("section").eq(idx);
+//   let sectionDistance = section.offset().top;
+//   $("html,body").stop().animate({ scrollTop: sectionDistance });
+// });
