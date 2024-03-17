@@ -191,7 +191,7 @@ header {
 .work3 h1 {
   font-size: 70px;
   color: #75a939;
-  padding: 100px 0 0 170px;
+  padding: 110px 0 0 170px;
 }
 .work1 .thumb,
 .work3 .thumb {
@@ -200,20 +200,6 @@ header {
   height: 674px;
   margin: 50px 0 0 150px;
 }
-.work1 .left .pointer,
-.work3 .left .pointer {
-  width: 100px;
-  height: 100px;
-  background-color: #ddea8e;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #85a85c;
-  font-size: 20px;
-  font-weight: 700;
-}
-
 .work1 .thumb .mokup,
 .work3 .thumb .mokup {
   width: 100%;
@@ -267,8 +253,16 @@ header {
   opacity: 0.5;
   transition: opacity 0.6s;
 }
-.work1 .thumb img,
-.work3 .thumb img {
+.work1 .thumb .memo,
+.work3 .thumb .memo {
+  position: absolute;
+  top: 62%;
+  right: 17%;
+  width: 72px;
+  height: 72px;
+}
+.work1 .thumb .memo img,
+.work3 .thumb .memo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -278,11 +272,32 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 280px 330px 0 0;
+  padding: 300px 330px 0 0;
+}
+.work1 .work_info .tit,
+.work3 .work_info .tit {
+  padding-top: 70px;
+}
+.work1 .work_info .tit img,
+.work3 .work_info .tit img {
+  position: relative;
+  padding-left: 30px;
+}
+.work1 .work_info .tit .highlight,
+.work3 .work_info .tit .highlight {
+  position: absolute;
+  width: 0;
+  height: 20px;
+  background-color: #75a939;
+  opacity: 0.5;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  margin-top: 8px;
 }
 .work1 .desc,
 .work3 .desc {
-  margin-top: -30px;
+  padding-top: 50px;
   color: #333;
 }
 .work1 .desc p:first-child,
@@ -311,7 +326,7 @@ header {
 .work3 .library p {
   display: inline-block;
   text-transform: uppercase;
-  margin-top: 70px;
+  margin-top: 60px;
   color: #75a939;
   font-size: 18px;
   font-weight: 700;
@@ -333,13 +348,13 @@ header {
   right: 0;
   font-size: 70px;
   color: #75a939;
-  padding: 80px 240px 0 0;
+  padding: 110px 240px 0 0;
 }
 .work2 .thumb {
   position: absolute;
   width: 583px;
   height: 674px;
-  top: 20%;
+  top: 25%;
   right: 220px;
 }
 .work2 .thumb a {
@@ -388,14 +403,45 @@ header {
   opacity: 0.5;
   transition: opacity 0.6s;
 }
+.work2 .thumb .memo {
+  position: absolute;
+  top: 62%;
+  left: 17%;
+  width: 72px;
+  height: 72px;
+}
+.work1 .thumb .memo img,
+.work3 .thumb .memo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .work2 .work_info {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 190px 0 0 330px;
+  padding: 300px 0 0 330px;
+}
+.work2 .work_info .tit {
+  padding-top: 70px;
+}
+.work2 .work_info .tit img {
+  position: relative;
+  padding-left: 30px;
+}
+.work2 .work_info .tit .highlight {
+  position: absolute;
+  width: 0;
+  height: 20px;
+  background-color: #75a939;
+  opacity: 0.5;
+  top: 50%;
+  left: 40%;
+  z-index: -1;
+  margin-top: 12px;
 }
 .work2 .desc {
-  margin-top: -80px;
+  padding-top: 50px;
   color: #333;
 }
 .work2 .desc p:first-child {
@@ -407,7 +453,7 @@ header {
 .work2 .proto p {
   display: inline-block;
   text-transform: uppercase;
-  margin-top: 50px;
+  margin-top: 70px;
   color: #75a939;
   font-size: 18px;
   font-weight: 700;
