@@ -29,7 +29,6 @@ ScrollTrigger.create({
   animation: intro,
   trigger: ".intro",
   end: "70% 50%",
-  markers: true,
   onLeave: () => {
     $(".nav li a").removeClass("on");
     $(".nav li").eq(1).find("a").addClass("on");
@@ -83,7 +82,6 @@ ScrollTrigger.create({
   trigger: ".profile",
   start: "top 1%",
   pin: true,
-  markers: true,
   onLeave: () => {
     $(".nav li a").removeClass("on");
     $(".nav li").eq(2).find("a").addClass("on");
@@ -113,7 +111,6 @@ ScrollTrigger.create({
   start: "top 1%",
   // scrub: true,
   pin: true,
-  markers: true,
   onLeave: () => {
     $(".nav li a").removeClass("on");
     $(".nav li").eq(3).find("a").addClass("on");
@@ -133,7 +130,7 @@ ScrollTrigger.create({
 let work2 = gsap.timeline();
 work2
   .from(".work2 h1", {
-    x: -20,
+    x: 20,
     autoAlpha: 0,
   })
   .to(".work2 .tit .highlight", { width: 308, delay: 0.2 });
@@ -141,9 +138,7 @@ ScrollTrigger.create({
   animation: work2,
   trigger: ".work2",
   start: "top 1%",
-  // scrub: true,
   pin: true,
-  markers: true,
   onLeave: () => {
     $(".nav li a").removeClass("on");
     $(".nav li").eq(4).find("a").addClass("on");
@@ -160,17 +155,18 @@ ScrollTrigger.create({
   },
 });
 let work3 = gsap.timeline();
-work3.from(".work3 h1", {
-  x: -20,
-  autoAlpha: 0,
-});
+work3
+  .from(".work3 h1", {
+    x: -20,
+    autoAlpha: 0,
+  })
+  .to(".work3 .tit .highlight", { width: 420, delay: 0.2 });
 ScrollTrigger.create({
   animation: work3,
   trigger: ".work3",
   start: "top 1%",
   // scrub: true,
   pin: true,
-  markers: true,
   onLeaveBack: () => {
     $(".nav li a").removeClass("on");
     $(".nav li").eq(3).find("a").addClass("on");
@@ -189,5 +185,5 @@ $(".nav li").click(function (e) {
 
   let section = $("section").eq(idx);
   let sectionDistance = section.offset().top;
-  $("html,body").stop().animate({ scrollTop: sectionDistance });
+  $("html,body").stop().animate({ scrollTop: sectionDistance }, 1000);
 });

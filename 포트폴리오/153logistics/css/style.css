@@ -239,7 +239,7 @@ header .inner nav .deps1 li .deps2 > li:hover a::before {
 }
 .swiper-slide-active .txt_box .inner .tit > span > span {
   display: block;
-  transform: translateY(100px);
+  /* transform: translateY(100px); */
 }
 
 /* .main {

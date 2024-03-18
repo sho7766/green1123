@@ -138,16 +138,48 @@ $(window).scroll(function () {
   }
 });
 
-// let fixed = document.querySelector("fixed_cont");
-// window.addEventListener("scroll", function () {
-//   let value = window.scrollY;
-//   console.log("scrollY", value);
-//   if (value > 1390 && value < 8000) {
-//     $(".fixed_cont").addClass("on");
-//     $(".fade_box").addClass("on");
-//   } else if (value < 1390) {
-//     $(".fixed_cont").removeClass("on");
-//   } else {
-//     $(".fixed_cont").removeClass("on");
-//   }
-// });
+gsap.to(".fade_box1", {
+  autoAlpha: 0,
+  scrollTrigger: { scrub: true, trigger: ".fade_box1" },
+});
+
+gsap.to(".fade_box2", {
+  autoAlpha: 1,
+
+  scrollTrigger: { scrub: true, trigger: ".fade_box2" },
+});
+
+gsap.to(".fixed_cont", {
+  xPercent: -100,
+  x: () => innerWidth,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".fixed_cont",
+    end: () => innerWidth * 4,
+    scrub: true,
+    pin: true,
+    toggleClass: "on",
+  },
+});
+gsap.to(".scroll_img", {
+  x: -500,
+  // autoAlpha: 0,
+  scrollTrigger: {
+    scrub: true,
+    trigger: ".img_wrap .img",
+    start: 2000,
+    end: 2500,
+    toggleClass: "on",
+  },
+});
+gsap.to(".scroll_img", {
+  x: -2500,
+  // autoAlpha: 0,
+  scrollTrigger: {
+    scrub: true,
+    trigger: ".img_wrap .img:nth-child(2n)",
+    start: 2500,
+    end: 4000,
+    toggleClass: "on",
+  },
+});

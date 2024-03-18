@@ -129,7 +129,7 @@ gsap.from(".work3 .tit", {
   delay: 0.5,
   scrollTrigger: { trigger: ".work1", start: "top 90%" },
 });
-let sectionDistance = $("section").height();
+
 $(".nav li").click(function (e) {
   e.preventDefault();
   let idx = $(this).index();
