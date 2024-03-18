@@ -461,7 +461,7 @@ header {
   z-index: -1;
   margin-top: 8px;
 }
-@media (max-width: 1880px) {
+/* @media (max-width: 1880px) {
   .profile img {
     width: 425px;
     height: 600px;
@@ -646,4 +646,4 @@ header {
     top: 260px;
     right: 250px;
   }
-}
+} */
