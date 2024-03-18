@@ -151,8 +151,7 @@ header .logo_ko {
   padding-inline-end: 9vw;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  /* background: #fdf8f5; */
-  background: #fff;
+  background: #fdf8f5;
 }
 .inside .tit_eng {
   font-size: 28px;
@@ -252,4 +251,53 @@ header .logo_ko {
   display: flex;
   width: 100%;
   height: 56.25vw;
+  /* overflow: hidden; */
+}
+.brand .left {
+  width: 50%;
+  padding-top: 9vw;
+  padding-bottom: 7vw;
+  padding-inline-start: 9vw;
+  padding-inline-end: 9vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.brand .left .tit {
+  text-align: left;
+}
+.brand .left .tit p:first-child {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+}
+.brand .left .tit p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 0 70px;
+}
+.brand .left .content {
+  position: relative;
+  margin-bottom: 6vw;
+  display: flex;
+  flex-direction: column;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
