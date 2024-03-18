@@ -179,11 +179,12 @@ ScrollTrigger.create({
 $(".nav li").click(function (e) {
   e.preventDefault();
   let idx = $(this).index();
-  console.log(idx);
+  //console.log(idx);
   $(".nav li a").removeClass("on");
   $(".nav li").eq(idx).find("a").addClass("on");
 
   let section = $("section").eq(idx);
   let sectionDistance = section.offset().top;
+  console.log(sectionDistance);
   $("html,body").stop().animate({ scrollTop: sectionDistance }, 1000);
 });
